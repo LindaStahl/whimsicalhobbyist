@@ -127,6 +127,79 @@ const recipes = [
     popular: false
   },
   {
+    slug: "vegan-chocolate-chip-banana-bread",
+    title: "Vegan Chocolate Chip Banana Bread",
+    category: "bread",
+    categoryLabel: "Bread",
+    badge: "Banana bread",
+    date: "2026-07-03",
+    prepTime: "15 min",
+    bakeTime: "60-80 min",
+    servings: "1 loaf, about 10 slices",
+    excerpt:
+      "Soft, incredibly moist vegan banana bread packed with rich dark chocolate and lightly spiced with cinnamon and ginger.",
+    featuredText:
+      "Moist banana bread with dark chocolate, cinnamon, and ginger.",
+    image: "Bananabread.png",
+    thumbnail: "Bananabread.png",
+    alt: "Vegan chocolate chip banana bread with pecans",
+    ingredients: [
+      "300 g all-purpose flour",
+      "125 g granulated sugar",
+      "65 g light brown sugar",
+      "4 g baking powder",
+      "2.5 g baking soda",
+      "1.5 g ground cinnamon",
+      "1 g ground ginger",
+      "3 g salt",
+      "240 g ripe bananas, mashed, about 2 medium bananas",
+      "250 g plant-based milk, soy, oat, or almond",
+      "230 g rapeseed oil, or canola oil",
+      "15 g apple cider vinegar",
+      "2.5 g vanilla extract",
+      "150 g dark chocolate chips or chopped dark chocolate"
+    ],
+    method: [
+      "Prepare the batter: Preheat your oven to 175C (350F). Grease and lightly flour a 1.5-litre (9x5-inch) loaf pan.",
+      "In a large mixing bowl, whisk together the flour, granulated sugar, brown sugar, baking powder, baking soda, cinnamon, ginger, and salt until evenly combined.",
+      "In a separate bowl, mash the bananas until mostly smooth. Add the plant milk, rapeseed oil, apple cider vinegar, and vanilla extract, then whisk until well combined.",
+      "Pour the wet ingredients into the dry ingredients and gently whisk until no dry flour remains. Avoid overmixing to keep the loaf soft and tender.",
+      "Fold in the dark chocolate chips.",
+      "Bake: Pour the batter into the prepared loaf pan and smooth the top.",
+      "Bake for 60-80 minutes, or until a skewer inserted into the center comes out clean or with just a few moist crumbs.",
+      "If the top begins to brown too quickly, loosely cover the loaf with aluminum foil during the final 20 minutes of baking.",
+      "Let the banana bread cool in the pan for about 15 minutes, then transfer it to a wire rack to cool completely before slicing."
+    ],
+    tip: "The riper the bananas, the sweeter and more flavorful your banana bread will be.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Store the banana bread in an airtight container at room temperature for 3 days, or in the refrigerator for up to 5 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Wrap individual slices or the whole loaf tightly in plastic wrap and place in a freezer-safe container or bag.",
+          "Freeze for up to 3 months. Thaw at room temperature or gently warm before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "The riper the bananas, the sweeter and more flavorful your banana bread will be.",
+          "Do not overmix the batter. This keeps the loaf light and tender.",
+          "For extra chocolate, sprinkle a handful of chocolate chips over the top before baking.",
+          "Add chopped walnuts or pecans for a delicious crunchy variation.",
+          "This banana bread tastes even better the next day, once the flavors have had time to develop."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
     slug: "blueberry-cream-cupcakes",
     title: "Blueberry cream cupcakes",
     category: "cupcakes",
