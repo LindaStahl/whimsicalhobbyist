@@ -256,6 +256,8 @@ const recipes = [
     servings: "9 large bakery-style cookies",
     excerpt:
       "Rich, fudgy chocolate cookies with a gooey peanut butter center, finished with melted chocolate and crunchy peanuts.",
+    cardText:
+      "Some of the best treats are the ones with a surprise hidden inside.\n\nThese cookies remind me of those moments as a child when breaking open a dessert felt like uncovering a little secret. The excitement of seeing warm peanut butter slowly melt into rich chocolate was enough to make waiting for them to cool almost impossible.\n\nThey are the kind of cookies that disappear from the cooling rack faster than you expect. One turns into two, two become three, and suddenly everyone is asking if there are any left. With their crisp edges, fudgy centers, and creamy peanut butter filling, they are made for sharing, though you might want to hide a few for yourself.\n\nI hope these cookies bring a little joy, a little nostalgia, and plenty of chocolatey smiles to your kitchen. Sometimes the sweetest memories begin with warm cookies fresh from the oven and sticky fingers that no one minds.",
     featuredText:
       "Bakery-style chocolate cookies with a molten peanut butter center.",
     image: "Pbchocolate_cookie.png",
