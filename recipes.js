@@ -86,47 +86,6 @@ const recipes = [
     popular: true
   },
   {
-    slug: "confetti-cloud-cake",
-    title: "Confetti cloud cake",
-    category: "cakes",
-    categoryLabel: "Cakes",
-    badge: "TikTok favorite",
-    date: "2026-07-03",
-    prepTime: "35 min",
-    bakeTime: "25 min",
-    servings: "10 slices",
-    excerpt:
-      "A soft vanilla layer cake with rainbow sprinkles folded into the batter, covered in whipped pastel frosting and finished with a playful sprinkle shower.",
-    featuredText: "Vanilla layers, pastel sprinkles, and soft whipped frosting.",
-    image:
-      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=80",
-    thumbnail:
-      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=400&q=80",
-    alt: "Pastel layered cake with sprinkles",
-    ingredients: [
-      "2 1/2 cups plain flour",
-      "2 teaspoons baking powder",
-      "1 cup caster sugar",
-      "3 large eggs",
-      "1 cup milk",
-      "1/2 cup soft butter",
-      "1 tablespoon vanilla extract",
-      "1/2 cup pastel sprinkles",
-      "Whipped vanilla frosting"
-    ],
-    method: [
-      "Heat the oven to 175C and line two round cake tins.",
-      "Whisk flour, baking powder, and sugar in a large bowl.",
-      "Beat in eggs, milk, butter, and vanilla until smooth and fluffy.",
-      "Fold through the sprinkles gently so the colors stay bright.",
-      "Bake until golden and a tester comes out clean, then cool completely.",
-      "Layer with whipped frosting and finish with extra sprinkles."
-    ],
-    tip: "Fold sprinkles in at the very end to keep the batter soft and colorful.",
-    featured: true,
-    popular: false
-  },
-  {
     slug: "vegan-chocolate-chip-banana-bread",
     title: "Vegan Chocolate Chip Banana Bread",
     category: "bread",
@@ -283,46 +242,6 @@ const recipes = [
       }
     ],
     featured: false,
-    popular: true
-  },
-  {
-    slug: "blueberry-cream-cupcakes",
-    title: "Blueberry cream cupcakes",
-    category: "cupcakes",
-    categoryLabel: "Cupcakes",
-    badge: "Cupcakes",
-    date: "2026-07-01",
-    prepTime: "25 min",
-    bakeTime: "18 min",
-    servings: "12 cupcakes",
-    excerpt:
-      "Fluffy little cakes crowned with pale blue berry buttercream swirls and a soft vanilla crumb.",
-    featuredText: "Fluffy cakes crowned with pale blue berry buttercream.",
-    image:
-      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1000&q=80",
-    thumbnail:
-      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=400&q=80",
-    alt: "Cupcakes with pastel frosting",
-    ingredients: [
-      "1 1/2 cups plain flour",
-      "1 1/2 teaspoons baking powder",
-      "3/4 cup caster sugar",
-      "2 eggs",
-      "1/2 cup milk",
-      "1/2 cup melted butter",
-      "1 teaspoon vanilla extract",
-      "1/2 cup blueberry jam",
-      "Blueberry buttercream"
-    ],
-    method: [
-      "Heat the oven to 175C and line a cupcake tray.",
-      "Mix flour, baking powder, and sugar together.",
-      "Whisk in eggs, milk, melted butter, and vanilla.",
-      "Divide between cases and bake until lightly golden.",
-      "Cool, fill with a little blueberry jam, and pipe with buttercream."
-    ],
-    tip: "Use a tiny drop of blue food coloring for a soft pastel frosting shade.",
-    featured: true,
     popular: true
   },
   {
