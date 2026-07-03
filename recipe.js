@@ -6,6 +6,7 @@ const navDropdown = document.querySelector(".nav-dropdown");
 const navDropdownButton = document.querySelector(".nav-dropdown-button");
 const menuCategories = [
   { slug: "cakes", label: "Cakes" },
+  { slug: "cupcakes", label: "Cupcakes" },
   { slug: "cookies", label: "Cookies" },
   { slug: "bars", label: "Bars" },
   { slug: "creams", label: "Creams" },

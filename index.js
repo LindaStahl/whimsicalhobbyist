@@ -13,7 +13,8 @@ const navDropdownButton = document.querySelector(".nav-dropdown-button");
 
 let activeFilter = "all";
 const menuCategories = [
-  { slug: "cakes", label: "Cakes", categories: ["cakes", "cupcakes"] },
+  { slug: "cakes", label: "Cakes", categories: ["cakes"] },
+  { slug: "cupcakes", label: "Cupcakes", categories: ["cupcakes"] },
   { slug: "cookies", label: "Cookies", categories: ["cookies"] },
   { slug: "bars", label: "Bars", categories: ["bars"] },
   { slug: "creams", label: "Creams", categories: ["basics", "creams"] },
