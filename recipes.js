@@ -202,6 +202,88 @@ const recipes = [
     popular: true
   },
   {
+    slug: "vegan-fudgy-walnut-brownies",
+    title: "Vegan Fudgy Walnut Brownies",
+    category: "cookies",
+    categoryLabel: "Cookies",
+    badge: "Brownies",
+    date: "2026-07-03",
+    prepTime: "20 min",
+    bakeTime: "34-37 min",
+    servings: "16 brownies",
+    excerpt:
+      "Rich, intensely chocolatey vegan brownies with a shiny crackly top, whipped aquafaba, dark chocolate, and crunchy walnuts.",
+    featuredText:
+      "Fudgy vegan brownies with dark chocolate, aquafaba, and walnuts.",
+    image: "Brownie_with_walnuts.png",
+    thumbnail: "Brownie_with_walnuts.png",
+    alt: "Vegan fudgy walnut brownies with cream topping",
+    ingredients: [
+      "180 g aquafaba, liquid from canned chickpeas",
+      "435 g dark brown sugar",
+      "255 g dark chocolate, 65-75%, roughly chopped",
+      "168 g vegan butter or margarine, cubed",
+      "270 g all-purpose flour",
+      "63 g unsweetened cocoa powder",
+      "5 g salt",
+      "22.5 g vanilla extract",
+      "10 g instant espresso powder",
+      "128 g dark chocolate, chopped",
+      "120 g chopped walnuts"
+    ],
+    method: [
+      "Prepare the pan: Preheat your oven to 176C (350F). Line a 25 x 25 cm (10 x 10-inch) square metal baking pan with parchment paper, leaving an overhang on two sides.",
+      "Prepare the dry ingredients: Sift together the flour and cocoa powder into a medium bowl. This helps prevent lumps and creates a smoother batter.",
+      "Whip the aquafaba: In a large mixing bowl, combine the aquafaba and brown sugar.",
+      "Using an electric hand mixer or stand mixer, beat on high speed for 2 1/2-3 minutes, until the mixture becomes thick, glossy, and forms ribbons when lifted.",
+      "Add the vanilla extract, salt, and instant espresso powder. Fold gently with a silicone spatula until fully combined.",
+      "Melt the chocolate: Place the chopped dark chocolate and vegan butter in a microwave-safe bowl.",
+      "Microwave in 30-second intervals, stirring between each interval, until completely melted and smooth.",
+      "Make the batter: Pour the warm chocolate mixture into the whipped aquafaba and gently fold together.",
+      "Add the sifted flour and cocoa mixture, folding just until no dry streaks remain. Avoid overmixing.",
+      "Fold in the chopped dark chocolate and chopped walnuts.",
+      "Transfer the batter to the prepared baking pan and spread it evenly.",
+      "Bake for 34-37 minutes.",
+      "The brownies are ready when a toothpick inserted into the center comes out with a few moist crumbs or a little melted chocolate, but not wet batter.",
+      "If the toothpick comes out with liquid batter, continue baking in 5-minute intervals, checking frequently.",
+      "Cool and slice: Let the brownies cool in the pan for 30 minutes.",
+      "Lift them out using the parchment paper and transfer them to a wire rack.",
+      "Allow them to cool for another 20-30 minutes before slicing. For the cleanest cuts, chill the brownies for an hour before slicing with a warm knife."
+    ],
+    tip: "Whipping the aquafaba well is the secret to achieving that beautiful shiny, crackly brownie top.",
+    extraSections: [
+      {
+        title: "Cooling time",
+        items: ["Cool for about 1 hour before slicing for the neatest pieces."]
+      },
+      {
+        title: "Storage",
+        items: [
+          "Store the brownies in an airtight container at room temperature for 4 days, or refrigerate for up to 1 week."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Wrap individual brownies or the entire slab tightly and freeze in an airtight container for up to 3 months.",
+          "Thaw at room temperature before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Whipping the aquafaba well is the secret to achieving that beautiful shiny, crackly brownie top.",
+          "Use good-quality dark chocolate with 65-75% cocoa for the richest flavor.",
+          "Do not overbake. The brownies will continue to set as they cool.",
+          "For extra fudgy brownies, let them rest overnight before slicing.",
+          "Toast the walnuts for a few minutes before adding them to the batter to deepen their flavor."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
     slug: "blueberry-cream-cupcakes",
     title: "Blueberry cream cupcakes",
     category: "cupcakes",
