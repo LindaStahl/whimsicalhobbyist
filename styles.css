@@ -83,16 +83,17 @@ a {
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 36px 6vw 30px;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(42px, 8vw, 86px);
-  font-weight: 700;
-  line-height: 0.95;
-  text-align: center;
+  display: block;
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: 24px 0 18px;
+}
+
+.header-logo {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: contain;
 }
 
 .brand-mark {
@@ -587,7 +588,8 @@ footer p {
   }
 
   .brand {
-    font-size: 38px;
+    width: min(96vw, 1120px);
+    padding: 18px 0 14px;
   }
 
   .brand-mark {
