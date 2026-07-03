@@ -4,6 +4,7 @@ const newsletterForm = document.querySelector("#newsletter-form");
 const formMessage = document.querySelector("#form-message");
 const miniSearch = document.querySelector("#mini-search");
 const searchInput = document.querySelector("#site-search");
+const categorySelect = document.querySelector("#category-select");
 
 let activeFilter = "all";
 
@@ -22,6 +23,7 @@ function updateVisiblePosts() {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     activeFilter = button.dataset.filter;
+    categorySelect.value = activeFilter;
 
     filterButtons.forEach((filterButton) => {
       filterButton.classList.remove("active");
@@ -30,6 +32,20 @@ filterButtons.forEach((button) => {
     button.classList.add("active");
     updateVisiblePosts();
   });
+});
+
+categorySelect.addEventListener("change", () => {
+  activeFilter = categorySelect.value;
+
+  filterButtons.forEach((filterButton) => {
+    filterButton.classList.toggle(
+      "active",
+      filterButton.dataset.filter === activeFilter
+    );
+  });
+
+  updateVisiblePosts();
+  document.querySelector("#recipes").scrollIntoView({ behavior: "smooth" });
 });
 
 miniSearch.addEventListener("submit", (event) => {

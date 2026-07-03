@@ -443,20 +443,30 @@ h3 {
   font-weight: 800;
 }
 
-.category-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+.categories-panel label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-weight: 800;
+  text-align: center;
 }
 
-.category-list a {
-  min-height: 40px;
-  display: grid;
-  place-items: center;
+.category-select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--blue);
   color: var(--ink);
+  cursor: pointer;
+  font: inherit;
   font-weight: 800;
+  padding: 0 18px;
+}
+
+.category-select:focus {
+  border-color: var(--pink-strong);
+  outline: 3px solid rgba(233, 107, 154, 0.2);
 }
 
 footer {
@@ -548,7 +558,4 @@ footer p {
     margin-bottom: 14px;
   }
 
-  .category-list {
-    grid-template-columns: 1fr;
-  }
 }
