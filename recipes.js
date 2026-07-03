@@ -245,6 +245,102 @@ const recipes = [
     popular: true
   },
   {
+    slug: "peanut-butter-stuffed-chocolate-cookies",
+    title: "Peanut Butter Stuffed Chocolate Cookies",
+    category: "cookies",
+    categoryLabel: "Cookies",
+    badge: "Cookies",
+    date: "2026-07-03",
+    prepTime: "30 min",
+    bakeTime: "16 min",
+    servings: "9 large bakery-style cookies",
+    excerpt:
+      "Rich, fudgy chocolate cookies with a gooey peanut butter center, finished with melted chocolate and crunchy peanuts.",
+    featuredText:
+      "Bakery-style chocolate cookies with a molten peanut butter center.",
+    image: "Pbchocolate_cookie.png",
+    thumbnail: "Pbchocolate_cookie.png",
+    alt: "Peanut butter stuffed chocolate cookies with chocolate drizzle and chopped peanuts",
+    ingredients: [
+      "For the Peanut Butter Filling",
+      "158 g smooth peanut butter",
+      "For the Chocolate Cookie Dough",
+      "230 g vegan margarine, softened",
+      "125 g granulated sugar",
+      "75 g light brown sugar",
+      "177 g all-purpose flour",
+      "80 g unsweetened cocoa powder",
+      "1.5 g salt",
+      "1 g ground cinnamon",
+      "2.5 g baking soda",
+      "10 g vanilla extract",
+      "5 g brewed coffee, or strong espresso",
+      "70 g chopped peanuts",
+      "For Decorating",
+      "50 g dark chocolate, melted",
+      "Chopped peanuts"
+    ],
+    method: [
+      "Freeze the peanut butter filling: Divide the peanut butter into 9 equal portions.",
+      "Place them on a parchment-lined plate or tray and freeze while preparing the cookie dough.",
+      "Make the cookie dough: In a large mixing bowl, beat the softened vegan margarine, granulated sugar, and brown sugar until light, fluffy, and completely smooth.",
+      "Add the flour, cocoa powder, baking soda, salt, cinnamon, vanilla extract, and brewed coffee.",
+      "Mix just until the ingredients come together. Avoid overmixing, as this can make the cookies less tender.",
+      "Fold in the chopped peanuts until evenly distributed.",
+      "Fill the cookies: Divide the dough into 9 equal portions using a large cookie scoop or spoon.",
+      "Flatten each portion slightly to create a well in the center.",
+      "Place one frozen peanut butter portion in the middle.",
+      "Carefully wrap the dough around the filling, sealing all edges completely. Make sure there are no cracks or openings, otherwise the filling may leak during baking.",
+      "If needed, lightly dampen your hands with water and gently roll each cookie into a smooth ball.",
+      "Freeze the dough: Place the filled cookie dough balls onto a parchment-lined baking tray.",
+      "Freeze for at least 1 hour. Do not skip this step. Chilling the dough prevents the cookies from spreading too much and helps create thick, bakery-style cookies.",
+      "Bake: Preheat your oven to 175C (350F).",
+      "Bake the frozen cookies for 15-16 minutes. Every oven is different, so begin checking after 15 minutes.",
+      "The cookies are ready when they have spread slightly and the edges look set while the centers still appear soft.",
+      "Shorter baking time gives extra fudgy cookies. Longer baking time gives firmer cookies.",
+      "Shape: As soon as the cookies come out of the oven, use a round cookie cutter or a heatproof glass slightly larger than the cookies to gently swirl around each one. This creates perfectly round bakery-style cookies.",
+      "Let the cookies cool on the baking tray for about 15 minutes.",
+      "Before lifting them, gently slide each cookie back and forth to make sure it has released from the parchment paper.",
+      "Decorate: Drizzle the melted dark chocolate over each cookie.",
+      "Sprinkle with chopped peanuts while the chocolate is still wet.",
+      "Refrigerate for 10 minutes, or until the chocolate has set.",
+      "Now for the best part: take a bite and enjoy that gooey peanut butter center."
+    ],
+    tip: "Freezing both the filling and the assembled dough is the key to thick, bakery-style cookies with a gooey peanut butter center.",
+    extraSections: [
+      {
+        title: "Freeze time",
+        items: ["Freeze for a total of about 1 hour 30 minutes before baking."]
+      },
+      {
+        title: "Storage",
+        items: [
+          "Store the cookies in an airtight container in the refrigerator for up to 1 week.",
+          "Place a sheet of parchment paper between each cookie to prevent them from sticking together."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze baked cookies in an airtight container or freezer-safe bag for up to 3 months.",
+          "Allow them to thaw at room temperature, or warm them in the microwave for 15-20 seconds for an irresistible molten center."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Freezing the peanut butter filling makes assembling the cookies much easier.",
+          "Do not skip freezing the assembled cookie dough. It is the key to thick, bakery-style cookies.",
+          "Seal the dough completely around the filling to prevent leaks.",
+          "A small amount of coffee enhances the chocolate flavor without making the cookies taste like coffee.",
+          "For an extra gooey center, enjoy the cookies slightly warm."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
     slug: "vegan-lemon-poppy-seed-bundt-cake",
     title: "Vegan Lemon Poppy Seed Bundt Cake",
     category: "cakes",
