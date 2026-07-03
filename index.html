@@ -33,57 +33,22 @@
         <a href="#popular">Popular</a>
         <div class="nav-dropdown">
           <button class="nav-dropdown-button" type="button">Categories</button>
-          <div class="nav-dropdown-menu" aria-label="Recipe categories">
-            <button type="button" data-category-filter="all">All recipes</button>
-            <button type="button" data-category-filter="cakes">Cakes</button>
-            <button type="button" data-category-filter="cookies">Cookies</button>
-            <button type="button" data-category-filter="bread">Bread</button>
-            <button type="button" data-category-filter="no-bake">No bake</button>
-          </div>
+          <div
+            class="nav-dropdown-menu"
+            id="category-menu"
+            aria-label="Recipe categories"
+          ></div>
         </div>
         <a href="#newsletter">Newsletter</a>
       </nav>
     </header>
 
     <main>
-      <section class="featured-strip" aria-label="Featured recipes">
-        <article class="feature-card">
-          <img
-            src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=80"
-            alt="Pastel layered cake with sprinkles"
-          />
-          <div>
-            <p class="eyebrow">TikTok favorite</p>
-            <h2>Confetti cloud cake</h2>
-            <p>Vanilla layers, pastel sprinkles, and soft whipped frosting.</p>
-            <a href="#recipes">View post</a>
-          </div>
-        </article>
-        <article class="feature-card">
-          <img
-            src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80"
-            alt="Cupcakes with pastel frosting"
-          />
-          <div>
-            <p class="eyebrow">Cupcakes</p>
-            <h2>Blueberry cream cupcakes</h2>
-            <p>Fluffy cakes crowned with pale blue berry buttercream.</p>
-            <a href="#recipes">View post</a>
-          </div>
-        </article>
-        <article class="feature-card">
-          <img
-            src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=80"
-            alt="Fresh chocolate chip cookies"
-          />
-          <div>
-            <p class="eyebrow">Cookies</p>
-            <h2>Brown butter bakery cookies</h2>
-            <p>Chewy centers, crisp edges, and dreamy chocolate pools.</p>
-            <a href="#recipes">View post</a>
-          </div>
-        </article>
-      </section>
+      <section
+        class="featured-strip"
+        id="featured-recipes"
+        aria-label="Featured recipes"
+      ></section>
 
       <section class="page-shell">
         <section class="post-feed" id="recipes" aria-label="Latest recipes">
@@ -97,147 +62,19 @@
             </p>
           </div>
 
-          <div class="filter-bar" aria-label="Recipe filters">
-            <button class="filter-button active" type="button" data-filter="all">
-              All
-            </button>
-            <button class="filter-button" type="button" data-filter="cakes">
-              Cakes
-            </button>
-            <button class="filter-button" type="button" data-filter="cookies">
-              Cookies
-            </button>
-            <button class="filter-button" type="button" data-filter="bread">
-              Bread
-            </button>
-            <button class="filter-button" type="button" data-filter="no-bake">
-              No bake
-            </button>
-          </div>
+          <div
+            class="filter-bar"
+            id="filter-bar"
+            aria-label="Recipe filters"
+          ></div>
 
-          <article class="blog-post" data-category="cakes">
-            <a href="#" class="post-image">
-              <img
-                src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=80"
-                alt="Pastel layered cake with sprinkles"
-              />
-            </a>
-            <div class="post-content">
-              <time datetime="2026-07-03">
-                <span>03</span>
-                Jul 2026
-              </time>
-              <p class="eyebrow">Cakes</p>
-              <h2>Confetti cloud cake</h2>
-              <p>
-                A soft vanilla layer cake with rainbow sprinkles folded into
-                the batter, covered in whipped pastel frosting and finished with
-                a playful sprinkle shower.
-              </p>
-              <a class="read-more" href="#">View post</a>
-            </div>
-          </article>
-
-          <article class="blog-post" data-category="cookies">
-            <a href="#" class="post-image">
-              <img
-                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1000&q=80"
-                alt="Fresh chocolate chip cookies"
-              />
-            </a>
-            <div class="post-content">
-              <time datetime="2026-06-29">
-                <span>29</span>
-                Jun 2026
-              </time>
-              <p class="eyebrow">Cookies</p>
-              <h2>Brown butter bakery cookies</h2>
-              <p>
-                Deeply golden, chewy cookies with crisp edges, a nutty brown
-                butter base, and pools of chocolate tucked into every bite.
-              </p>
-              <a class="read-more" href="#">View post</a>
-            </div>
-          </article>
-
-          <article class="blog-post" data-category="bread">
-            <a href="#" class="post-image">
-              <img
-                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80"
-                alt="Fresh bread loaves on a table"
-              />
-            </a>
-            <div class="post-content">
-              <time datetime="2026-06-24">
-                <span>24</span>
-                Jun 2026
-              </time>
-              <p class="eyebrow">Bread</p>
-              <h2>Honey milk bread</h2>
-              <p>
-                A golden, soft loaf with a plush crumb and gentle honey flavor,
-                perfect for toast, jam, or thick slices still warm from the oven.
-              </p>
-              <a class="read-more" href="#">View post</a>
-            </div>
-          </article>
-
-          <article class="blog-post" data-category="no-bake">
-            <a href="#" class="post-image">
-              <img
-                src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1000&q=80"
-                alt="Berry dessert cups"
-              />
-            </a>
-            <div class="post-content">
-              <time datetime="2026-06-18">
-                <span>18</span>
-                Jun 2026
-              </time>
-              <p class="eyebrow">No bake</p>
-              <h2>Strawberry cream dessert cups</h2>
-              <p>
-                Buttery biscuit crumbs, whipped vanilla cream, and glossy
-                strawberry layers stacked into tiny pastel dessert cups.
-              </p>
-              <a class="read-more" href="#">View post</a>
-            </div>
-          </article>
+          <div id="recipe-list"></div>
         </section>
 
         <aside class="sidebar" aria-label="Blog sidebar">
           <section class="sidebar-panel" id="popular">
             <h2>Popular posts</h2>
-            <a class="mini-post" href="#">
-              <img
-                src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=400&q=80"
-                alt="Pastel cupcakes"
-              />
-              <span>
-                <small>Cupcakes</small>
-                Blueberry cream cupcakes
-              </span>
-            </a>
-            <a class="mini-post" href="#">
-              <img
-                src="https://images.unsplash.com/photo-1464195244916-405fa0a82545?auto=format&fit=crop&w=400&q=80"
-                alt="Lemon cake"
-              />
-              <span>
-                <small>Cakes</small>
-                Lemon crumb muffins
-              </span>
-            </a>
-            <a class="mini-post" href="#">
-              <img
-                src="https://images.unsplash.com/photo-1514517604298-cf80e0fb7f1e?auto=format&fit=crop&w=400&q=80"
-                alt="Pink macarons"
-              />
-              <span>
-                <small>Basics</small>
-                Pastel buttercream guide
-              </span>
-            </a>
+            <div id="popular-posts"></div>
           </section>
 
           <section class="sidebar-panel about-panel" id="about">
