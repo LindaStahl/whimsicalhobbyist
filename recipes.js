@@ -335,6 +335,8 @@ const recipes = [
     servings: "Approximately 350 g",
     excerpt:
       "Creamy, rich, and irresistibly chocolatey vegan Nutella made with roasted hazelnuts, cashews, cocoa, and vegan milk chocolate.",
+    cardText:
+      "A Little Story\n\nThere was always something magical about opening a fresh jar of chocolate hazelnut spread.\n\nWhether it was spread generously on warm toast before school or secretly enjoyed by the spoonful when no one was looking, it somehow made ordinary moments feel a little more special. That rich chocolate flavor, the roasted hazelnuts, and the excitement of scraping the last bit from the jar are memories many of us share.\n\nThis homemade version brings all of that nostalgia back, but with simple ingredients and plenty of love. Smooth, creamy, and deeply chocolatey, it is the kind of recipe you will find yourself making again and again, not just because it is delicious, but because every spoonful feels like a little taste of childhood.",
     featuredText:
       "Smooth chocolate-hazelnut spread for toast, pancakes, oatmeal, and spoonfuls.",
     image: "Nutella.png",
