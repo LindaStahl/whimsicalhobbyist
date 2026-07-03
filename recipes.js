@@ -245,6 +245,83 @@ const recipes = [
     popular: true
   },
   {
+    slug: "vegan-lemon-poppy-seed-bundt-cake",
+    title: "Vegan Lemon Poppy Seed Bundt Cake",
+    category: "cakes",
+    categoryLabel: "Cakes",
+    badge: "Cakes",
+    date: "2026-07-03",
+    prepTime: "15 min",
+    bakeTime: "35-40 min",
+    servings: "10-12 slices",
+    excerpt:
+      "Bright, soft, and wonderfully moist vegan lemon poppy seed Bundt cake with fresh citrus flavor and a sweet lemon glaze.",
+    featuredText:
+      "Fresh lemon, delicate poppy seeds, and a sweet citrus glaze.",
+    image: "Lemonbundt.png",
+    thumbnail: "Lemonbundt.png",
+    alt: "Vegan lemon poppy seed Bundt cake with lemon glaze",
+    ingredients: [
+      "For the Cake",
+      "88 g plant-based yogurt",
+      "275 g unsweetened soy milk",
+      "122 g sunflower oil",
+      "50 g freshly squeezed lemon juice",
+      "Zest of 1 large lemon",
+      "385 g all-purpose flour",
+      "5 g baking soda",
+      "3 g baking powder",
+      "220 g granulated sugar",
+      "5 g poppy seeds",
+      "For the Lemon Glaze",
+      "180 g powdered sugar",
+      "45 g freshly squeezed lemon juice"
+    ],
+    method: [
+      "Prepare the batter: Preheat your oven to 180C (355F). Grease and lightly flour a Bundt pan to prevent sticking.",
+      "In a large mixing bowl, whisk together the soy milk, plant-based yogurt, sunflower oil, lemon juice, and lemon zest until smooth.",
+      "In a separate bowl, whisk together the flour, sugar, baking soda, baking powder, and poppy seeds.",
+      "Pour the wet ingredients into the dry ingredients and gently whisk until just combined. Do not overmix. A few small lumps are perfectly fine.",
+      "Bake: Pour the batter into the prepared Bundt pan and smooth the top.",
+      "Bake for 35-40 minutes, or until a skewer inserted into the center comes out clean or with a few moist crumbs.",
+      "Allow the cake to cool in the pan for about 15 minutes before carefully turning it out onto a wire rack.",
+      "Let the cake cool completely before glazing.",
+      "Make the lemon glaze: In a small bowl, whisk together the powdered sugar and fresh lemon juice until smooth.",
+      "If the glaze is too thick, add a teaspoon of lemon juice at a time. If it is too thin, whisk in a little more powdered sugar.",
+      "Slowly drizzle the glaze over the completely cooled Bundt cake, allowing it to run naturally down the sides.",
+      "Let the glaze set for about 15 minutes before serving."
+    ],
+    tip: "Use fresh lemon juice and zest for the brightest, most vibrant flavor, and let the cake cool completely before glazing.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Store the cake in an airtight container at room temperature for 3 days, or refrigerate for up to 5 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze the cake without the glaze for up to 3 months.",
+          "Wrap it tightly in plastic wrap and place it in a freezer-safe container.",
+          "Thaw overnight in the refrigerator and glaze before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Use fresh lemon juice and zest for the brightest, most vibrant flavor.",
+          "Rub the lemon zest into the sugar before mixing for an even more aromatic cake.",
+          "Avoid overmixing the batter to keep the crumb light and tender.",
+          "Let the cake cool completely before glazing to prevent the icing from melting.",
+          "For an extra elegant finish, garnish with thin lemon slices, additional lemon zest, or edible flowers."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
     slug: "brown-butter-bakery-cookies",
     title: "Brown butter bakery cookies",
     category: "cookies",
