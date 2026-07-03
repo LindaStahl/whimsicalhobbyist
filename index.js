@@ -7,6 +7,8 @@ const newsletterForm = document.querySelector("#newsletter-form");
 const formMessage = document.querySelector("#form-message");
 const miniSearch = document.querySelector("#mini-search");
 const searchInput = document.querySelector("#site-search");
+const navDropdown = document.querySelector(".nav-dropdown");
+const navDropdownButton = document.querySelector(".nav-dropdown-button");
 
 let activeFilter = "all";
 
@@ -183,6 +185,10 @@ function applyStoredRecipeFilters() {
 }
 
 function bindCategoryFilters() {
+  navDropdownButton.addEventListener("click", () => {
+    navDropdown.classList.toggle("open");
+  });
+
   document.querySelectorAll(".filter-button").forEach((button) => {
     button.addEventListener("click", () => {
       setActiveFilter(button.dataset.filter);
@@ -192,10 +198,17 @@ function bindCategoryFilters() {
   document.querySelectorAll("[data-category-filter]").forEach((button) => {
     button.addEventListener("click", () => {
       setActiveFilter(button.dataset.categoryFilter);
+      navDropdown.classList.remove("open");
       document.querySelector("#recipes").scrollIntoView({ behavior: "smooth" });
     });
   });
 }
+
+document.addEventListener("click", (event) => {
+  if (!navDropdown.contains(event.target)) {
+    navDropdown.classList.remove("open");
+  }
+});
 
 renderCategories();
 renderFeaturedRecipes();

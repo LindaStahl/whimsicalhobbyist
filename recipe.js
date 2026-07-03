@@ -2,6 +2,8 @@ const recipePageElement = document.querySelector("#recipe-page");
 const categoryMenuElement = document.querySelector("#category-menu");
 const miniSearch = document.querySelector("#mini-search");
 const searchInput = document.querySelector("#site-search");
+const navDropdown = document.querySelector(".nav-dropdown");
+const navDropdownButton = document.querySelector(".nav-dropdown-button");
 
 function getRecipeUrl(recipe) {
   return `recipe.html?recipe=${recipe.slug}`;
@@ -216,6 +218,10 @@ function getSelectedRecipe() {
 
 renderCategoryMenu();
 
+navDropdownButton.addEventListener("click", () => {
+  navDropdown.classList.toggle("open");
+});
+
 const selectedRecipe = getSelectedRecipe();
 
 if (selectedRecipe) {
@@ -232,6 +238,13 @@ categoryMenuElement.addEventListener("click", (event) => {
   }
 
   sessionStorage.setItem("whimsicalCategory", categoryLink.dataset.categoryFilter);
+  navDropdown.classList.remove("open");
+});
+
+document.addEventListener("click", (event) => {
+  if (!navDropdown.contains(event.target)) {
+    navDropdown.classList.remove("open");
+  }
 });
 
 miniSearch.addEventListener("submit", (event) => {
