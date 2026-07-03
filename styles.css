@@ -195,17 +195,17 @@ a {
 .featured-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  padding: 34px 6vw 42px;
+  gap: 14px;
+  padding: 22px 6vw 28px;
   background: linear-gradient(135deg, var(--pink), var(--blue) 55%, var(--yellow));
 }
 
 .feature-card {
   display: grid;
-  grid-template-columns: 42% 1fr;
-  gap: 18px;
-  min-height: 210px;
-  padding: 16px;
+  grid-template-columns: 40% 1fr;
+  gap: 14px;
+  min-height: 150px;
+  padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.74);
@@ -215,7 +215,7 @@ a {
 .feature-card img {
   width: 100%;
   height: 100%;
-  min-height: 178px;
+  min-height: 126px;
   border-radius: 6px;
   object-fit: cover;
 }
@@ -243,8 +243,8 @@ h3 {
 }
 
 .feature-card h2 {
-  margin: 8px 0 8px;
-  font-size: 25px;
+  margin: 6px 0;
+  font-size: 22px;
   line-height: 1.05;
 }
 

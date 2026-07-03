@@ -12,6 +12,8 @@ const recipes = [
     servings: "6 large muffins or 8 medium muffins",
     excerpt:
       "Soft, moist, warmly spiced vegan carrot cake muffins topped with light vegan cream cheese frosting and chopped walnuts.",
+    cardText:
+      "I wanted to turn the classic carrot cake into something a little more everyday - a bakery-style muffin that is just as welcome on a slow Sunday morning as it is with an afternoon cup of tea. They are incredibly moist, warmly spiced, and finished with a cloud of fluffy vegan cream cheese frosting and a handful of crunchy walnuts.\n\nWhether you are baking them to share with loved ones or simply treating yourself after a long day, I hope these little cupcakes bring the same comfort, warmth, and joy they bring to my kitchen. Sometimes the sweetest memories are made over a bowl of batter, a dusting of flour, and something delicious fresh from the oven.",
     featuredText:
       "Warmly spiced carrot muffins with vegan cream cheese frosting and walnuts.",
     image: "Carrotcupcake.png",

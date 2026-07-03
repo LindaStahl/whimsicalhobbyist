@@ -87,6 +87,7 @@ function renderRecipePosts() {
   recipeListElement.innerHTML = recipes
     .map((recipe) => {
       const date = formatDate(recipe.date);
+      const cardText = recipe.cardText || recipe.excerpt;
 
       return `
         <article class="blog-post" data-category="${recipe.category}">
@@ -100,7 +101,12 @@ function renderRecipePosts() {
             </time>
             <p class="eyebrow">${recipe.categoryLabel}</p>
             <h2>${recipe.title}</h2>
-            <p>${recipe.excerpt}</p>
+            <div class="post-excerpt">
+              ${cardText
+                .split("\n\n")
+                .map((paragraph) => `<p>${paragraph}</p>`)
+                .join("")}
+            </div>
             <a class="read-more" href="${getRecipeUrl(recipe)}">View post</a>
           </div>
         </article>
