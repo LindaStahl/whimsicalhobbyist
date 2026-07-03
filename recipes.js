@@ -18,7 +18,7 @@ const recipes = [
     thumbnail: "Carrotcupcake.png",
     alt: "Vegan carrot cake muffins with cream cheese frosting and walnuts",
     ingredients: [
-      "For the muffins",
+      "Cupcake batter",
       "182 g all-purpose flour",
       "120 g brown sugar",
       "4.4 g baking powder",
