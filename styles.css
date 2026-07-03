@@ -526,10 +526,11 @@ footer {
   font-weight: 700;
 }
 
-footer .brand-mark {
+.footer-favicon {
   width: 42px;
   height: 42px;
-  font-size: 24px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 footer p {
