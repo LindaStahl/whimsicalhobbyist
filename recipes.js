@@ -256,6 +256,8 @@ const recipes = [
     servings: "10-12 slices",
     excerpt:
       "Bright, soft, and wonderfully moist vegan lemon poppy seed Bundt cake with fresh citrus flavor and a sweet lemon glaze.",
+    cardText:
+      "A Little Story\n\nSome cakes taste like sunshine, and this is one of them.\n\nThe bright scent of freshly grated lemons, the tiny poppy seeds scattered through every slice, and the sweet drizzle of lemon glaze bring back memories of slow afternoons, open windows, and warm kitchens filled with laughter. It is the kind of cake that sits proudly in the center of the table, inviting everyone to cut \"just one more slice.\"\n\nSimple, fresh, and wonderfully comforting, this lemon Bundt cake celebrates the little joys of homemade baking. Whether you are sharing it over coffee with friends or enjoying a quiet moment to yourself, I hope it fills your home with the same warmth, happiness, and sunshine that inspired this recipe.",
     featuredText:
       "Fresh lemon, delicate poppy seeds, and a sweet citrus glaze.",
     image: "Lemonbundt.png",
