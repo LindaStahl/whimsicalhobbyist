@@ -509,6 +509,10 @@ h3 {
   font-weight: 800;
 }
 
+.tiktok-card + .tiktok-card {
+  margin-top: 10px;
+}
+
 .tiktok-card span {
   display: grid;
   min-width: 62px;
