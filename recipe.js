@@ -54,6 +54,7 @@ function renderRecipeNotFound() {
 
 function renderRecipe(recipe) {
   document.title = `${recipe.title} | Whimsicalhobbyist`;
+  const extraSections = recipe.extraSections || [];
 
   recipePageElement.innerHTML = `
     <article class="recipe-detail">
@@ -94,6 +95,27 @@ function renderRecipe(recipe) {
         <p class="eyebrow">Whimsical tip</p>
         <p>${recipe.tip}</p>
       </section>
+
+      ${
+        extraSections.length
+          ? `
+            <div class="recipe-extra-sections">
+              ${extraSections
+                .map(
+                  (section) => `
+                    <section class="recipe-card-panel">
+                      <h2>${section.title}</h2>
+                      <ul>
+                        ${section.items.map((item) => `<li>${item}</li>`).join("")}
+                      </ul>
+                    </section>
+                  `
+                )
+                .join("")}
+            </div>
+          `
+          : ""
+      }
 
       <footer class="recipe-post-footer">
         <span>Posted ${formatDate(recipe.date)}</span>

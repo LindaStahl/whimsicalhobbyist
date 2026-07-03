@@ -1,6 +1,89 @@
 // Edit recipes here. Add, remove, or update these objects to change the site.
 const recipes = [
   {
+    slug: "vegan-carrot-cake-muffins",
+    title: "Vegan Carrot Cake Muffins with Cream Cheese Frosting & Walnuts",
+    category: "cupcakes",
+    categoryLabel: "Cupcakes",
+    badge: "New recipe",
+    date: "2026-07-03",
+    prepTime: "20 min",
+    bakeTime: "20-25 min",
+    servings: "6 large muffins or 8 medium muffins",
+    excerpt:
+      "Soft, moist, warmly spiced vegan carrot cake muffins topped with light vegan cream cheese frosting and chopped walnuts.",
+    featuredText:
+      "Warmly spiced carrot muffins with vegan cream cheese frosting and walnuts.",
+    image: "Carrotcupcake.png",
+    thumbnail: "Carrotcupcake.png",
+    alt: "Vegan carrot cake muffins with cream cheese frosting and walnuts",
+    ingredients: [
+      "For the muffins",
+      "182 g all-purpose flour",
+      "120 g brown sugar",
+      "4.4 g baking powder",
+      "5.5 g baking soda",
+      "1.7 g salt",
+      "4.6 g ground cinnamon",
+      "0.3 g ground nutmeg",
+      "0.5 g ground cloves",
+      "2.2 g vanilla extract",
+      "175 g unsweetened soy milk",
+      "103 g finely grated carrots",
+      "38.8 g sunflower oil",
+      "6.5 g apple cider vinegar",
+      "For the vegan cream cheese frosting",
+      "100 g vegan cream cheese, such as Violife, Sheese, or Mommus",
+      "150 g cold vegan whipping cream",
+      "41 g granulated sugar",
+      "5 g vanilla extract",
+      "For decorating",
+      "Chopped walnuts",
+      "Optional: lemon zest, vegan white chocolate shavings, or a sprinkle of cinnamon"
+    ],
+    method: [
+      "Prepare the batter: In a large bowl, whisk together the soy milk, vanilla extract, grated carrot, sunflower oil, and apple cider vinegar. Let the mixture rest for 5 minutes to create a vegan buttermilk.",
+      "In a separate bowl, whisk together the flour, brown sugar, baking powder, baking soda, salt, cinnamon, nutmeg, and cloves until evenly combined.",
+      "Pour the wet ingredients into the dry ingredients and gently fold together until just combined. Be careful not to overmix. A few small lumps are perfectly fine.",
+      "Bake: Preheat your oven to 175C (350F). Line a muffin tin with paper liners.",
+      "Divide the batter evenly, filling each liner about three-quarters full.",
+      "Bake for 20-25 minutes, or until a toothpick inserted into the center comes out with a few moist crumbs attached.",
+      "Let the muffins cool completely in the pan before frosting.",
+      "Make the frosting: In a mixing bowl, beat together the vegan cream cheese, sugar, and vanilla until smooth.",
+      "Add the cold vegan whipping cream and whip until the frosting becomes thick, light, and holds its shape. Refrigerate until ready to use.",
+      "Decorate: Transfer the frosting to a piping bag, or a zip-top bag with one corner snipped off.",
+      "Pipe a generous swirl of frosting onto each cooled muffin and finish with chopped walnuts.",
+      "For an extra special touch, garnish with lemon zest, vegan white chocolate shavings, or a light dusting of cinnamon."
+    ],
+    tip: "Finely grate the carrots for the softest, moistest crumb, and let the muffins cool completely before frosting.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Store the frosted muffins in an airtight container in the refrigerator for up to 5 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Unfrosted muffins can be frozen in an airtight container for up to 3 months.",
+          "Thaw overnight in the refrigerator or at room temperature before frosting and serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Finely grate the carrots for the softest, moistest crumb.",
+          "Do not overmix the batter or the muffins may become dense.",
+          "Make sure the vegan whipping cream is very cold before whipping for the fluffiest frosting.",
+          "Allow the muffins to cool completely before decorating so the frosting does not melt."
+        ]
+      }
+    ],
+    featured: true,
+    popular: true
+  },
+  {
     slug: "confetti-cloud-cake",
     title: "Confetti cloud cake",
     category: "cakes",
