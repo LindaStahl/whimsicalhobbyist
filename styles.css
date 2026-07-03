@@ -293,7 +293,7 @@ h3 {
   grid-template-columns: minmax(0, 1fr) 330px;
   gap: 42px;
   width: min(1180px, 88vw);
-  margin: 58px auto 76px;
+  margin: 32px auto 76px;
 }
 
 .section-heading {

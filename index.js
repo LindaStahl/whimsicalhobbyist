@@ -1,4 +1,3 @@
-const featuredRecipesElement = document.querySelector("#featured-recipes");
 const categoryMenuElement = document.querySelector("#category-menu");
 const filterBarElement = document.querySelector("#filter-bar");
 const recipeListElement = document.querySelector("#recipe-list");
@@ -58,27 +57,6 @@ function renderCategories() {
         >
           ${category.label}
         </button>
-      `
-    )
-    .join("");
-}
-
-function renderFeaturedRecipes() {
-  featuredRecipesElement.innerHTML = recipes
-    .filter((recipe) => recipe.featured)
-    .slice(0, 3)
-    .map(
-      (recipe) => `
-        <article class="feature-card">
-          <a href="${getRecipeUrl(recipe)}">
-            <img src="${recipe.image}" alt="${recipe.alt}" />
-          </a>
-          <div>
-            <h2>${recipe.title}</h2>
-            <p>${recipe.featuredText}</p>
-            <a href="${getRecipeUrl(recipe)}">View post</a>
-          </div>
-        </article>
       `
     )
     .join("");
@@ -210,7 +188,6 @@ document.addEventListener("click", (event) => {
 });
 
 renderCategories();
-renderFeaturedRecipes();
 renderRecipePosts();
 renderPopularPosts();
 bindCategoryFilters();
