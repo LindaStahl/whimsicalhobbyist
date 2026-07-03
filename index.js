@@ -1,5 +1,4 @@
 const categoryMenuElement = document.querySelector("#category-menu");
-const filterBarElement = document.querySelector("#filter-bar");
 const recipeListElement = document.querySelector("#recipe-list");
 const popularPostsElement = document.querySelector("#popular-posts");
 const newsletterForm = document.querySelector("#newsletter-form");
@@ -41,20 +40,6 @@ function renderCategories() {
     .map(
       (category) => `
         <button type="button" data-category-filter="${category.slug}">
-          ${category.label}
-        </button>
-      `
-    )
-    .join("");
-
-  filterBarElement.innerHTML = getCategories()
-    .map(
-      (category) => `
-        <button
-          class="filter-button"
-          type="button"
-          data-filter="${category.slug}"
-        >
           ${category.label}
         </button>
       `
@@ -113,13 +98,6 @@ function renderPopularPosts() {
 }
 
 function syncFilterControls() {
-  document.querySelectorAll(".filter-button").forEach((filterButton) => {
-    filterButton.classList.toggle(
-      "active",
-      filterButton.dataset.filter === activeFilter
-    );
-  });
-
   document.querySelectorAll("[data-category-filter]").forEach((button) => {
     button.classList.toggle(
       "active",
@@ -164,12 +142,6 @@ function applyStoredRecipeFilters() {
 function bindCategoryFilters() {
   navDropdownButton.addEventListener("click", () => {
     navDropdown.classList.toggle("open");
-  });
-
-  document.querySelectorAll(".filter-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      setActiveFilter(button.dataset.filter);
-    });
   });
 
   document.querySelectorAll("[data-category-filter]").forEach((button) => {
