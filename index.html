@@ -31,7 +31,16 @@
         <a href="#about">About</a>
         <a href="#recipes">Recipes</a>
         <a href="#popular">Popular</a>
-        <a href="#categories">Categories</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-button" type="button">Categories</button>
+          <div class="nav-dropdown-menu" aria-label="Recipe categories">
+            <button type="button" data-category-filter="all">All recipes</button>
+            <button type="button" data-category-filter="cakes">Cakes</button>
+            <button type="button" data-category-filter="cookies">Cookies</button>
+            <button type="button" data-category-filter="bread">Bread</button>
+            <button type="button" data-category-filter="no-bake">No bake</button>
+          </div>
+        </div>
         <a href="#newsletter">Newsletter</a>
       </nav>
     </header>
@@ -270,18 +279,6 @@
               <button type="submit">Subscribe</button>
               <p class="form-message" id="form-message" aria-live="polite"></p>
             </form>
-          </section>
-
-          <section class="sidebar-panel categories-panel" id="categories">
-            <h2>Categories</h2>
-            <label for="category-select">Browse by category</label>
-            <select id="category-select" class="category-select">
-              <option value="all">All recipes</option>
-              <option value="cakes">Cakes</option>
-              <option value="cookies">Cookies</option>
-              <option value="bread">Bread</option>
-              <option value="no-bake">No bake</option>
-            </select>
           </section>
         </aside>
       </section>

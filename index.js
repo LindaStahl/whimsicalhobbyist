@@ -1,12 +1,28 @@
 const filterButtons = document.querySelectorAll(".filter-button");
+const navCategoryButtons = document.querySelectorAll("[data-category-filter]");
 const recipePosts = document.querySelectorAll(".blog-post");
 const newsletterForm = document.querySelector("#newsletter-form");
 const formMessage = document.querySelector("#form-message");
 const miniSearch = document.querySelector("#mini-search");
 const searchInput = document.querySelector("#site-search");
-const categorySelect = document.querySelector("#category-select");
 
 let activeFilter = "all";
+
+function syncFilterControls() {
+  filterButtons.forEach((filterButton) => {
+    filterButton.classList.toggle(
+      "active",
+      filterButton.dataset.filter === activeFilter
+    );
+  });
+
+  navCategoryButtons.forEach((categoryButton) => {
+    categoryButton.classList.toggle(
+      "active",
+      categoryButton.dataset.categoryFilter === activeFilter
+    );
+  });
+}
 
 function updateVisiblePosts() {
   const searchTerm = searchInput.value.trim().toLowerCase();
@@ -23,29 +39,18 @@ function updateVisiblePosts() {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     activeFilter = button.dataset.filter;
-    categorySelect.value = activeFilter;
-
-    filterButtons.forEach((filterButton) => {
-      filterButton.classList.remove("active");
-    });
-
-    button.classList.add("active");
+    syncFilterControls();
     updateVisiblePosts();
   });
 });
 
-categorySelect.addEventListener("change", () => {
-  activeFilter = categorySelect.value;
-
-  filterButtons.forEach((filterButton) => {
-    filterButton.classList.toggle(
-      "active",
-      filterButton.dataset.filter === activeFilter
-    );
+navCategoryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeFilter = button.dataset.categoryFilter;
+    syncFilterControls();
+    updateVisiblePosts();
+    document.querySelector("#recipes").scrollIntoView({ behavior: "smooth" });
   });
-
-  updateVisiblePosts();
-  document.querySelector("#recipes").scrollIntoView({ behavior: "smooth" });
 });
 
 miniSearch.addEventListener("submit", (event) => {
