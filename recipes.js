@@ -213,6 +213,8 @@ const recipes = [
     servings: "16 brownies",
     excerpt:
       "Rich, intensely chocolatey vegan brownies with a shiny crackly top, whipped aquafaba, dark chocolate, and crunchy walnuts.",
+    cardText:
+      "There is something wonderfully nostalgic about brownies cooling on the kitchen counter.\n\nMaybe it is the anticipation of waiting for them to set, knowing someone will sneak a corner piece before they have fully cooled. Or the way the rich aroma of chocolate fills every room, making the whole house feel a little warmer and a little cozier.\n\nThese brownies are inspired by those simple moments - the ones where sticky fingers, shared laughs, and a glass of cold milk, or your favorite plant-based alternative, made an ordinary afternoon feel special. With their crackly top, gooey center, pockets of melted chocolate, and crunchy walnuts, they are everything a brownie should be.\n\nWhether you are baking for friends, family, or simply because you are craving chocolate, I hope these brownies become one of those recipes you will come back to again and again - the kind that creates memories as sweet as every bite.",
     featuredText:
       "Fudgy vegan brownies with dark chocolate, aquafaba, and walnuts.",
     image: "Brownie_with_walnuts.png",
