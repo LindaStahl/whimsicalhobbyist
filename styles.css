@@ -41,7 +41,7 @@ a {
 }
 
 .site-header {
-  background: rgba(255, 250, 244, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--line);
 }
 
@@ -67,17 +67,36 @@ a {
 }
 
 .brand {
-  display: block;
-  width: min(860px, 88vw);
+  display: grid;
+  justify-items: center;
+  width: min(760px, 92vw);
   margin: 0 auto;
-  padding: 0;
+  padding: 24px 0 14px;
+  text-align: center;
 }
 
-.header-logo {
-  width: 100%;
-  display: block;
-  height: auto;
-  object-fit: contain;
+.brand-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  color: var(--pink-strong);
+  font-family: "Sacramento", cursive;
+  font-size: clamp(58px, 8vw, 94px);
+  line-height: 0.88;
+}
+
+.brand-title span:last-child {
+  color: #8aa8b7;
+}
+
+.brand-tagline {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
 }
 
 .brand-mark {
@@ -99,8 +118,9 @@ a {
   justify-content: center;
   align-items: center;
   gap: 6px;
-  padding: 0 6vw 6px;
-  margin-top: -54px;
+  padding: 8px 6vw;
+  border-top: 1px solid var(--line);
+  margin-top: 0;
 }
 
 .main-nav a,
@@ -115,8 +135,11 @@ a {
   color: var(--muted);
   cursor: pointer;
   font: inherit;
+  font-size: 13px;
   font-weight: 800;
+  letter-spacing: 1px;
   padding: 0 16px;
+  text-transform: uppercase;
 }
 
 .main-nav a:hover,
@@ -753,7 +776,18 @@ footer p {
 
   .brand {
     width: min(92vw, 860px);
-    padding: 0;
+    padding: 18px 0 12px;
+  }
+
+  .brand-title {
+    font-size: clamp(48px, 16vw, 68px);
+  }
+
+  .brand-tagline {
+    max-width: 88vw;
+    font-size: 11px;
+    letter-spacing: 3px;
+    line-height: 1.6;
   }
 
   .brand-mark {
