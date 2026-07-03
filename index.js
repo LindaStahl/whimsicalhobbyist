@@ -74,7 +74,6 @@ function renderFeaturedRecipes() {
             <img src="${recipe.image}" alt="${recipe.alt}" />
           </a>
           <div>
-            <p class="eyebrow">${recipe.badge}</p>
             <h2>${recipe.title}</h2>
             <p>${recipe.featuredText}</p>
             <a href="${getRecipeUrl(recipe)}">View post</a>
