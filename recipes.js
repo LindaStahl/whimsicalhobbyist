@@ -138,6 +138,8 @@ const recipes = [
     servings: "1 loaf, about 10 slices",
     excerpt:
       "Soft, incredibly moist vegan banana bread packed with rich dark chocolate and lightly spiced with cinnamon and ginger.",
+    cardText:
+      "Banana bread has a way of making a house feel like home.\n\nIt is the recipe that rescues forgotten bananas from the fruit bowl, filling the kitchen with the comforting aroma of cinnamon, warm vanilla, and melting chocolate. The kind of smell that lingers long after the oven has cooled and quietly invites everyone to gather for \"just one slice.\"\n\nThis version is inspired by those slow afternoons when life seemed a little simpler - a warm loaf on the counter, a cozy blanket, and a cup of tea shared with someone you love. Soft, rich, and dotted with pockets of dark chocolate, it is the kind of bake that feels like a warm hug with every bite.\n\nWhether you are baking it to create new memories or relive old ones, I hope this banana bread brings a little extra comfort to your kitchen. Sometimes the sweetest moments begin with a couple of overripe bananas and the simple joy of baking something from scratch.",
     featuredText:
       "Moist banana bread with dark chocolate, cinnamon, and ginger.",
     image: "Bananabread.png",
