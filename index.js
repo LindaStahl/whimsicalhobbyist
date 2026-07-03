@@ -1,4 +1,7 @@
 const categoryMenuElement = document.querySelector("#category-menu");
+const recipeCarouselElement = document.querySelector("#recipe-carousel");
+const carouselPrevButton = document.querySelector("#carousel-prev");
+const carouselNextButton = document.querySelector("#carousel-next");
 const recipeListElement = document.querySelector("#recipe-list");
 const popularPostsElement = document.querySelector("#popular-posts");
 const newsletterForm = document.querySelector("#newsletter-form");
@@ -42,6 +45,23 @@ function renderCategories() {
         <button type="button" data-category-filter="${category.slug}">
           ${category.label}
         </button>
+      `
+    )
+    .join("");
+}
+
+function renderRecipeCarousel() {
+  recipeCarouselElement.innerHTML = recipes
+    .slice(0, 6)
+    .map(
+      (recipe) => `
+        <a class="carousel-card" href="${getRecipeUrl(recipe)}">
+          <img src="${recipe.image}" alt="${recipe.alt}" />
+          <span>
+            <small>${recipe.categoryLabel}</small>
+            ${recipe.title}
+          </span>
+        </a>
       `
     )
     .join("");
@@ -95,6 +115,21 @@ function renderPopularPosts() {
       `
     )
     .join("");
+}
+
+function bindRecipeCarousel() {
+  const scrollCarousel = (direction) => {
+    const card = recipeCarouselElement.querySelector(".carousel-card");
+    const cardWidth = card ? card.offsetWidth : 280;
+
+    recipeCarouselElement.scrollBy({
+      left: direction * (cardWidth + 18),
+      behavior: "smooth"
+    });
+  };
+
+  carouselPrevButton.addEventListener("click", () => scrollCarousel(-1));
+  carouselNextButton.addEventListener("click", () => scrollCarousel(1));
 }
 
 function syncFilterControls() {
@@ -160,9 +195,11 @@ document.addEventListener("click", (event) => {
 });
 
 renderCategories();
+renderRecipeCarousel();
 renderRecipePosts();
 renderPopularPosts();
 bindCategoryFilters();
+bindRecipeCarousel();
 applyStoredRecipeFilters();
 setActiveFilter(activeFilter);
 
