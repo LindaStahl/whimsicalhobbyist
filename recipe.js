@@ -52,6 +52,76 @@ function renderRecipeNotFound() {
   `;
 }
 
+function parseIngredientAmount(amount) {
+  if (amount.includes(" ")) {
+    const [whole, fraction] = amount.split(" ");
+    const [numerator, denominator] = fraction.split("/");
+
+    return Number(whole) + Number(numerator) / Number(denominator);
+  }
+
+  if (amount.includes("/")) {
+    const [numerator, denominator] = amount.split("/");
+
+    return Number(numerator) / Number(denominator);
+  }
+
+  return Number(amount);
+}
+
+function formatScaledAmount(amount) {
+  const rounded = Math.round(amount * 100) / 100;
+
+  if (Number.isInteger(rounded)) {
+    return String(rounded);
+  }
+
+  return String(rounded).replace(/\.0+$/, "");
+}
+
+function scaleIngredient(ingredient, scale) {
+  const match = ingredient.match(/^(\d+(?:\.\d+)?(?:\s+\d+\/\d+)?|\d+\/\d+)(.*)$/);
+
+  if (!match) {
+    return ingredient;
+  }
+
+  const amount = parseIngredientAmount(match[1]);
+
+  if (!Number.isFinite(amount)) {
+    return ingredient;
+  }
+
+  return `${formatScaledAmount(amount * scale)}${match[2]}`;
+}
+
+function renderIngredients(recipe, scale = 1) {
+  return recipe.ingredients
+    .map((ingredient) => {
+      const isHeading = ingredient.toLowerCase().startsWith("for ");
+      const scaledIngredient = scaleIngredient(ingredient, scale);
+
+      return `<li class="${isHeading ? "ingredient-heading" : ""}">${scaledIngredient}</li>`;
+    })
+    .join("");
+}
+
+function bindIngredientScaler(recipe) {
+  const ingredientsList = document.querySelector("#ingredients-list");
+
+  document.querySelectorAll("[data-recipe-scale]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const scale = Number(button.dataset.recipeScale);
+
+      document.querySelectorAll("[data-recipe-scale]").forEach((scaleButton) => {
+        scaleButton.classList.toggle("active", scaleButton === button);
+      });
+
+      ingredientsList.innerHTML = renderIngredients(recipe, scale);
+    });
+  });
+}
+
 function renderRecipe(recipe) {
   document.title = `${recipe.title} | Whimsicalhobbyist`;
   const extraSections = recipe.extraSections || [];
@@ -76,10 +146,15 @@ function renderRecipe(recipe) {
       <div class="recipe-detail-body">
         <section class="recipe-card-panel">
           <h2>Ingredients</h2>
-          <ul>
-            ${recipe.ingredients
-              .map((ingredient) => `<li>${ingredient}</li>`)
-              .join("")}
+          <div class="ingredient-scaler" aria-label="Scale recipe ingredients">
+            <span>Batch size</span>
+            <button type="button" data-recipe-scale="0.5">1/2x</button>
+            <button class="active" type="button" data-recipe-scale="1">1x</button>
+            <button type="button" data-recipe-scale="2">2x</button>
+            <button type="button" data-recipe-scale="3">3x</button>
+          </div>
+          <ul id="ingredients-list">
+            ${renderIngredients(recipe)}
           </ul>
         </section>
 
@@ -123,6 +198,8 @@ function renderRecipe(recipe) {
       </footer>
     </article>
   `;
+
+  bindIngredientScaler(recipe);
 }
 
 function getSelectedRecipe() {
