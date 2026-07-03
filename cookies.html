@@ -11,58 +11,40 @@
     />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Recipe | Whimsicalhobbyist</title>
+    <title>Cookies | Whimsicalhobbyist</title>
   </head>
-  <body>
+  <body data-page-type="category" data-category="cookies">
     <header class="site-header">
       <a href="index.html" class="brand" aria-label="Whimsicalhobbyist home">
-        <span class="brand-title">
-          <span>Whimsical</span>
-          <span>Hobbyist</span>
-        </span>
+        <span class="brand-title"><span>Whimsical</span><span>Hobbyist</span></span>
         <span class="brand-tagline">Bake | Read | Create | Live Whimsically</span>
       </a>
-
       <nav class="main-nav" aria-label="Main navigation">
         <a href="about.html">About</a>
         <div class="nav-dropdown">
           <button class="nav-dropdown-button" type="button">Recipes</button>
-          <div
-            class="nav-dropdown-menu"
-            id="category-menu"
-            aria-label="Recipe categories"
-          ></div>
+          <div class="nav-dropdown-menu" id="category-menu" aria-label="Recipe categories"></div>
         </div>
         <a href="popular-recipes.html">Popular Recipes</a>
         <a href="order-my-ebook.html">Order my Ebook</a>
         <a href="sign-up.html">Sign up</a>
         <form class="mini-search" id="mini-search">
-          <input
-            id="site-search"
-            type="search"
-            placeholder="Search bakes"
-            aria-label="Search recipes"
-          />
+          <input id="site-search" type="search" placeholder="Search bakes" aria-label="Search recipes" />
         </form>
       </nav>
     </header>
-
-    <main class="recipe-page" id="recipe-page"></main>
-
+    <main class="landing-page">
+      <section class="landing-hero">
+        <h1>Cookies</h1>
+        <p>Fudgy, chewy, chocolatey cookies made for sharing, gifting, and sneaking warm from the tray.</p>
+      </section>
+      <div id="landing-recipe-list"></div>
+    </main>
     <footer>
-      <div class="footer-brand">
-        <img
-          src="favicon.png"
-          alt=""
-          class="footer-favicon"
-          aria-hidden="true"
-        />
-        <span>Whimsicalhobbyist</span>
-      </div>
+      <div class="footer-brand"><img src="favicon.png" alt="" class="footer-favicon" aria-hidden="true" /><span>Whimsicalhobbyist</span></div>
       <p>Pastel baking, cozy hobbies, and sweet recipes from my TikTok kitchen.</p>
     </footer>
-
     <script src="recipes.js"></script>
-    <script src="recipe.js"></script>
+    <script src="landing.js"></script>
   </body>
 </html>

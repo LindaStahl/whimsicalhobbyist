@@ -5,12 +5,12 @@ const searchInput = document.querySelector("#site-search");
 const navDropdown = document.querySelector(".nav-dropdown");
 const navDropdownButton = document.querySelector(".nav-dropdown-button");
 const menuCategories = [
-  { slug: "cakes", label: "Cakes" },
-  { slug: "cupcakes", label: "Cupcakes" },
-  { slug: "cookies", label: "Cookies" },
-  { slug: "bars", label: "Bars" },
-  { slug: "creams", label: "Creams" },
-  { slug: "no-bake", label: "No Bake" }
+  { slug: "cakes", label: "Cakes", href: "cakes.html" },
+  { slug: "cupcakes", label: "Cupcakes", href: "cupcakes.html" },
+  { slug: "cookies", label: "Cookies", href: "cookies.html" },
+  { slug: "bars", label: "Bars", href: "bars.html" },
+  { slug: "creams", label: "Creams", href: "creams.html" },
+  { slug: "no-bake", label: "No Bake", href: "no-bake.html" }
 ];
 
 function getRecipeUrl(recipe) {
@@ -35,7 +35,7 @@ function renderCategoryMenu() {
   categoryMenuElement.innerHTML = getCategories()
     .map(
       (category) => `
-        <a href="index.html#recipes" data-category-filter="${category.slug}">
+        <a href="${category.href}" data-category-filter="${category.slug}">
           ${category.label}
         </a>
       `

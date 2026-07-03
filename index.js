@@ -13,12 +13,12 @@ const navDropdownButton = document.querySelector(".nav-dropdown-button");
 
 let activeFilter = "all";
 const menuCategories = [
-  { slug: "cakes", label: "Cakes", categories: ["cakes"] },
-  { slug: "cupcakes", label: "Cupcakes", categories: ["cupcakes"] },
-  { slug: "cookies", label: "Cookies", categories: ["cookies"] },
-  { slug: "bars", label: "Bars", categories: ["bars"] },
-  { slug: "creams", label: "Creams", categories: ["basics", "creams"] },
-  { slug: "no-bake", label: "No Bake", categories: ["no-bake"] }
+  { slug: "cakes", label: "Cakes", href: "cakes.html", categories: ["cakes"] },
+  { slug: "cupcakes", label: "Cupcakes", href: "cupcakes.html", categories: ["cupcakes"] },
+  { slug: "cookies", label: "Cookies", href: "cookies.html", categories: ["cookies"] },
+  { slug: "bars", label: "Bars", href: "bars.html", categories: ["bars"] },
+  { slug: "creams", label: "Creams", href: "creams.html", categories: ["basics", "creams"] },
+  { slug: "no-bake", label: "No Bake", href: "no-bake.html", categories: ["no-bake"] }
 ];
 
 function getRecipeUrl(recipe) {
@@ -42,9 +42,9 @@ function renderCategories() {
   categoryMenuElement.innerHTML = getCategories()
     .map(
       (category) => `
-        <button type="button" data-category-filter="${category.slug}">
+        <a href="${category.href}" data-category-filter="${category.slug}">
           ${category.label}
-        </button>
+        </a>
       `
     )
     .join("");
@@ -183,11 +183,9 @@ function bindCategoryFilters() {
     navDropdown.classList.toggle("open");
   });
 
-  document.querySelectorAll("[data-category-filter]").forEach((button) => {
-    button.addEventListener("click", () => {
-      setActiveFilter(button.dataset.categoryFilter);
+  document.querySelectorAll("[data-category-filter]").forEach((link) => {
+    link.addEventListener("click", () => {
       navDropdown.classList.remove("open");
-      document.querySelector("#recipes").scrollIntoView({ behavior: "smooth" });
     });
   });
 }
