@@ -2,7 +2,7 @@
 const recipes = [
   {
     slug: "vegan-carrot-cake-muffins",
-    title: "Vegan Carrot Cake Muffins with Cream Cheese Frosting & Walnuts",
+    title: "Carrot Cake Cupcakes",
     category: "cupcakes",
     categoryLabel: "Cupcakes",
     badge: "New recipe",
