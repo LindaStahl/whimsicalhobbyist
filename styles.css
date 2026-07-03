@@ -68,7 +68,7 @@ a {
 
 .brand {
   display: block;
-  width: min(1120px, 92vw);
+  width: min(860px, 88vw);
   margin: 0 auto;
   padding: 0;
 }
@@ -702,7 +702,7 @@ footer p {
   }
 
   .brand {
-    width: min(96vw, 1120px);
+    width: min(92vw, 860px);
     padding: 0;
   }
 
