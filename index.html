@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Whimsicalhobbyist Baking Recipes</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-bar">
+        <a href="#" class="social-link">@Whimsicalhobbyist</a>
+        <form class="mini-search" id="mini-search">
+          <label for="site-search">Search</label>
+          <input id="site-search" type="search" placeholder="Search bakes" />
+        </form>
+      </div>
+
+      <a href="#" class="brand" aria-label="Whimsicalhobbyist home">
+        <span class="brand-mark">W</span>
+        <span>Whimsicalhobbyist</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#popular">Popular</a>
+        <a href="#categories">Categories</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="featured-strip" aria-label="Featured recipes">
+        <article class="feature-card">
+          <img
+            src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=80"
+            alt="Pastel layered cake with sprinkles"
+          />
+          <div>
+            <p class="eyebrow">TikTok favorite</p>
+            <h2>Confetti cloud cake</h2>
+            <p>Vanilla layers, pastel sprinkles, and soft whipped frosting.</p>
+            <a href="#recipes">View post</a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img
+            src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80"
+            alt="Cupcakes with pastel frosting"
+          />
+          <div>
+            <p class="eyebrow">Cupcakes</p>
+            <h2>Blueberry cream cupcakes</h2>
+            <p>Fluffy cakes crowned with pale blue berry buttercream.</p>
+            <a href="#recipes">View post</a>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img
+            src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=80"
+            alt="Fresh chocolate chip cookies"
+          />
+          <div>
+            <p class="eyebrow">Cookies</p>
+            <h2>Brown butter bakery cookies</h2>
+            <p>Chewy centers, crisp edges, and dreamy chocolate pools.</p>
+            <a href="#recipes">View post</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="page-shell">
+        <section class="post-feed" id="recipes" aria-label="Latest recipes">
+          <div class="section-heading">
+            <p class="eyebrow">Latest recipes</p>
+            <h1>Pastel bakes from my cozy kitchen</h1>
+            <p>
+              Recipes inspired by Whimsicalhobbyist TikToks, written out with
+              steps, tips, timings, and all the little details that make a bake
+              feel magical.
+            </p>
+          </div>
+
+          <div class="filter-bar" aria-label="Recipe filters">
+            <button class="filter-button active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="filter-button" type="button" data-filter="cakes">
+              Cakes
+            </button>
+            <button class="filter-button" type="button" data-filter="cookies">
+              Cookies
+            </button>
+            <button class="filter-button" type="button" data-filter="bread">
+              Bread
+            </button>
+            <button class="filter-button" type="button" data-filter="no-bake">
+              No bake
+            </button>
+          </div>
+
+          <article class="blog-post" data-category="cakes">
+            <a href="#" class="post-image">
+              <img
+                src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=80"
+                alt="Pastel layered cake with sprinkles"
+              />
+            </a>
+            <div class="post-content">
+              <time datetime="2026-07-03">
+                <span>03</span>
+                Jul 2026
+              </time>
+              <p class="eyebrow">Cakes</p>
+              <h2>Confetti cloud cake</h2>
+              <p>
+                A soft vanilla layer cake with rainbow sprinkles folded into
+                the batter, covered in whipped pastel frosting and finished with
+                a playful sprinkle shower.
+              </p>
+              <a class="read-more" href="#">View post</a>
+            </div>
+          </article>
+
+          <article class="blog-post" data-category="cookies">
+            <a href="#" class="post-image">
+              <img
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1000&q=80"
+                alt="Fresh chocolate chip cookies"
+              />
+            </a>
+            <div class="post-content">
+              <time datetime="2026-06-29">
+                <span>29</span>
+                Jun 2026
+              </time>
+              <p class="eyebrow">Cookies</p>
+              <h2>Brown butter bakery cookies</h2>
+              <p>
+                Deeply golden, chewy cookies with crisp edges, a nutty brown
+                butter base, and pools of chocolate tucked into every bite.
+              </p>
+              <a class="read-more" href="#">View post</a>
+            </div>
+          </article>
+
+          <article class="blog-post" data-category="bread">
+            <a href="#" class="post-image">
+              <img
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80"
+                alt="Fresh bread loaves on a table"
+              />
+            </a>
+            <div class="post-content">
+              <time datetime="2026-06-24">
+                <span>24</span>
+                Jun 2026
+              </time>
+              <p class="eyebrow">Bread</p>
+              <h2>Honey milk bread</h2>
+              <p>
+                A golden, soft loaf with a plush crumb and gentle honey flavor,
+                perfect for toast, jam, or thick slices still warm from the oven.
+              </p>
+              <a class="read-more" href="#">View post</a>
+            </div>
+          </article>
+
+          <article class="blog-post" data-category="no-bake">
+            <a href="#" class="post-image">
+              <img
+                src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1000&q=80"
+                alt="Berry dessert cups"
+              />
+            </a>
+            <div class="post-content">
+              <time datetime="2026-06-18">
+                <span>18</span>
+                Jun 2026
+              </time>
+              <p class="eyebrow">No bake</p>
+              <h2>Strawberry cream dessert cups</h2>
+              <p>
+                Buttery biscuit crumbs, whipped vanilla cream, and glossy
+                strawberry layers stacked into tiny pastel dessert cups.
+              </p>
+              <a class="read-more" href="#">View post</a>
+            </div>
+          </article>
+        </section>
+
+        <aside class="sidebar" aria-label="Blog sidebar">
+          <section class="sidebar-panel" id="popular">
+            <h2>Popular posts</h2>
+            <a class="mini-post" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=400&q=80"
+                alt="Pastel cupcakes"
+              />
+              <span>
+                <small>Cupcakes</small>
+                Blueberry cream cupcakes
+              </span>
+            </a>
+            <a class="mini-post" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1464195244916-405fa0a82545?auto=format&fit=crop&w=400&q=80"
+                alt="Lemon cake"
+              />
+              <span>
+                <small>Cakes</small>
+                Lemon crumb muffins
+              </span>
+            </a>
+            <a class="mini-post" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1514517604298-cf80e0fb7f1e?auto=format&fit=crop&w=400&q=80"
+                alt="Pink macarons"
+              />
+              <span>
+                <small>Basics</small>
+                Pastel buttercream guide
+              </span>
+            </a>
+          </section>
+
+          <section class="sidebar-panel about-panel" id="about">
+            <h2>Hi, I am Whimsicalhobbyist</h2>
+            <img
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80"
+              alt="Baker decorating pastries"
+            />
+            <p>
+              Welcome to my pastel recipe home. This is where my TikTok bakes
+              become easy-to-follow recipes, cozy notes, and sweet hobby ideas.
+            </p>
+          </section>
+
+          <section class="sidebar-panel tiktok-panel">
+            <h2>Follow on TikTok</h2>
+            <a
+              class="tiktok-card"
+              href="https://www.tiktok.com/@whimsicalhobbyist"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>TikTok</span>
+              @Whimsicalhobbyist
+            </a>
+          </section>
+
+          <section class="sidebar-panel newsletter-panel" id="newsletter">
+            <h2>Sign up</h2>
+            <p>Get new recipes and pastel kitchen notes in your inbox.</p>
+            <form class="newsletter-form" id="newsletter-form">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                required
+              />
+              <button type="submit">Subscribe</button>
+              <p class="form-message" id="form-message" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <section class="sidebar-panel categories-panel" id="categories">
+            <h2>Categories</h2>
+            <div class="category-list">
+              <a href="#recipes">Cakes</a>
+              <a href="#recipes">Cookies</a>
+              <a href="#recipes">Bread</a>
+              <a href="#recipes">No bake</a>
+              <a href="#recipes">Cupcakes</a>
+              <a href="#recipes">Basics</a>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="brand-mark">W</span>
+        <span>Whimsicalhobbyist</span>
+      </div>
+      <p>Pastel baking, cozy hobbies, and sweet recipes from my TikTok kitchen.</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
