@@ -96,9 +96,14 @@ function scaleIngredient(ingredient, scale) {
 }
 
 function renderIngredients(recipe, scale = 1) {
+  const ingredientHeadings = ["cupcake batter", "frosting", "decoration"];
+
   return recipe.ingredients
     .map((ingredient) => {
-      const isHeading = ingredient.toLowerCase().startsWith("for ");
+      const normalizedIngredient = ingredient.toLowerCase();
+      const isHeading =
+        normalizedIngredient.startsWith("for ") ||
+        ingredientHeadings.includes(normalizedIngredient);
       const scaledIngredient = scaleIngredient(ingredient, scale);
 
       return `<li class="${isHeading ? "ingredient-heading" : ""}">${scaledIngredient}</li>`;
