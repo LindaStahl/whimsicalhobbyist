@@ -6,12 +6,17 @@ const recipeListElement = document.querySelector("#recipe-list");
 const popularPostsElement = document.querySelector("#popular-posts");
 const newsletterForm = document.querySelector("#newsletter-form");
 const formMessage = document.querySelector("#form-message");
-const miniSearch = document.querySelector("#mini-search");
-const searchInput = document.querySelector("#site-search");
 const navDropdown = document.querySelector(".nav-dropdown");
 const navDropdownButton = document.querySelector(".nav-dropdown-button");
 
 let activeFilter = "all";
+const menuCategories = [
+  { slug: "cakes", label: "Cakes", categories: ["cakes", "cupcakes"] },
+  { slug: "cookies", label: "Cookies", categories: ["cookies"] },
+  { slug: "bars", label: "Bars", categories: ["bars"] },
+  { slug: "creams", label: "Creams", categories: ["basics", "creams"] },
+  { slug: "no-bake", label: "No Bake", categories: ["no-bake"] }
+];
 
 function getRecipeUrl(recipe) {
   return `recipe.html?recipe=${recipe.slug}`;
@@ -27,15 +32,7 @@ function formatDate(dateValue) {
 }
 
 function getCategories() {
-  const categories = recipes.map((recipe) => ({
-    slug: recipe.category,
-    label: recipe.categoryLabel
-  }));
-  const uniqueCategories = new Map(
-    categories.map((category) => [category.slug, category])
-  );
-
-  return [{ slug: "all", label: "All recipes" }, ...uniqueCategories.values()];
+  return menuCategories;
 }
 
 function renderCategories() {
@@ -142,14 +139,16 @@ function syncFilterControls() {
 }
 
 function updateVisiblePosts() {
-  const searchTerm = searchInput.value.trim().toLowerCase();
+  const activeCategory = getCategories().find(
+    (category) => category.slug === activeFilter
+  );
 
   document.querySelectorAll(".blog-post").forEach((post) => {
     const matchesFilter =
-      activeFilter === "all" || post.dataset.category === activeFilter;
-    const matchesSearch = post.textContent.toLowerCase().includes(searchTerm);
+      activeFilter === "all" ||
+      activeCategory?.categories.includes(post.dataset.category);
 
-    post.classList.toggle("hidden", !matchesFilter || !matchesSearch);
+    post.classList.toggle("hidden", !matchesFilter);
   });
 }
 
@@ -161,12 +160,6 @@ function setActiveFilter(filter) {
 
 function applyStoredRecipeFilters() {
   const storedCategory = sessionStorage.getItem("whimsicalCategory");
-  const storedSearch = sessionStorage.getItem("whimsicalSearch");
-
-  if (storedSearch) {
-    searchInput.value = storedSearch;
-    sessionStorage.removeItem("whimsicalSearch");
-  }
 
   if (storedCategory) {
     activeFilter = storedCategory;
@@ -202,14 +195,6 @@ bindCategoryFilters();
 bindRecipeCarousel();
 applyStoredRecipeFilters();
 setActiveFilter(activeFilter);
-
-miniSearch.addEventListener("submit", (event) => {
-  event.preventDefault();
-  updateVisiblePosts();
-  document.querySelector("#recipes").scrollIntoView({ behavior: "smooth" });
-});
-
-searchInput.addEventListener("input", updateVisiblePosts);
 
 newsletterForm.addEventListener("submit", (event) => {
   event.preventDefault();

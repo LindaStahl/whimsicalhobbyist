@@ -1,9 +1,14 @@
 const recipePageElement = document.querySelector("#recipe-page");
 const categoryMenuElement = document.querySelector("#category-menu");
-const miniSearch = document.querySelector("#mini-search");
-const searchInput = document.querySelector("#site-search");
 const navDropdown = document.querySelector(".nav-dropdown");
 const navDropdownButton = document.querySelector(".nav-dropdown-button");
+const menuCategories = [
+  { slug: "cakes", label: "Cakes" },
+  { slug: "cookies", label: "Cookies" },
+  { slug: "bars", label: "Bars" },
+  { slug: "creams", label: "Creams" },
+  { slug: "no-bake", label: "No Bake" }
+];
 
 function getRecipeUrl(recipe) {
   return `recipe.html?recipe=${recipe.slug}`;
@@ -20,15 +25,7 @@ function formatDate(dateValue) {
 }
 
 function getCategories() {
-  const categories = recipes.map((recipe) => ({
-    slug: recipe.category,
-    label: recipe.categoryLabel
-  }));
-  const uniqueCategories = new Map(
-    categories.map((category) => [category.slug, category])
-  );
-
-  return [{ slug: "all", label: "All recipes" }, ...uniqueCategories.values()];
+  return menuCategories;
 }
 
 function renderCategoryMenu() {
@@ -245,10 +242,4 @@ document.addEventListener("click", (event) => {
   if (!navDropdown.contains(event.target)) {
     navDropdown.classList.remove("open");
   }
-});
-
-miniSearch.addEventListener("submit", (event) => {
-  event.preventDefault();
-  sessionStorage.setItem("whimsicalSearch", searchInput.value.trim());
-  window.location.href = "index.html#recipes";
 });
