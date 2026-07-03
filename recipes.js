@@ -324,6 +324,85 @@ const recipes = [
     popular: true
   },
   {
+    slug: "homemade-vegan-nutella",
+    title: "Homemade Vegan Nutella",
+    category: "basics",
+    categoryLabel: "Basics",
+    badge: "Basics",
+    date: "2026-07-03",
+    prepTime: "15 min",
+    bakeTime: "10 min chill",
+    servings: "Approximately 350 g",
+    excerpt:
+      "Creamy, rich, and irresistibly chocolatey vegan Nutella made with roasted hazelnuts, cashews, cocoa, and vegan milk chocolate.",
+    featuredText:
+      "Smooth chocolate-hazelnut spread for toast, pancakes, oatmeal, and spoonfuls.",
+    image: "Nutella.png",
+    thumbnail: "Nutella.png",
+    alt: "Homemade vegan Nutella chocolate hazelnut spread",
+    ingredients: [
+      "162 g roasted, peeled hazelnuts",
+      "41 g roasted cashews",
+      "18 g unsweetened cocoa powder",
+      "40 g vegan milk chocolate, chopped, such as Vantastic Foods",
+      "26 g melted coconut oil",
+      "58 g powdered sugar",
+      "1 g salt"
+    ],
+    method: [
+      "Blend the nuts: Add the roasted hazelnuts, roasted cashews, and melted coconut oil to a high-powered food processor.",
+      "Blend until the mixture becomes completely smooth and creamy. Depending on your food processor, this may take 5-10 minutes. Stop occasionally to scrape down the sides of the bowl.",
+      "Add the chocolate: Add the cocoa powder, chopped vegan milk chocolate, powdered sugar, and salt.",
+      "Blend again until everything is fully incorporated and silky smooth, scraping down the bowl as needed.",
+      "Chill: Transfer the spread to a clean jar or airtight container.",
+      "Refrigerate for 10 minutes to allow it to thicken slightly.",
+      "Now comes the best part: grab a spoon and enjoy."
+    ],
+    tip: "For an even creamier spread, blend a little longer so the natural oils from the nuts continue to release.",
+    extraSections: [
+      {
+        title: "Serving suggestions",
+        items: [
+          "Toast or fresh bread",
+          "Pancakes and waffles",
+          "Crepes",
+          "Croissants",
+          "Banana slices",
+          "Fresh strawberries",
+          "Oatmeal",
+          "Ice cream",
+          "Brownies and cupcakes",
+          "Straight from the jar"
+        ]
+      },
+      {
+        title: "Storage",
+        items: [
+          "Store in an airtight container in the refrigerator for up to 1 week."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze in a sealed airtight container for up to 3 months.",
+          "Thaw overnight in the refrigerator and stir well before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Roasting the hazelnuts brings out their rich, nutty flavor and makes the spread extra aromatic.",
+          "If your hazelnuts still have skins, rub them in a clean kitchen towel after roasting to remove most of the skins.",
+          "A high-powered food processor works best for achieving an ultra-smooth texture.",
+          "For an even creamier spread, blend a little longer. The natural oils from the nuts will continue to release.",
+          "Store at room temperature for about 15 minutes before serving if you prefer a softer, more spreadable consistency."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
     slug: "brown-butter-bakery-cookies",
     title: "Brown butter bakery cookies",
     category: "cookies",
