@@ -133,6 +133,22 @@ function renderMethodStep(step) {
   return `<li class="${isHeading ? "method-heading ingredient-heading" : ""}">${step}</li>`;
 }
 
+function renderMethodSteps(method) {
+  let shouldResetCounter = true;
+
+  return method
+    .map((step) => {
+      const renderedStep = renderMethodStep(step);
+      const isHeading = renderedStep.includes("method-heading");
+      const resetAttribute = shouldResetCounter && !isHeading ? ' value="1"' : "";
+
+      shouldResetCounter = isHeading;
+
+      return renderedStep.replace("<li", `<li${resetAttribute}`);
+    })
+    .join("");
+}
+
 function bindIngredientScaler(recipe) {
   const ingredientsList = document.querySelector("#ingredients-list");
 
@@ -188,7 +204,7 @@ function renderRecipe(recipe) {
         <section class="recipe-card-panel">
           <h2>Method</h2>
           <ol>
-            ${recipe.method.map((step) => renderMethodStep(step)).join("")}
+            ${renderMethodSteps(recipe.method)}
           </ol>
         </section>
       </div>
