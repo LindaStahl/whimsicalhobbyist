@@ -121,6 +121,18 @@ function renderIngredients(recipe, scale = 1) {
     .join("");
 }
 
+function renderMethodStep(step) {
+  const methodHeadings = [
+    "prepare the apple filling",
+    "make the crumble",
+    "assemble",
+    "make the vanilla custard"
+  ];
+  const isHeading = methodHeadings.includes(step.toLowerCase());
+
+  return `<li class="${isHeading ? "method-heading ingredient-heading" : ""}">${step}</li>`;
+}
+
 function bindIngredientScaler(recipe) {
   const ingredientsList = document.querySelector("#ingredients-list");
 
@@ -176,7 +188,7 @@ function renderRecipe(recipe) {
         <section class="recipe-card-panel">
           <h2>Method</h2>
           <ol>
-            ${recipe.method.map((step) => `<li>${step}</li>`).join("")}
+            ${recipe.method.map((step) => renderMethodStep(step)).join("")}
           </ol>
         </section>
       </div>

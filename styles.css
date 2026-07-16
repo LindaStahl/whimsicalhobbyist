@@ -751,6 +751,10 @@ h3 {
   list-style: none;
 }
 
+.method-heading {
+  margin-left: -22px;
+}
+
 .ingredient-heading:first-child {
   margin-top: 0;
 }
