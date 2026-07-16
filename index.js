@@ -18,11 +18,16 @@ const menuCategories = [
   { slug: "cookies", label: "Cookies", href: "cookies.html", categories: ["cookies"] },
   { slug: "bars", label: "Bars", href: "bars.html", categories: ["bars"] },
   { slug: "creams", label: "Creams", href: "creams.html", categories: ["basics", "creams"] },
-  { slug: "no-bake", label: "No Bake", href: "no-bake.html", categories: ["no-bake"] }
+  { slug: "no-bake", label: "No Bake", href: "no-bake.html", categories: ["no-bake"] },
+  { slug: "glutenfree", label: "Gluten-Free", href: "glutenfree.html", categories: ["glutenfree"] }
 ];
 
 function getRecipeUrl(recipe) {
   return `recipe.html?recipe=${recipe.slug}`;
+}
+
+function getRecipeCategories(recipe) {
+  return recipe.categories || [recipe.category];
 }
 
 function formatDate(dateValue) {
@@ -74,7 +79,7 @@ function renderRecipePosts() {
       const cardText = recipe.cardText || recipe.excerpt;
 
       return `
-        <article class="blog-post" data-category="${recipe.category}">
+        <article class="blog-post" data-category="${recipe.category}" data-categories="${getRecipeCategories(recipe).join(" ")}">
           <a href="${getRecipeUrl(recipe)}" class="post-image">
             <img src="${recipe.image}" alt="${recipe.alt}" />
           </a>
@@ -150,7 +155,9 @@ function updateVisiblePosts() {
   document.querySelectorAll(".blog-post").forEach((post) => {
     const matchesFilter =
       activeFilter === "all" ||
-      activeCategory?.categories.includes(post.dataset.category);
+      activeCategory?.categories.some((category) =>
+        post.dataset.categories.split(" ").includes(category)
+      );
     const matchesSearch = post.textContent.toLowerCase().includes(searchTerm);
 
     post.classList.toggle("hidden", !matchesFilter || !matchesSearch);

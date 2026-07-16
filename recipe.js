@@ -10,7 +10,8 @@ const menuCategories = [
   { slug: "cookies", label: "Cookies", href: "cookies.html" },
   { slug: "bars", label: "Bars", href: "bars.html" },
   { slug: "creams", label: "Creams", href: "creams.html" },
-  { slug: "no-bake", label: "No Bake", href: "no-bake.html" }
+  { slug: "no-bake", label: "No Bake", href: "no-bake.html" },
+  { slug: "glutenfree", label: "Gluten-Free", href: "glutenfree.html" }
 ];
 
 function getRecipeUrl(recipe) {
@@ -98,7 +99,14 @@ function scaleIngredient(ingredient, scale) {
 }
 
 function renderIngredients(recipe, scale = 1) {
-  const ingredientHeadings = ["cupcake batter", "frosting", "decoration"];
+  const ingredientHeadings = [
+    "cupcake batter",
+    "frosting",
+    "decoration",
+    "apple filling",
+    "crumble topping",
+    "homemade vanilla custard"
+  ];
 
   return recipe.ingredients
     .map((ingredient) => {

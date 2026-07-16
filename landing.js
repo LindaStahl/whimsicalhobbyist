@@ -13,11 +13,16 @@ const menuCategories = [
   { slug: "cookies", label: "Cookies", href: "cookies.html", categories: ["cookies"] },
   { slug: "bars", label: "Bars", href: "bars.html", categories: ["bars"] },
   { slug: "creams", label: "Creams", href: "creams.html", categories: ["basics", "creams"] },
-  { slug: "no-bake", label: "No Bake", href: "no-bake.html", categories: ["no-bake"] }
+  { slug: "no-bake", label: "No Bake", href: "no-bake.html", categories: ["no-bake"] },
+  { slug: "glutenfree", label: "Gluten-Free", href: "glutenfree.html", categories: ["glutenfree"] }
 ];
 
 function getRecipeUrl(recipe) {
   return `recipe.html?recipe=${recipe.slug}`;
+}
+
+function getRecipeCategories(recipe) {
+  return recipe.categories || [recipe.category];
 }
 
 function formatDate(dateValue) {
@@ -62,7 +67,7 @@ function renderRecipeCards(recipeSet) {
       const cardText = recipe.cardText || recipe.excerpt;
 
       return `
-        <article class="blog-post" data-category="${recipe.category}">
+        <article class="blog-post" data-category="${recipe.category}" data-categories="${getRecipeCategories(recipe).join(" ")}">
           <a href="${getRecipeUrl(recipe)}" class="post-image">
             <img src="${recipe.image}" alt="${recipe.alt}" />
           </a>
@@ -102,7 +107,11 @@ function renderLandingRecipes() {
 
   const category = menuCategories.find((item) => item.slug === categorySlug);
   const categoryRecipes = category
-    ? recipes.filter((recipe) => category.categories.includes(recipe.category))
+    ? recipes.filter((recipe) =>
+        category.categories.some((categoryName) =>
+          getRecipeCategories(recipe).includes(categoryName)
+        )
+      )
     : recipes;
 
   renderRecipeCards(categoryRecipes);

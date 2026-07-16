@@ -1,6 +1,104 @@
 // Edit recipes here. Add, remove, or update these objects to change the site.
 const recipes = [
   {
+    slug: "vegan-apple-crumble",
+    title: "Vegan Apple Crumble",
+    category: "cakes",
+    categories: ["cakes", "glutenfree"],
+    categoryLabel: "Cakes",
+    badge: "Gluten-free option",
+    date: "2026-07-16",
+    prepTime: "20 min",
+    bakeTime: "40 min",
+    servings: "8-10 servings",
+    excerpt:
+      "Warm, cozy vegan apple crumble with tender cinnamon-spiced apples, a buttery oat topping, and silky homemade vanilla custard.",
+    cardText:
+      "Apple crumble has a way of slowing everything down.\n\nIt is the dessert that fills the house with the comforting scent of cinnamon and baked apples, drawing everyone into the kitchen before it is even out of the oven. There was always something special about watching that golden crumble turn crisp while the fruit bubbled underneath, knowing that dessert would be served warm with plenty of creamy vanilla custard.\n\nThis recipe celebrates those simple, comforting moments - the kind where conversations linger a little longer around the table and second helpings are almost guaranteed. Soft, spiced apples, a buttery oat crumble, and silky vanilla custard come together to create a dessert that feels like home in every spoonful.\n\nWhether you are baking it on a chilly autumn afternoon or simply craving a little comfort, I hope this apple crumble brings warmth, nostalgia, and sweet memories to your kitchen.",
+    featuredText:
+      "Cinnamon-spiced apples, golden oat crumble, and homemade vanilla custard.",
+    image: "Applecrumble.png",
+    thumbnail: "Applecrumble.png",
+    alt: "Vegan apple crumble served with vanilla ice cream on a pastel table",
+    ingredients: [
+      "Apple Filling",
+      "750 g apples, peeled and diced into small cubes",
+      "7 g ground cinnamon",
+      "3 g ground cardamom",
+      "22.5 g light brown sugar",
+      "Crumble Topping",
+      "428 g vegan butter or margarine, melted",
+      "292 g light brown sugar",
+      "265 g agave syrup",
+      "7 g vanilla extract",
+      "382 g rolled oats, or certified gluten-free rolled oats",
+      "382 g all-purpose flour, or gluten-free flour blend",
+      "7 g baking powder",
+      "5 g salt",
+      "Homemade Vanilla Custard",
+      "80 g cornstarch",
+      "85 g granulated sugar",
+      "8 g vanilla sugar, or 5 g vanilla extract",
+      "250 g vegan whipping cream",
+      "300 g plant-based milk",
+      "1 g ground turmeric, optional, for a natural golden color"
+    ],
+    method: [
+      "Prepare the apple filling: Preheat your oven to 180C (350F).",
+      "Grease a 25 cm (10-inch) round baking dish.",
+      "In a large bowl, combine the diced apples, cinnamon, cardamom, and brown sugar.",
+      "Toss until the apples are evenly coated and set aside.",
+      "Make the crumble: In a large mixing bowl, whisk together the rolled oats, flour, baking powder, and salt.",
+      "Add the melted vegan butter, brown sugar, agave syrup, and vanilla extract.",
+      "Stir until the mixture forms a crumbly dough.",
+      "Assemble: Press half of the crumble mixture firmly into the bottom of the prepared baking dish.",
+      "Spread the apple filling evenly over the base.",
+      "Sprinkle the remaining crumble mixture over the apples, gently covering the entire surface.",
+      "Bake for approximately 40 minutes, or until the crumble is golden brown and the apple filling is bubbling around the edges.",
+      "Allow the crumble to cool for about 15 minutes before serving.",
+      "Make the vanilla custard: In a saucepan, whisk together the cornstarch, sugar, and vanilla sugar.",
+      "Gradually pour in the vegan cream and plant-based milk while whisking continuously until smooth.",
+      "Add the turmeric, if using.",
+      "Place the saucepan over medium heat and cook, whisking constantly, until the custard thickens.",
+      "Remove from the heat and serve warm alongside the apple crumble."
+    ],
+    tip: "Use a mix of tart and sweet apples for the best depth of flavor, and let the crumble rest for 10-15 minutes after baking so the filling can set slightly.",
+    extraSections: [
+      {
+        title: "Gluten-free option",
+        items: [
+          "Use certified gluten-free oats and a gluten-free flour blend to make this crumble gluten-free."
+        ]
+      },
+      {
+        title: "Storage",
+        items: [
+          "Store leftover apple crumble in an airtight container in the refrigerator for up to 5 days.",
+          "Store the vanilla custard separately in the refrigerator for up to 3 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze the baked crumble without the custard in an airtight container for up to 3 months.",
+          "Thaw overnight in the refrigerator and reheat in the oven before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Use a mix of tart and sweet apples for the best depth of flavor.",
+          "Do not skip the cardamom. It adds a subtle warmth that pairs beautifully with the cinnamon.",
+          "Let the crumble rest for 10-15 minutes after baking so the filling can set slightly.",
+          "For an extra crunchy topping, sprinkle a handful of chopped pecans or walnuts over the crumble before baking.",
+          "Serve warm with vanilla custard, vegan vanilla ice cream, or whipped cream for the ultimate cozy dessert."
+        ]
+      }
+    ],
+    featured: true,
+    popular: true
+  },
+  {
     slug: "vegan-carrot-cake-muffins",
     title: "Carrot Cake Cupcakes",
     category: "cupcakes",
