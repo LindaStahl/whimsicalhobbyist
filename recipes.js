@@ -44,19 +44,23 @@ const recipes = [
       "1 g ground turmeric, optional, for a natural golden color"
     ],
     method: [
-      "Prepare the apple filling: Preheat your oven to 180C (350F).",
+      "Prepare the apple filling:",
+      "Preheat your oven to 180C(350F).",
       "Grease a 25 cm (10-inch) round baking dish.",
       "In a large bowl, combine the diced apples, cinnamon, cardamom, and brown sugar.",
       "Toss until the apples are evenly coated and set aside.",
-      "Make the crumble: In a large mixing bowl, whisk together the rolled oats, flour, baking powder, and salt.",
+      "Make the crumble:",
+      "In a large mixing bowl, whisk together the rolled oats, flour, baking powder, and salt.",
       "Add the melted vegan butter, brown sugar, agave syrup, and vanilla extract.",
       "Stir until the mixture forms a crumbly dough.",
-      "Assemble: Press half of the crumble mixture firmly into the bottom of the prepared baking dish.",
+      "Assemble:",
+      "Press half of the crumble mixture firmly into the bottom of the prepared baking dish.",
       "Spread the apple filling evenly over the base.",
       "Sprinkle the remaining crumble mixture over the apples, gently covering the entire surface.",
       "Bake for approximately 40 minutes, or until the crumble is golden brown and the apple filling is bubbling around the edges.",
       "Allow the crumble to cool for about 15 minutes before serving.",
-      "Make the vanilla custard: In a saucepan, whisk together the cornstarch, sugar, and vanilla sugar.",
+      "Make the vanilla custard:",
+      "In a saucepan, whisk together the cornstarch, sugar, and vanilla sugar.",
       "Gradually pour in the vegan cream and plant-based milk while whisking continuously until smooth.",
       "Add the turmeric, if using.",
       "Place the saucepan over medium heat and cook, whisking constantly, until the custard thickens.",
@@ -196,7 +200,7 @@ const recipes = [
     excerpt:
       "Soft, incredibly moist vegan banana bread packed with rich dark chocolate and lightly spiced with cinnamon and ginger.",
     cardText:
-      "Banana bread has a way of making a house feel like home.\n\nIt is the recipe that rescues forgotten bananas from the fruit bowl, filling the kitchen with the comforting aroma of cinnamon, warm vanilla, and melting chocolate. The kind of smell that lingers long after the oven has cooled and quietly invites everyone to gather for \"just one slice.\"\n\nThis version is inspired by those slow afternoons when life seemed a little simpler - a warm loaf on the counter, a cozy blanket, and a cup of tea shared with someone you love. Soft, rich, and dotted with pockets of dark chocolate, it is the kind of bake that feels like a warm hug with every bite.\n\nWhether you are baking it to create new memories or relive old ones, I hope this banana bread brings a little extra comfort to your kitchen. Sometimes the sweetest moments begin with a couple of overripe bananas and the simple joy of baking something from scratch.",
+      'Banana bread has a way of making a house feel like home.\n\nIt is the recipe that rescues forgotten bananas from the fruit bowl, filling the kitchen with the comforting aroma of cinnamon, warm vanilla, and melting chocolate. The kind of smell that lingers long after the oven has cooled and quietly invites everyone to gather for "just one slice."\n\nThis version is inspired by those slow afternoons when life seemed a little simpler - a warm loaf on the counter, a cozy blanket, and a cup of tea shared with someone you love. Soft, rich, and dotted with pockets of dark chocolate, it is the kind of bake that feels like a warm hug with every bite.\n\nWhether you are baking it to create new memories or relive old ones, I hope this banana bread brings a little extra comfort to your kitchen. Sometimes the sweetest moments begin with a couple of overripe bananas and the simple joy of baking something from scratch.',
     featuredText:
       "Moist banana bread with dark chocolate, cinnamon, and ginger.",
     image: "Bananabread.png",
@@ -453,7 +457,7 @@ const recipes = [
     excerpt:
       "Bright, soft, and wonderfully moist vegan lemon poppy seed Bundt cake with fresh citrus flavor and a sweet lemon glaze.",
     cardText:
-      "Some cakes taste like sunshine, and this is one of them.\n\nThe bright scent of freshly grated lemons, the tiny poppy seeds scattered through every slice, and the sweet drizzle of lemon glaze bring back memories of slow afternoons, open windows, and warm kitchens filled with laughter. It is the kind of cake that sits proudly in the center of the table, inviting everyone to cut \"just one more slice.\"\n\nSimple, fresh, and wonderfully comforting, this lemon Bundt cake celebrates the little joys of homemade baking. Whether you are sharing it over coffee with friends or enjoying a quiet moment to yourself, I hope it fills your home with the same warmth, happiness, and sunshine that inspired this recipe.",
+      'Some cakes taste like sunshine, and this is one of them.\n\nThe bright scent of freshly grated lemons, the tiny poppy seeds scattered through every slice, and the sweet drizzle of lemon glaze bring back memories of slow afternoons, open windows, and warm kitchens filled with laughter. It is the kind of cake that sits proudly in the center of the table, inviting everyone to cut "just one more slice."\n\nSimple, fresh, and wonderfully comforting, this lemon Bundt cake celebrates the little joys of homemade baking. Whether you are sharing it over coffee with friends or enjoying a quiet moment to yourself, I hope it fills your home with the same warmth, happiness, and sunshine that inspired this recipe.',
     featuredText:
       "Fresh lemon, delicate poppy seeds, and a sweet citrus glaze.",
     image: "Lemonbundt.png",
