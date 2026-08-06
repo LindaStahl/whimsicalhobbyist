@@ -445,6 +445,88 @@ const recipes = [
     popular: true
   },
   {
+    slug: "vegan-smores-stuffed-cookies",
+    title: "Vegan S'mores Stuffed Cookies",
+    category: "cookies",
+    categoryLabel: "Cookies",
+    badge: "New recipe",
+    date: "2026-08-06",
+    prepTime: "35 min",
+    bakeTime: "18-20 min",
+    servings: "8-10 large bakery-style cookies",
+    excerpt:
+      "Thick vegan s'mores stuffed cookies with gooey chocolate hazelnut spread, melty marshmallows, crunchy Marie biscuits, and vegan chocolate chunks.",
+    cardText:
+      "If you love thick, bakery-style cookies, these Vegan S'mores Stuffed Cookies are a must-try.\n\nThey are packed with gooey chocolate hazelnut spread, melty vegan marshmallows, crunchy biscuits, and chunks of vegan chocolate in every bite. The frozen center bakes into a soft, molten surprise while the cookie edges turn golden and set just enough to hold everything together.\n\nA drizzle of melted vegan milk chocolate and a scatter of marshmallows, chocolate, and crushed Marie biscuits make them feel extra special. Serve them slightly warm for the ultimate gooey center.",
+    featuredText:
+      "Bakery-style s'mores cookies with chocolate hazelnut spread, marshmallows, and biscuits.",
+    image: "Smores_tiktok_photo.png",
+    thumbnail: "Smores_tiktok_photo.png",
+    alt: "Vegan s'mores stuffed cookie pulled apart with gooey chocolate and marshmallow filling",
+    ingredients: [
+      "Chocolate Hazelnut Filling",
+      "100 g vegan chocolate hazelnut spread",
+      "Cookie Dough",
+      "233 g vegan margarine, softened",
+      "122 g granulated sugar",
+      "82 g light brown sugar",
+      "295 g all-purpose flour",
+      "2 g salt",
+      "3 g baking soda",
+      "5 g vanilla sugar",
+      "4.5 g vanilla extract",
+      "30 g vegan Marie biscuits, chopped",
+      "75 g vegan milk chocolate, chopped",
+      "55 g vegan marshmallows, chopped",
+      "Decoration",
+      "Melted vegan milk chocolate",
+      "Extra chopped vegan marshmallows",
+      "Extra chopped vegan chocolate",
+      "Crushed Marie biscuits"
+    ],
+    method: [
+      "Divide the chocolate hazelnut spread into 8-10 small portions and freeze.",
+      "Beat the margarine, granulated sugar, and brown sugar until light and fluffy.",
+      "Add the flour, salt, baking soda, vanilla sugar, and vanilla extract. Mix until just combined.",
+      "Fold in the chopped chocolate, marshmallows, and biscuits.",
+      "Divide about 2/3 of the dough into 8 large balls. Press a well into each one.",
+      "Fill each cookie with one frozen chocolate hazelnut portion, a marshmallow piece, and a biscuit piece.",
+      "Cover with the remaining dough, seal well, and roll into smooth balls.",
+      "Freeze for at least 1 hour.",
+      "Preheat your oven to 175C (350F).",
+      "Bake for 18-20 minutes, until the edges are set and the centers are still soft.",
+      "While still warm, shape the cookies into perfect circles using a large cookie cutter or a glass.",
+      "Drizzle with melted vegan chocolate and decorate with extra marshmallows, chopped chocolate, and crushed biscuits."
+    ],
+    tip: "Freeze the filled cookie dough for at least 1 hour before baking so the cookies stay thick and the chocolate hazelnut center turns perfectly gooey.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Keep in an airtight container in the refrigerator for up to 1 week."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze for up to 3 months.",
+          "Warm for 15-20 seconds before serving for the ultimate gooey center."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Freeze the chocolate hazelnut spread portions before filling so the cookies are easier to shape.",
+          "Seal the dough well around the filling to help prevent leaks.",
+          "Shape the cookies while they are still warm for a polished bakery-style finish.",
+          "Serve slightly warm if you want the chocolate and marshmallow center extra melty."
+        ]
+      }
+    ],
+    featured: true,
+    popular: true
+  },
+  {
     slug: "vegan-lemon-poppy-seed-bundt-cake",
     title: "Vegan Lemon Poppy Seed Bundt Cake",
     category: "cakes",

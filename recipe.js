@@ -105,7 +105,9 @@ function renderIngredients(recipe, scale = 1) {
     "decoration",
     "apple filling",
     "crumble topping",
-    "homemade vanilla custard"
+    "homemade vanilla custard",
+    "chocolate hazelnut filling",
+    "cookie dough"
   ];
 
   return recipe.ingredients
