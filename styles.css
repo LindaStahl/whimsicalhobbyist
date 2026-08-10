@@ -918,8 +918,36 @@ h3 {
   pointer-events: none;
 }
 
-.rating-options label:hover span,
-.rating-options label:has(input:checked) span {
+.rating-options[data-selected-rating="1"] [data-rating-value="1"] span,
+.rating-options[data-selected-rating="2"] [data-rating-value="1"] span,
+.rating-options[data-selected-rating="2"] [data-rating-value="2"] span,
+.rating-options[data-selected-rating="3"] [data-rating-value="1"] span,
+.rating-options[data-selected-rating="3"] [data-rating-value="2"] span,
+.rating-options[data-selected-rating="3"] [data-rating-value="3"] span,
+.rating-options[data-selected-rating="4"] [data-rating-value="1"] span,
+.rating-options[data-selected-rating="4"] [data-rating-value="2"] span,
+.rating-options[data-selected-rating="4"] [data-rating-value="3"] span,
+.rating-options[data-selected-rating="4"] [data-rating-value="4"] span,
+.rating-options[data-selected-rating="5"] [data-rating-value="1"] span,
+.rating-options[data-selected-rating="5"] [data-rating-value="2"] span,
+.rating-options[data-selected-rating="5"] [data-rating-value="3"] span,
+.rating-options[data-selected-rating="5"] [data-rating-value="4"] span,
+.rating-options[data-selected-rating="5"] [data-rating-value="5"] span,
+.rating-options[data-hover-rating="1"] [data-rating-value="1"] span,
+.rating-options[data-hover-rating="2"] [data-rating-value="1"] span,
+.rating-options[data-hover-rating="2"] [data-rating-value="2"] span,
+.rating-options[data-hover-rating="3"] [data-rating-value="1"] span,
+.rating-options[data-hover-rating="3"] [data-rating-value="2"] span,
+.rating-options[data-hover-rating="3"] [data-rating-value="3"] span,
+.rating-options[data-hover-rating="4"] [data-rating-value="1"] span,
+.rating-options[data-hover-rating="4"] [data-rating-value="2"] span,
+.rating-options[data-hover-rating="4"] [data-rating-value="3"] span,
+.rating-options[data-hover-rating="4"] [data-rating-value="4"] span,
+.rating-options[data-hover-rating="5"] [data-rating-value="1"] span,
+.rating-options[data-hover-rating="5"] [data-rating-value="2"] span,
+.rating-options[data-hover-rating="5"] [data-rating-value="3"] span,
+.rating-options[data-hover-rating="5"] [data-rating-value="4"] span,
+.rating-options[data-hover-rating="5"] [data-rating-value="5"] span {
   color: var(--pink-strong);
 }
 

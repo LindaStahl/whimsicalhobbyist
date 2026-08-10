@@ -228,8 +228,27 @@ function renderCommentList(recipe) {
 function bindRecipeComments(recipe) {
   const commentForm = document.querySelector("#comment-form");
   const commentMessage = document.querySelector("#comment-message");
+  const ratingOptions = document.querySelector("#rating-options");
 
   renderCommentList(recipe);
+
+  ratingOptions.addEventListener("change", (event) => {
+    if (event.target.name === "rating") {
+      ratingOptions.dataset.selectedRating = event.target.value;
+    }
+  });
+
+  ratingOptions.addEventListener("mouseover", (event) => {
+    const ratingLabel = event.target.closest("[data-rating-value]");
+
+    if (ratingLabel) {
+      ratingOptions.dataset.hoverRating = ratingLabel.dataset.ratingValue;
+    }
+  });
+
+  ratingOptions.addEventListener("mouseleave", () => {
+    delete ratingOptions.dataset.hoverRating;
+  });
 
   commentForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -252,6 +271,8 @@ function bindRecipeComments(recipe) {
 
     saveStoredComments(recipe, [comment, ...comments]);
     commentForm.reset();
+    delete ratingOptions.dataset.selectedRating;
+    delete ratingOptions.dataset.hoverRating;
     commentMessage.textContent = "Thank you! Your comment has been added on this device.";
     renderCommentList(recipe);
   });
@@ -353,12 +374,12 @@ function renderRecipe(recipe) {
           <form class="comment-form" id="comment-form">
             <fieldset class="rating-fieldset">
               <legend>Recipe rating</legend>
-              <div class="rating-options">
-                <label><input type="radio" name="rating" value="1" required /><span>★</span></label>
-                <label><input type="radio" name="rating" value="2" /><span>★</span></label>
-                <label><input type="radio" name="rating" value="3" /><span>★</span></label>
-                <label><input type="radio" name="rating" value="4" /><span>★</span></label>
-                <label><input type="radio" name="rating" value="5" /><span>★</span></label>
+              <div class="rating-options" id="rating-options">
+                <label data-rating-value="1"><input type="radio" name="rating" value="1" required /><span>★</span></label>
+                <label data-rating-value="2"><input type="radio" name="rating" value="2" /><span>★</span></label>
+                <label data-rating-value="3"><input type="radio" name="rating" value="3" /><span>★</span></label>
+                <label data-rating-value="4"><input type="radio" name="rating" value="4" /><span>★</span></label>
+                <label data-rating-value="5"><input type="radio" name="rating" value="5" /><span>★</span></label>
               </div>
             </fieldset>
 
