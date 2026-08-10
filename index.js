@@ -39,6 +39,14 @@ function formatDate(dateValue) {
   return { day, label: `${month} ${year}` };
 }
 
+function sortRecipesByNewest(recipeSet) {
+  return [...recipeSet].sort(
+    (firstRecipe, secondRecipe) =>
+      new Date(`${secondRecipe.date}T00:00:00`) -
+      new Date(`${firstRecipe.date}T00:00:00`)
+  );
+}
+
 function getCategories() {
   return menuCategories;
 }
@@ -73,7 +81,7 @@ function renderRecipeCarousel() {
 }
 
 function renderRecipePosts() {
-  recipeListElement.innerHTML = recipes
+  recipeListElement.innerHTML = sortRecipesByNewest(recipes)
     .map((recipe) => {
       const date = formatDate(recipe.date);
       const cardText = recipe.cardText || recipe.excerpt;
