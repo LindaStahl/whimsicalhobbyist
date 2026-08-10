@@ -151,6 +151,111 @@ function renderMethodSteps(method) {
     .join("");
 }
 
+function escapeHtml(value) {
+  return value.replace(/[&<>"']/g, (character) => {
+    const entities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    };
+
+    return entities[character];
+  });
+}
+
+function getCommentStorageKey(recipe) {
+  return `whimsicalRecipeComments:${recipe.slug}`;
+}
+
+function getStoredComments(recipe) {
+  try {
+    return JSON.parse(localStorage.getItem(getCommentStorageKey(recipe))) || [];
+  } catch {
+    return [];
+  }
+}
+
+function saveStoredComments(recipe, comments) {
+  localStorage.setItem(getCommentStorageKey(recipe), JSON.stringify(comments));
+}
+
+function formatCommentDate(dateValue) {
+  return new Date(dateValue).toLocaleDateString("en", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+}
+
+function renderCommentList(recipe) {
+  const comments = getStoredComments(recipe);
+  const commentCountElement = document.querySelector("#comment-count");
+  const commentListElement = document.querySelector("#comment-list");
+  const commentLabel = comments.length === 1 ? "1 Comment" : `${comments.length} Comments`;
+
+  commentCountElement.textContent = commentLabel;
+
+  if (!comments.length) {
+    commentListElement.innerHTML = `
+      <p class="no-comments">No comments yet. Be the first to leave one.</p>
+    `;
+    return;
+  }
+
+  commentListElement.innerHTML = comments
+    .map(
+      (comment) => `
+        <article class="recipe-comment">
+          <div class="comment-avatar" aria-hidden="true">${escapeHtml(comment.name.charAt(0).toUpperCase())}</div>
+          <div>
+            <div class="comment-meta">
+              <strong>${escapeHtml(comment.name)}</strong>
+              <span>${formatCommentDate(comment.createdAt)}</span>
+            </div>
+            <p class="comment-rating" aria-label="${comment.rating} out of 5 stars">
+              ${"★".repeat(comment.rating)}${"☆".repeat(5 - comment.rating)}
+            </p>
+            <p>${escapeHtml(comment.comment)}</p>
+          </div>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function bindRecipeComments(recipe) {
+  const commentForm = document.querySelector("#comment-form");
+  const commentMessage = document.querySelector("#comment-message");
+
+  renderCommentList(recipe);
+
+  commentForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(commentForm);
+    const comments = getStoredComments(recipe);
+    const comment = {
+      name: formData.get("name").trim(),
+      email: formData.get("email").trim(),
+      website: formData.get("website").trim(),
+      comment: formData.get("comment").trim(),
+      rating: Number(formData.get("rating")),
+      createdAt: new Date().toISOString()
+    };
+
+    if (!comment.name || !comment.email || !comment.comment || !comment.rating) {
+      commentMessage.textContent = "Please complete the required fields before posting.";
+      return;
+    }
+
+    saveStoredComments(recipe, [comment, ...comments]);
+    commentForm.reset();
+    commentMessage.textContent = "Thank you! Your comment has been added on this device.";
+    renderCommentList(recipe);
+  });
+}
+
 function bindIngredientScaler(recipe) {
   const ingredientsList = document.querySelector("#ingredients-list");
 
@@ -237,6 +342,50 @@ function renderRecipe(recipe) {
           : ""
       }
 
+      <section class="recipe-comments" id="comments">
+        <h2 id="comment-count">0 Comments</h2>
+        <div class="comment-list" id="comment-list"></div>
+
+        <div class="comment-reply">
+          <h2>Leave a Reply</h2>
+          <p>Your email address will not be published. Required fields are marked *</p>
+          <form class="comment-form" id="comment-form">
+            <fieldset class="rating-fieldset">
+              <legend>Recipe rating *</legend>
+              <div class="rating-options">
+                <label><input type="radio" name="rating" value="5" required /> 5 Stars</label>
+                <label><input type="radio" name="rating" value="4" /> 4 Stars</label>
+                <label><input type="radio" name="rating" value="3" /> 3 Stars</label>
+                <label><input type="radio" name="rating" value="2" /> 2 Stars</label>
+                <label><input type="radio" name="rating" value="1" /> 1 Star</label>
+              </div>
+            </fieldset>
+
+            <label for="comment">Comment *</label>
+            <textarea id="comment" name="comment" rows="7" required></textarea>
+
+            <div class="comment-field-grid">
+              <label for="comment-name">
+                Name *
+                <input id="comment-name" name="name" type="text" required />
+              </label>
+              <label for="comment-email">
+                Email *
+                <input id="comment-email" name="email" type="email" required />
+              </label>
+            </div>
+
+            <label for="comment-website">
+              Website
+              <input id="comment-website" name="website" type="url" />
+            </label>
+
+            <button type="submit">Post Comment</button>
+            <p class="form-message" id="comment-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
       <footer class="recipe-post-footer">
         <span>Posted ${formatDate(recipe.date)}</span>
         <a class="read-more" href="index.html#recipes">Browse more recipes</a>
@@ -245,6 +394,7 @@ function renderRecipe(recipe) {
   `;
 
   bindIngredientScaler(recipe);
+  bindRecipeComments(recipe);
 }
 
 function getSelectedRecipe() {

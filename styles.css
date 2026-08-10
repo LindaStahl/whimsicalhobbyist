@@ -779,6 +779,165 @@ h3 {
   gap: 22px;
 }
 
+.recipe-comments {
+  display: grid;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.recipe-comments h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.comment-list {
+  display: grid;
+  gap: 18px;
+}
+
+.no-comments,
+.comment-reply p,
+.recipe-comment p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.recipe-comment {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--cream);
+}
+
+.comment-avatar {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pink);
+  color: var(--pink-strong);
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.comment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: baseline;
+}
+
+.comment-meta strong {
+  color: var(--ink);
+}
+
+.comment-meta span,
+.comment-rating {
+  color: var(--pink-strong);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.comment-reply {
+  display: grid;
+  gap: 12px;
+}
+
+.comment-form {
+  display: grid;
+  gap: 14px;
+}
+
+.comment-form label,
+.rating-fieldset legend {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  padding: 13px 14px;
+}
+
+.comment-form input {
+  min-height: 46px;
+}
+
+.comment-form textarea {
+  resize: vertical;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: var(--pink-strong);
+  outline: 3px solid rgba(233, 107, 154, 0.2);
+}
+
+.rating-fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rating-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.rating-options label {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--muted);
+  padding: 0 12px;
+}
+
+.comment-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.comment-field-grid label,
+.comment-form > label {
+  display: grid;
+  gap: 8px;
+}
+
+.comment-form button {
+  min-height: 46px;
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 0 24px;
+}
+
 .recipe-post-footer {
   display: flex;
   justify-content: space-between;
@@ -907,6 +1066,7 @@ footer p {
   .recipe-detail-hero,
   .recipe-detail-body,
   .recipe-extra-sections,
+  .comment-field-grid,
   .sidebar {
     grid-template-columns: 1fr;
   }
