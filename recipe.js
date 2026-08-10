@@ -237,14 +237,12 @@ function bindRecipeComments(recipe) {
     const comments = getStoredComments(recipe);
     const comment = {
       name: formData.get("name").trim(),
-      email: formData.get("email").trim(),
-      website: formData.get("website").trim(),
       comment: formData.get("comment").trim(),
       rating: Number(formData.get("rating")),
       createdAt: new Date().toISOString()
     };
 
-    if (!comment.name || !comment.email || !comment.comment || !comment.rating) {
+    if (!comment.name || !comment.comment || !comment.rating) {
       commentMessage.textContent = "Please complete the required fields before posting.";
       return;
     }
@@ -347,8 +345,8 @@ function renderRecipe(recipe) {
         <div class="comment-list" id="comment-list"></div>
 
         <div class="comment-reply">
-          <h2>Leave a Reply</h2>
-          <p>Your email address will not be published. Required fields are marked *</p>
+          <h2>Leave a Comment</h2>
+          <p>Required fields are marked *</p>
           <form class="comment-form" id="comment-form">
             <fieldset class="rating-fieldset">
               <legend>Recipe rating *</legend>
@@ -364,20 +362,9 @@ function renderRecipe(recipe) {
             <label for="comment">Comment *</label>
             <textarea id="comment" name="comment" rows="7" required></textarea>
 
-            <div class="comment-field-grid">
-              <label for="comment-name">
-                Name *
-                <input id="comment-name" name="name" type="text" required />
-              </label>
-              <label for="comment-email">
-                Email *
-                <input id="comment-email" name="email" type="email" required />
-              </label>
-            </div>
-
-            <label for="comment-website">
-              Website
-              <input id="comment-website" name="website" type="url" />
+            <label for="comment-name">
+              Name *
+              <input id="comment-name" name="name" type="text" required />
             </label>
 
             <button type="submit">Post Comment</button>
