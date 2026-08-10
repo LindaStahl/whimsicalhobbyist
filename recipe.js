@@ -237,12 +237,15 @@ function bindRecipeComments(recipe) {
     const comments = getStoredComments(recipe);
     const comment = {
       name: formData.get("name").trim(),
+      email: formData.get("email").trim(),
       comment: formData.get("comment").trim(),
       rating: Number(formData.get("rating")),
+      notifyComments: formData.get("notify-comments") === "on",
+      notifyPosts: formData.get("notify-posts") === "on",
       createdAt: new Date().toISOString()
     };
 
-    if (!comment.name || !comment.comment || !comment.rating) {
+    if (!comment.name || !comment.email || !comment.comment || !comment.rating) {
       commentMessage.textContent = "Please complete the required fields before posting.";
       return;
     }
@@ -345,17 +348,17 @@ function renderRecipe(recipe) {
         <div class="comment-list" id="comment-list"></div>
 
         <div class="comment-reply">
-          <h2>Leave a Comment</h2>
-          <p>Required fields are marked *</p>
+          <h2>Leave a Reply</h2>
+          <p>Your email address will not be published. Required fields are marked *</p>
           <form class="comment-form" id="comment-form">
             <fieldset class="rating-fieldset">
-              <legend>Recipe rating *</legend>
+              <legend>Recipe rating</legend>
               <div class="rating-options">
-                <label><input type="radio" name="rating" value="5" required /> 5 Stars</label>
-                <label><input type="radio" name="rating" value="4" /> 4 Stars</label>
-                <label><input type="radio" name="rating" value="3" /> 3 Stars</label>
-                <label><input type="radio" name="rating" value="2" /> 2 Stars</label>
-                <label><input type="radio" name="rating" value="1" /> 1 Star</label>
+                <label><input type="radio" name="rating" value="1" required /><span>★</span></label>
+                <label><input type="radio" name="rating" value="2" /><span>★</span></label>
+                <label><input type="radio" name="rating" value="3" /><span>★</span></label>
+                <label><input type="radio" name="rating" value="4" /><span>★</span></label>
+                <label><input type="radio" name="rating" value="5" /><span>★</span></label>
               </div>
             </fieldset>
 
@@ -365,6 +368,21 @@ function renderRecipe(recipe) {
             <label for="comment-name">
               Name *
               <input id="comment-name" name="name" type="text" required />
+            </label>
+
+            <label for="comment-email">
+              Email *
+              <input id="comment-email" name="email" type="email" required />
+            </label>
+
+            <label class="comment-checkbox">
+              <input name="notify-comments" type="checkbox" />
+              <span>Notify me of follow-up comments by email.</span>
+            </label>
+
+            <label class="comment-checkbox">
+              <input name="notify-posts" type="checkbox" />
+              <span>Notify me of new posts by email.</span>
             </label>
 
             <button type="submit">Post Comment</button>
