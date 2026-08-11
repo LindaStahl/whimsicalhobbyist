@@ -103,6 +103,105 @@ const recipes = [
     popular: true
   },
   {
+    slug: "vegan-lemon-blueberry-crumble-muffins",
+    title: "Vegan Lemon Blueberry Crumble Muffins",
+    category: "cupcakes",
+    categoryLabel: "Cupcakes",
+    badge: "New recipe",
+    date: "2026-08-11",
+    prepTime: "30 min",
+    bakeTime: "20-25 min",
+    servings: "6 large muffins or 8 medium muffins",
+    excerpt:
+      "Soft vegan lemon blueberry muffins with juicy berries, buttery oat crumble, and a creamy vanilla cream cheese filling.",
+    cardText:
+      "These vegan lemon blueberry crumble muffins are bright, cozy, and just a little bakery-style.\n\nThe muffin base is soft and tender with fresh lemon zest and juicy blueberries folded through the batter. A buttery oat crumble bakes into a golden, crisp topping, while the vanilla cream cheese filling adds a lovely creamy surprise in the center.\n\nThey are the kind of muffins that feel special enough for weekend baking, but still simple enough to make when you want something sweet and fresh with your afternoon tea.",
+    featuredText:
+      "Lemon blueberry muffins with oat crumble and vanilla cream cheese filling.",
+    image: "Lemon_Blueberry_Crumble_Muffins.png",
+    thumbnail: "Lemon_Blueberry_Crumble_Muffins.png",
+    alt: "Vegan lemon blueberry crumble muffins with vanilla cream and fresh blueberries",
+    ingredients: [
+      "Oat Crumble Topping",
+      "63 g rolled oats",
+      "86 g vegan margarine",
+      "93 g all-purpose flour",
+      "114 g light brown sugar",
+      "1.6 g salt",
+      "Lemon Blueberry Muffin Batter",
+      "214 g all-purpose flour",
+      "120 g granulated sugar",
+      "6 g baking powder",
+      "5 g vanilla sugar",
+      "3 g baking soda",
+      "3 g salt",
+      "180 g plant-based milk, preferably soy or oat",
+      "60 g sunflower oil",
+      "Zest of 1 lemon",
+      "11 g apple cider vinegar",
+      "150 g fresh blueberries",
+      "Vanilla Cream Cheese Filling",
+      "150 g vegan cream cheese, such as Sheese, Violife, or Mommus",
+      "6 g vanilla extract",
+      "40 g granulated sugar",
+      "Decoration",
+      "Extra vanilla cream cheese filling",
+      "Fresh blueberries",
+      "Optional: lemon zest, rolled oats, or a little crumble"
+    ],
+    method: [
+      "Make the oat crumble",
+      "Add the rolled oats, flour, brown sugar, and salt to a bowl. Mix until evenly combined.",
+      "Add the vegan margarine and rub it in with your fingertips, or mix with a spatula, until you have a crumbly dough with little buttery clusters.",
+      "Place the crumble in the refrigerator while you make the muffin batter.",
+      "Make the muffin batter",
+      "In a large bowl, whisk together the flour, granulated sugar, baking powder, vanilla sugar, baking soda, and salt.",
+      "In a separate bowl, whisk together the plant-based milk, sunflower oil, and apple cider vinegar.",
+      "Pour the wet ingredients into the dry ingredients and whisk gently until just combined. Do not overmix; stop as soon as no dry flour remains.",
+      "Add the lemon zest and fresh blueberries, then fold them in carefully with a spatula.",
+      "Preheat the oven to 175C (350F). Line a muffin tin with paper cases.",
+      "Divide the batter between the muffin cases, filling each about three-quarters full. This recipe makes 6 large muffins or 8 medium muffins.",
+      "Sprinkle a generous layer of oat crumble over each muffin.",
+      "Bake for 20-25 minutes, or until the muffins are risen and lightly golden. Check after 20 minutes. A toothpick should come out clean or with a few moist crumbs, but not wet batter.",
+      "Let the muffins cool completely in the tin.",
+      "Make the vanilla cream cheese filling",
+      "Add the vegan cream cheese, vanilla extract, and sugar to a bowl. Whisk until smooth, creamy, and free from lumps.",
+      "Chill until ready to use.",
+      "Fill and decorate",
+      "Once the muffins are completely cool, use a small knife or apple corer to remove a little piece from the center of each muffin. Keep the little tops.",
+      "Transfer the cream cheese filling to a piping bag. If you do not have one, use a small plastic bag and cut off one corner.",
+      "Pipe the filling into each muffin, then place the little muffin tops back on.",
+      "Decorate with the remaining cream, fresh blueberries, and a little lemon zest or rolled oats if you like."
+    ],
+    tip: "For the softest muffins, mix the batter gently and stop as soon as it comes together. Overmixing can make muffins dense instead of tender.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Store the muffins in an airtight container in the refrigerator for up to 5 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze in an airtight container for up to 3 months.",
+          "Thaw in the refrigerator before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Use fresh blueberries for the juiciest texture.",
+          "Keep the crumble chilled until just before baking so it stays nicely crumbly.",
+          "Let the muffins cool completely before filling so the cream cheese filling does not melt.",
+          "For extra lemon flavor, add a little lemon zest to the decoration."
+        ]
+      }
+    ],
+    featured: true,
+    popular: true
+  },
+  {
     slug: "vegan-carrot-cake-muffins",
     title: "Carrot Cake Cupcakes",
     category: "cupcakes",

@@ -113,7 +113,10 @@ function renderIngredients(recipe, scale = 1) {
     "danish pastry dough",
     "almond filling",
     "brushing and decoration",
-    "glaze"
+    "glaze",
+    "oat crumble topping",
+    "lemon blueberry muffin batter",
+    "vanilla cream cheese filling"
   ];
 
   return recipe.ingredients
@@ -142,7 +145,11 @@ function renderMethodStep(step) {
     "for square pastries",
     "for figure eight pastries",
     "rise and bake",
-    "glaze"
+    "glaze",
+    "make the oat crumble",
+    "make the muffin batter",
+    "make the vanilla cream cheese filling",
+    "fill and decorate"
   ];
   const isHeading = methodHeadings.includes(step.toLowerCase());
 
@@ -242,6 +249,26 @@ const defaultRecipeReviews = {
       rating: 5,
       createdAt: "2026-07-26T11:10:00.000Z",
       comment: "A wonderful vegan carrot cake recipe. I would happily make these again for guests."
+    }
+  ],
+  "vegan-lemon-blueberry-crumble-muffins": [
+    {
+      name: "Laura Mills",
+      rating: 5,
+      createdAt: "2026-08-09T13:20:00.000Z",
+      comment: "These muffins were so fresh and lovely. The lemon, blueberries, and crumble topping worked beautifully together."
+    },
+    {
+      name: "Signe",
+      rating: 5,
+      createdAt: "2026-08-10T09:35:00.000Z",
+      comment: "The cream cheese filling made them feel like a bakery treat. Soft, bright, and absolutely delicious."
+    },
+    {
+      name: "Emily Hart",
+      rating: 5,
+      createdAt: "2026-08-11T12:05:00.000Z",
+      comment: "I loved the buttery oat crumble on top. These were perfect with afternoon tea."
     }
   ],
   "vegan-chocolate-chip-banana-bread": [
