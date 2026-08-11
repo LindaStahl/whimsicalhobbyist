@@ -265,8 +265,8 @@ const recipes = [
   {
     slug: "vegan-fudgy-walnut-brownies",
     title: "Vegan Fudgy Walnut Brownies",
-    category: "cookies",
-    categoryLabel: "Cookies",
+    category: "bars",
+    categoryLabel: "Brownies & Bars",
     badge: "Brownies",
     date: "2026-07-03",
     prepTime: "20 min",
