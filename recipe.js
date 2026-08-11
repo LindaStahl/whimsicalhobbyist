@@ -9,7 +9,7 @@ const menuCategories = [
   { slug: "pastries-buns", label: "Pastries & Buns", href: "pastries-buns.html" },
   { slug: "cupcakes", label: "Cupcakes", href: "cupcakes.html" },
   { slug: "cookies", label: "Cookies", href: "cookies.html" },
-  { slug: "bars", label: "Bars", href: "bars.html" },
+  { slug: "bars", label: "Brownies & Bars", href: "bars.html" },
   { slug: "creams", label: "Creams", href: "creams.html" },
   { slug: "no-bake", label: "No Bake", href: "no-bake.html" },
   { slug: "glutenfree", label: "Gluten-Free", href: "glutenfree.html" }
