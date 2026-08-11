@@ -9,6 +9,7 @@ const formMessage = document.querySelector("#form-message");
 
 const menuCategories = [
   { slug: "cakes", label: "Cakes", href: "cakes.html", categories: ["cakes"] },
+  { slug: "pastries-buns", label: "Pastries & Buns", href: "pastries-buns.html", categories: ["pastries-buns"] },
   { slug: "cupcakes", label: "Cupcakes", href: "cupcakes.html", categories: ["cupcakes"] },
   { slug: "cookies", label: "Cookies", href: "cookies.html", categories: ["cookies"] },
   { slug: "bars", label: "Bars", href: "bars.html", categories: ["bars"] },

@@ -609,7 +609,7 @@ const recipes = [
     slug: "vegan-danish-pastries-vanilla-almond",
     title: "Vegan Danish Pastries With Vanilla Cream And Almond Filling",
     category: "cakes",
-    categories: ["cakes"],
+    categories: ["cakes", "pastries-buns"],
     categoryLabel: "Pastries",
     badge: "New recipe",
     date: "2026-08-11",
