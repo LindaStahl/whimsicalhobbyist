@@ -280,7 +280,7 @@ const recipes = [
       "Fudgy vegan brownies with dark chocolate, aquafaba, and walnuts.",
     image: "Brownie_with_walnuts.png",
     thumbnail: "Brownie_with_walnuts.png",
-    alt: "Vegan fudgy walnut brownies with cream topping",
+    alt: "Gooey vegan chocolate brownie slice with melted chocolate and walnuts",
     ingredients: [
       "180 g aquafaba, liquid from canned chickpeas",
       "435 g dark brown sugar",
