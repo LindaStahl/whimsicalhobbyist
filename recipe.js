@@ -203,11 +203,198 @@ function formatCommentDate(dateValue) {
   });
 }
 
+const defaultRecipeReviews = {
+  "vegan-apple-crumble": [
+    {
+      name: "Emma",
+      rating: 5,
+      createdAt: "2026-08-01T10:00:00.000Z",
+      comment: "This tasted like pure comfort. The apples turned soft and cozy, and the crumble stayed beautifully golden."
+    },
+    {
+      name: "Sofia",
+      rating: 5,
+      createdAt: "2026-08-03T12:30:00.000Z",
+      comment: "Such a lovely dessert for a slow weekend. The custard made it feel extra special."
+    },
+    {
+      name: "Mia",
+      rating: 5,
+      createdAt: "2026-08-05T16:45:00.000Z",
+      comment: "I loved the cinnamon and cardamom together. It made the whole kitchen smell amazing."
+    }
+  ],
+  "vegan-carrot-cake-muffins": [
+    {
+      name: "Olivia",
+      rating: 5,
+      createdAt: "2026-08-02T09:15:00.000Z",
+      comment: "So soft and full of flavor. The frosting was light, creamy, and perfect with the spices."
+    },
+    {
+      name: "Clara",
+      rating: 5,
+      createdAt: "2026-08-04T14:20:00.000Z",
+      comment: "These felt like little bakery cupcakes. Moist, cozy, and beautiful with the walnuts on top."
+    },
+    {
+      name: "Nora",
+      rating: 5,
+      createdAt: "2026-08-07T11:10:00.000Z",
+      comment: "A wonderful vegan carrot cake recipe. I would happily make these again for guests."
+    }
+  ],
+  "vegan-chocolate-chip-banana-bread": [
+    {
+      name: "Ella",
+      rating: 5,
+      createdAt: "2026-08-01T18:05:00.000Z",
+      comment: "This banana bread came out so moist and chocolatey. It was even better the next day."
+    },
+    {
+      name: "Freja",
+      rating: 5,
+      createdAt: "2026-08-03T08:40:00.000Z",
+      comment: "The warm spices made it feel extra cozy. Perfect with coffee in the afternoon."
+    },
+    {
+      name: "Isabelle",
+      rating: 5,
+      createdAt: "2026-08-06T13:25:00.000Z",
+      comment: "Easy to follow and absolutely delicious. The chocolate pockets were my favorite part."
+    }
+  ],
+  "vegan-fudgy-walnut-brownies": [
+    {
+      name: "Lina",
+      rating: 5,
+      createdAt: "2026-08-02T17:50:00.000Z",
+      comment: "These brownies were rich, fudgy, and so chocolatey. The walnuts gave the perfect crunch."
+    },
+    {
+      name: "Amelia",
+      rating: 5,
+      createdAt: "2026-08-04T19:00:00.000Z",
+      comment: "Exactly how a brownie should be. Gooey in the middle with a beautiful crackly top."
+    },
+    {
+      name: "Hanna",
+      rating: 5,
+      createdAt: "2026-08-08T15:15:00.000Z",
+      comment: "I served these chilled and they sliced so neatly. Everyone asked for another piece."
+    }
+  ],
+  "peanut-butter-stuffed-chocolate-cookies": [
+    {
+      name: "Alice",
+      rating: 5,
+      createdAt: "2026-08-01T15:35:00.000Z",
+      comment: "The peanut butter center was such a dreamy surprise. These taste like bakery cookies."
+    },
+    {
+      name: "Julia",
+      rating: 5,
+      createdAt: "2026-08-05T10:20:00.000Z",
+      comment: "Freezing the filling made them so easy to shape. They baked up thick and delicious."
+    },
+    {
+      name: "Maja",
+      rating: 5,
+      createdAt: "2026-08-09T12:05:00.000Z",
+      comment: "Chocolate and peanut butter perfection. I warmed one slightly and it was incredible."
+    }
+  ],
+  "vegan-smores-stuffed-cookies": [
+    {
+      name: "Elise",
+      rating: 5,
+      createdAt: "2026-08-06T18:30:00.000Z",
+      comment: "These were so fun to pull apart. Gooey chocolate, soft marshmallow, and crisp biscuit pieces in every bite."
+    },
+    {
+      name: "Sara",
+      rating: 5,
+      createdAt: "2026-08-07T20:10:00.000Z",
+      comment: "A proper showstopper cookie. They looked beautiful and tasted even better warm."
+    },
+    {
+      name: "Thea",
+      rating: 5,
+      createdAt: "2026-08-09T16:45:00.000Z",
+      comment: "The frozen filling trick worked perfectly. Thick cookies with the dreamiest center."
+    }
+  ],
+  "vegan-lemon-poppy-seed-bundt-cake": [
+    {
+      name: "Matilda",
+      rating: 5,
+      createdAt: "2026-08-02T11:30:00.000Z",
+      comment: "Bright, soft, and so pretty on the table. The lemon glaze gave it such a fresh finish."
+    },
+    {
+      name: "Grace",
+      rating: 5,
+      createdAt: "2026-08-04T16:05:00.000Z",
+      comment: "This cake tasted like sunshine. The texture was tender and the poppy seeds were lovely."
+    },
+    {
+      name: "Alva",
+      rating: 5,
+      createdAt: "2026-08-08T09:55:00.000Z",
+      comment: "Beautiful flavor and easy instructions. It made a simple coffee break feel special."
+    }
+  ],
+  "vegan-danish-pastries-vanilla-almond": [
+    {
+      name: "Linnea",
+      rating: 5,
+      createdAt: "2026-08-11T08:20:00.000Z",
+      comment: "These pastries looked straight from a bakery. The almond filling and vanilla cream were beautiful together."
+    },
+    {
+      name: "Astrid",
+      rating: 5,
+      createdAt: "2026-08-11T11:40:00.000Z",
+      comment: "The layers turned out flaky and golden. The cardamom made them taste wonderfully Scandinavian."
+    },
+    {
+      name: "Elsa",
+      rating: 5,
+      createdAt: "2026-08-11T15:10:00.000Z",
+      comment: "Worth every chill and fold. They were crisp, creamy, and absolutely gorgeous with the glaze."
+    }
+  ],
+  "homemade-vegan-nutella": [
+    {
+      name: "Ida",
+      rating: 5,
+      createdAt: "2026-08-01T09:25:00.000Z",
+      comment: "So smooth and chocolatey. I loved knowing exactly what went into it."
+    },
+    {
+      name: "Leah",
+      rating: 5,
+      createdAt: "2026-08-03T14:50:00.000Z",
+      comment: "This was amazing on toast and pancakes. The roasted hazelnut flavor really shines."
+    },
+    {
+      name: "Victoria",
+      rating: 5,
+      createdAt: "2026-08-06T17:15:00.000Z",
+      comment: "Creamy, rich, and so much better than store-bought. I kept sneaking spoonfuls."
+    }
+  ]
+};
+
+function getDefaultReviews(recipe) {
+  return defaultRecipeReviews[recipe.slug] || [];
+}
+
 function renderCommentList(recipe) {
-  const comments = getStoredComments(recipe);
+  const comments = [...getStoredComments(recipe), ...getDefaultReviews(recipe)];
   const commentCountElement = document.querySelector("#comment-count");
   const commentListElement = document.querySelector("#comment-list");
-  const commentLabel = comments.length === 1 ? "1 Comment" : `${comments.length} Comments`;
+  const commentLabel = comments.length === 1 ? "1 Review" : `${comments.length} Reviews`;
 
   commentCountElement.textContent = commentLabel;
 
