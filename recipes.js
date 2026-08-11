@@ -606,6 +606,141 @@ const recipes = [
     popular: true
   },
   {
+    slug: "vegan-danish-pastries-vanilla-almond",
+    title: "Vegan Danish Pastries With Vanilla Cream And Almond Filling",
+    category: "cakes",
+    categories: ["cakes"],
+    categoryLabel: "Pastries",
+    badge: "New recipe",
+    date: "2026-08-11",
+    prepTime: "1 hr plus chilling and rising",
+    bakeTime: "20 min",
+    servings: "16 pastries",
+    excerpt:
+      "Flaky, golden vegan Danish pastries filled with soft almond cream, silky vanilla custard, warm cardamom, and a delicate drizzle of icing.",
+    cardText:
+      "These vegan Danish pastries are the kind of bake that turns an ordinary kitchen morning into something quietly magical.\n\nThe dough is folded with cold margarine to create delicate, flaky layers, then filled with soft almond cream and silky vanilla custard. A little cardamom gives the pastries that cozy Scandinavian bakery flavor, while slivered almonds and a simple icing drizzle make them look beautifully finished.\n\nThey take a little patience, but every fold, chill, and rise is worth it when the pastries come out golden, crisp, and filled with creamy sweetness.",
+    featuredText:
+      "Flaky vegan Danish pastries with almond cream, vanilla custard, cardamom, and icing.",
+    image: "Vegan_Danish_Pastries.png",
+    thumbnail: "Vegan_Danish_Pastries.png",
+    alt: "Vegan Danish pastries with vanilla cream, berry jam, almonds, and icing on a pink table",
+    ingredients: [
+      "Vanilla Cream",
+      "65 g cornstarch",
+      "85 g granulated sugar",
+      "5 g vanilla sugar",
+      "250 g vegan cream",
+      "300 g plant-based milk",
+      "1/2 tsp turmeric",
+      "Danish Pastry Dough",
+      "32 g fresh yeast",
+      "300 ml cold unsweetened plant-based milk",
+      "25 ml cold vegan cream",
+      "500 g all-purpose flour",
+      "50 g granulated sugar",
+      "12 g vanilla sugar",
+      "3 g ground cardamom",
+      "3 g salt",
+      "25 g softened vegan margarine, for the dough",
+      "450 g firm vegan margarine, cold, for laminating",
+      "Almond Filling",
+      "200 g almond paste",
+      "Vegan cream, 50-100 g",
+      "A pinch of ground cardamom",
+      "Brushing and Decoration",
+      "Plant-based milk, for brushing",
+      "Slivered almonds",
+      "Glaze",
+      "Powdered sugar",
+      "A little water"
+    ],
+    method: [
+      "Make the vanilla cream",
+      "Start with the vanilla cream so it has time to cool completely.",
+      "Add the cornstarch, granulated sugar, and vanilla sugar to a saucepan. Whisk together, then slowly pour in the vegan cream and plant-based milk while whisking until smooth.",
+      "Add the turmeric and place the saucepan over medium heat.",
+      "Cook, whisking constantly, until the mixture thickens into a smooth custard.",
+      "Transfer to a bowl, cover the surface, and refrigerate until completely cold.",
+      "Make the almond filling",
+      "Add the almond paste, 50 g vegan cream, and cardamom to a bowl.",
+      "Whisk or beat until smooth and spreadable.",
+      "Add more cream, a little at a time, if needed. The filling should be soft enough to pipe or spoon, but not runny.",
+      "Make the pastry dough",
+      "Before starting, make sure your ingredients are cold, including the flour and sugar. Cold dough is much easier to laminate and helps create flaky layers.",
+      "Dissolve the fresh yeast in the cold plant-based milk and vegan cream.",
+      "Add the flour, granulated sugar, vanilla sugar, cardamom, salt, and softened margarine.",
+      "Mix just until a dough forms. Avoid kneading for too long; the dough should come together but still feel soft and slightly tacky.",
+      "Cover and chill for 20 minutes.",
+      "Shape the cold laminating margarine into a 16 x 16 cm square.",
+      "Roll the chilled dough into a square, about 26 x 26 cm.",
+      "Place the margarine square in the center like a diamond. Fold the corners of the dough over the margarine so it is fully enclosed. Pinch the seams closed to seal.",
+      "Turn the dough so the folded edge is facing you. Gently roll it into a rectangle, about 25 x 45 cm.",
+      "Fold the dough into thirds, like a letter. Wrap and chill for 20 minutes.",
+      "Repeat the rolling, folding, and chilling process two more times, always keeping the dough cold.",
+      "After the final fold, chill for another 20 minutes.",
+      "Shape the pastries",
+      "You can shape these pastries in two ways.",
+      "For square pastries",
+      "Roll the chilled dough into a square, about 36 x 36 cm.",
+      "Cut into 16 squares, each about 9 x 9 cm.",
+      "Place a spoonful of almond cream in the center of each square.",
+      "Fold the corners toward the middle and press firmly to seal.",
+      "For figure eight pastries",
+      "Roll the chilled dough on a lightly floured surface into a sheet about 20 x 40 cm and just over 1 cm thick.",
+      "Cut into strips about 1.5 cm wide.",
+      "Twist each strip, then shape it into a figure eight, tucking the seam underneath in the center.",
+      "Add a spoonful of almond cream into the center of each hole.",
+      "Rise and bake",
+      "Place the pastries on lined baking trays.",
+      "Cover with a clean kitchen towel and let rise for 1-2 hours, or until puffy and almost doubled in size.",
+      "When about 15 minutes of rising time remains, preheat the oven to 200C (390F).",
+      "Spoon or pipe chilled vanilla cream into the center of each pastry.",
+      "Brush the pastry edges with plant-based milk and press slivered almonds on top.",
+      "Bake in the center of the oven for about 20 minutes, or until golden, crisp, and beautifully layered.",
+      "Transfer to a wire rack and let cool.",
+      "Glaze",
+      "Mix powdered sugar with a small amount of water until thick and smooth.",
+      "Pipe or drizzle the glaze over the cooled pastries.",
+      "If using jam instead of vanilla cream, add a small spoonful after baking."
+    ],
+    tip: "Keep the dough cold at every stage. If the margarine starts to soften, pause and refrigerate the dough before continuing. Cold layers are what give Danish pastries their delicate, flaky texture.",
+    extraSections: [
+      {
+        title: "Shaping options",
+        items: [
+          "For classic square pastries, cut the dough into 16 squares and fold the corners into the middle.",
+          "For figure eight pastries, cut the dough into strips, twist each strip, and shape it into an eight before filling."
+        ]
+      },
+      {
+        title: "Storage",
+        items: [
+          "These pastries are best enjoyed the day they are baked.",
+          "Store leftovers in an airtight container at room temperature for 1 day, or refrigerate for up to 3 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze baked pastries without glaze for up to 2 months.",
+          "Thaw and warm briefly in the oven before glazing and serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Use firm block-style vegan margarine for lamination.",
+          "If the dough resists rolling, let it rest in the refrigerator for 10 minutes before continuing.",
+          "If the margarine softens or leaks, chill the dough before the next fold.",
+          "Pipe the vanilla cream after the pastries have risen so it stays neatly in the center."
+        ]
+      }
+    ],
+    featured: true,
+    popular: true
+  },
+  {
     slug: "homemade-vegan-nutella",
     title: "Homemade Vegan Nutella",
     category: "basics",

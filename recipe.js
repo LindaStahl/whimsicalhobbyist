@@ -107,7 +107,12 @@ function renderIngredients(recipe, scale = 1) {
     "crumble topping",
     "homemade vanilla custard",
     "chocolate hazelnut filling",
-    "cookie dough"
+    "cookie dough",
+    "vanilla cream",
+    "danish pastry dough",
+    "almond filling",
+    "brushing and decoration",
+    "glaze"
   ];
 
   return recipe.ingredients
@@ -128,7 +133,15 @@ function renderMethodStep(step) {
     "prepare the apple filling",
     "make the crumble",
     "assemble",
-    "make the vanilla custard"
+    "make the vanilla custard",
+    "make the vanilla cream",
+    "make the almond filling",
+    "make the pastry dough",
+    "shape the pastries",
+    "for square pastries",
+    "for figure eight pastries",
+    "rise and bake",
+    "glaze"
   ];
   const isHeading = methodHeadings.includes(step.toLowerCase());
 
