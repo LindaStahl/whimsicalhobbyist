@@ -13,7 +13,7 @@ const menuCategories = [
   { slug: "cupcakes", label: "Cupcakes", href: "cupcakes.html", categories: ["cupcakes"] },
   { slug: "cookies", label: "Cookies", href: "cookies.html", categories: ["cookies"] },
   { slug: "bars", label: "Brownies & Bars", href: "bars.html", categories: ["bars"] },
-  { slug: "creams", label: "Creams", href: "creams.html", categories: ["basics", "creams"] },
+  { slug: "creams", label: "Creams & Fillings", href: "creams.html", categories: ["basics", "creams"] },
   { slug: "no-bake", label: "No Bake", href: "no-bake.html", categories: ["no-bake"] },
   { slug: "glutenfree", label: "Gluten-Free", href: "glutenfree.html", categories: ["glutenfree"] }
 ];
