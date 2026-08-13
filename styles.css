@@ -418,6 +418,13 @@ h3 {
   margin-bottom: 24px;
 }
 
+.landing-panel img[src="About.png"] {
+  aspect-ratio: 1;
+  max-height: 640px;
+  object-fit: contain;
+  background: var(--white);
+}
+
 .landing-panel p {
   color: var(--muted);
   line-height: 1.75;
@@ -566,9 +573,10 @@ h3 {
 
 .about-panel img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   border-radius: 0;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--white);
   margin-bottom: 14px;
 }
 
