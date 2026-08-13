@@ -180,17 +180,17 @@ function setActiveFilter(filter) {
 }
 
 function applyStoredRecipeFilters() {
-  const storedCategory = sessionStorage.getItem("whimsicalCategory");
-  const storedSearch = sessionStorage.getItem("whimsicalSearch");
+  const storedCategory = sessionStorage.getItem("littleBakingTrollCategory");
+  const storedSearch = sessionStorage.getItem("littleBakingTrollSearch");
 
   if (storedSearch) {
     searchInput.value = storedSearch;
-    sessionStorage.removeItem("whimsicalSearch");
+    sessionStorage.removeItem("littleBakingTrollSearch");
   }
 
   if (storedCategory) {
     activeFilter = storedCategory;
-    sessionStorage.removeItem("whimsicalCategory");
+    sessionStorage.removeItem("littleBakingTrollCategory");
   }
 }
 
@@ -233,6 +233,6 @@ newsletterForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const emailInput = document.querySelector("#email");
 
-  formMessage.textContent = "Sweet! Whimsicalhobbyist recipes are on the way.";
+  formMessage.textContent = "Sweet! Little Baking Troll recipes are on the way.";
   emailInput.value = "";
 });

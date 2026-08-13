@@ -68,8 +68,26 @@ a {
   justify-items: center;
   width: min(760px, 92vw);
   margin: 0 auto;
-  padding: 24px 0 14px;
+  padding: 18px 0 14px;
   text-align: center;
+}
+
+.brand-logo {
+  width: clamp(150px, 22vw, 230px);
+  aspect-ratio: 1;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 14px 28px rgba(73, 51, 58, 0.12);
+}
+
+.brand-name {
+  margin-top: 10px;
+  color: var(--pink-strong);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.05;
 }
 
 .brand-title {
@@ -79,7 +97,7 @@ a {
   gap: 12px;
   color: var(--pink-strong);
   font-family: "Sacramento", cursive;
-  font-size: clamp(58px, 8vw, 94px);
+  font-size: clamp(50px, 7vw, 82px);
   line-height: 0.88;
 }
 
@@ -1019,6 +1037,7 @@ footer {
   height: 42px;
   border-radius: 50%;
   object-fit: cover;
+  background: var(--cream);
 }
 
 footer p {
@@ -1077,11 +1096,19 @@ footer p {
 
   .brand {
     width: min(92vw, 860px);
-    padding: 18px 0 12px;
+    padding: 16px 0 12px;
+  }
+
+  .brand-logo {
+    width: clamp(124px, 38vw, 168px);
+  }
+
+  .brand-name {
+    font-size: clamp(24px, 8vw, 32px);
   }
 
   .brand-title {
-    font-size: clamp(48px, 16vw, 68px);
+    font-size: clamp(40px, 12vw, 60px);
   }
 
   .brand-tagline {

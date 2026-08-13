@@ -56,7 +56,7 @@ function renderRecipeCards(recipeSet) {
     recipeListElement.innerHTML = `
       <section class="recipe-not-found">
         <h2>Recipes coming soon</h2>
-        <p>This section is waiting for its first Whimsicalhobbyist bake.</p>
+        <p>This section is waiting for its first Little Baking Troll bake.</p>
       </section>
     `;
     return;
@@ -133,7 +133,7 @@ document.addEventListener("click", (event) => {
 
 miniSearch.addEventListener("submit", (event) => {
   event.preventDefault();
-  sessionStorage.setItem("whimsicalSearch", searchInput.value.trim());
+  sessionStorage.setItem("littleBakingTrollSearch", searchInput.value.trim());
   window.location.href = "index.html#recipes";
 });
 
@@ -142,7 +142,7 @@ if (newsletterForm) {
     event.preventDefault();
     const emailInput = document.querySelector("#email");
 
-    formMessage.textContent = "Sweet! Whimsicalhobbyist recipes are on the way.";
+    formMessage.textContent = "Sweet! Little Baking Troll recipes are on the way.";
     emailInput.value = "";
   });
 }

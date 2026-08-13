@@ -187,7 +187,7 @@ function escapeHtml(value) {
 }
 
 function getCommentStorageKey(recipe) {
-  return `whimsicalRecipeComments:${recipe.slug}`;
+  return `littleBakingTrollRecipeComments:${recipe.slug}`;
 }
 
 function getStoredComments(recipe) {
@@ -523,7 +523,7 @@ function bindIngredientScaler(recipe) {
 }
 
 function renderRecipe(recipe) {
-  document.title = `${recipe.title} | Whimsicalhobbyist`;
+  document.title = `${recipe.title} | The Little Baking Troll`;
   const extraSections = recipe.extraSections || [];
 
   recipePageElement.innerHTML = `
@@ -567,7 +567,7 @@ function renderRecipe(recipe) {
       </div>
 
       <section class="recipe-tip">
-        <p class="eyebrow">Whimsical tip</p>
+        <p class="eyebrow">Little baking tip</p>
         <p>${recipe.tip}</p>
       </section>
 
@@ -679,7 +679,7 @@ categoryMenuElement.addEventListener("click", (event) => {
     return;
   }
 
-  sessionStorage.setItem("whimsicalCategory", categoryLink.dataset.categoryFilter);
+  sessionStorage.setItem("littleBakingTrollCategory", categoryLink.dataset.categoryFilter);
   navDropdown.classList.remove("open");
 });
 
@@ -691,6 +691,6 @@ document.addEventListener("click", (event) => {
 
 miniSearch.addEventListener("submit", (event) => {
   event.preventDefault();
-  sessionStorage.setItem("whimsicalSearch", searchInput.value.trim());
+  sessionStorage.setItem("littleBakingTrollSearch", searchInput.value.trim());
   window.location.href = "index.html#recipes";
 });
