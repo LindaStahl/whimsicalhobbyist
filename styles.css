@@ -66,15 +66,15 @@ a {
 .brand {
   display: grid;
   justify-items: center;
-  width: min(1180px, 94vw);
+  width: min(980px, 92vw);
   margin: 0 auto;
-  padding: 14px 0 12px;
+  padding: 10px 0 8px;
   text-align: center;
 }
 
 .brand-header-image {
   width: 100%;
-  max-height: 390px;
+  max-height: 260px;
   display: block;
   object-fit: contain;
 }
@@ -1102,12 +1102,12 @@ footer p {
   }
 
   .brand {
-    width: min(96vw, 860px);
-    padding: 10px 0 8px;
+    width: min(94vw, 760px);
+    padding: 8px 0 6px;
   }
 
   .brand-header-image {
-    max-height: 210px;
+    max-height: 150px;
   }
 
   .brand-logo {
