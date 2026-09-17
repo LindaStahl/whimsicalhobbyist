@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#fffaf8"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="#f6c9b8" opacity="0.28"/>
+  <rect x="72" y="72" width="936" height="1206" fill="#ffffff"/>
+  <rect x="120" y="116" width="840" height="1118" fill="#fffaf8" stroke="#efd7cd" stroke-width="3"/>
+
+  <text x="540" y="188" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#9b6a5a">SKINCARE BRAND</text>
+
+  <rect x="202" y="258" width="676" height="486" fill="#ffffff" stroke="#f0cfc2" stroke-width="3"/>
+  <rect x="244" y="300" width="592" height="402" fill="#f8dfd5" stroke="#ffffff" stroke-width="8"/>
+  <text x="540" y="478" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="3" fill="#9b6a5a">PRODUCT PHOTO</text>
+  <text x="540" y="530" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#9b6a5a">place serum bottle here</text>
+
+  <text x="540" y="842" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700" fill="#332522">NEW</text>
+  <text x="540" y="930" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700" fill="#332522">VITAMIN C</text>
+  <text x="540" y="1018" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700" fill="#332522">SERUM</text>
+
+  <rect x="340" y="1066" width="400" height="2" fill="#d8a391"/>
+  <text x="540" y="1132" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="27" font-weight="600" letter-spacing="2" fill="#7d5a50">BRIGHTEN • GLOW • HYDRATE</text>
+
+  <rect x="354" y="1178" width="372" height="66" rx="33" fill="#332522"/>
+  <text x="540" y="1221" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3" fill="#ffffff">SHOP THE LAUNCH</text>
+</svg>

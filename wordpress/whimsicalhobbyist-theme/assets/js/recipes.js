@@ -1,0 +1,689 @@
+// Edit recipes here. Add, remove, or update these objects to change the site.
+const recipes = [
+  {
+    slug: "vegan-apple-crumble",
+    title: "Vegan Apple Crumble",
+    category: "cakes",
+    categories: ["cakes", "glutenfree"],
+    categoryLabel: "Cakes",
+    badge: "Gluten-free option",
+    date: "2026-07-16",
+    prepTime: "20 min",
+    bakeTime: "40 min",
+    servings: "8-10 servings",
+    excerpt:
+      "Warm, cozy vegan apple crumble with tender cinnamon-spiced apples, a buttery oat topping, and silky homemade vanilla custard.",
+    cardText:
+      "Apple crumble has a way of slowing everything down.\n\nIt is the dessert that fills the house with the comforting scent of cinnamon and baked apples, drawing everyone into the kitchen before it is even out of the oven. There was always something special about watching that golden crumble turn crisp while the fruit bubbled underneath, knowing that dessert would be served warm with plenty of creamy vanilla custard.\n\nThis recipe celebrates those simple, comforting moments - the kind where conversations linger a little longer around the table and second helpings are almost guaranteed. Soft, spiced apples, a buttery oat crumble, and silky vanilla custard come together to create a dessert that feels like home in every spoonful.\n\nWhether you are baking it on a chilly autumn afternoon or simply craving a little comfort, I hope this apple crumble brings warmth, nostalgia, and sweet memories to your kitchen.",
+    featuredText:
+      "Cinnamon-spiced apples, golden oat crumble, and homemade vanilla custard.",
+    image: "Applecrumble.png",
+    thumbnail: "Applecrumble.png",
+    alt: "Vegan apple crumble served with vanilla ice cream on a pastel table",
+    ingredients: [
+      "Apple Filling",
+      "750 g apples, peeled and diced into small cubes",
+      "7 g ground cinnamon",
+      "3 g ground cardamom",
+      "22.5 g light brown sugar",
+      "Crumble Topping",
+      "428 g vegan butter or margarine, melted",
+      "292 g light brown sugar",
+      "265 g agave syrup",
+      "7 g vanilla extract",
+      "382 g rolled oats, or certified gluten-free rolled oats",
+      "382 g all-purpose flour, or gluten-free flour blend",
+      "7 g baking powder",
+      "5 g salt",
+      "Homemade Vanilla Custard",
+      "80 g cornstarch",
+      "85 g granulated sugar",
+      "8 g vanilla sugar, or 5 g vanilla extract",
+      "250 g vegan whipping cream",
+      "300 g plant-based milk",
+      "1 g ground turmeric, optional, for a natural golden color"
+    ],
+    method: [
+      "Prepare the apple filling",
+      "Preheat your oven to 180C (350F).",
+      "Grease a 25 cm (10-inch) round baking dish.",
+      "In a large bowl, combine the diced apples, cinnamon, cardamom, and brown sugar.",
+      "Toss until the apples are evenly coated and set aside.",
+      "Make the crumble",
+      "In a large mixing bowl, whisk together the rolled oats, flour, baking powder, and salt.",
+      "Add the melted vegan butter, brown sugar, agave syrup, and vanilla extract.",
+      "Stir until the mixture forms a crumbly dough.",
+      "Assemble",
+      "Press half of the crumble mixture firmly into the bottom of the prepared baking dish.",
+      "Spread the apple filling evenly over the base.",
+      "Sprinkle the remaining crumble mixture over the apples, gently covering the entire surface.",
+      "Bake for approximately 40 minutes, or until the crumble is golden brown and the apple filling is bubbling around the edges.",
+      "Allow the crumble to cool for about 15 minutes before serving.",
+      "Make the vanilla custard",
+      "In a saucepan, whisk together the cornstarch, sugar, and vanilla sugar.",
+      "Gradually pour in the vegan cream and plant-based milk while whisking continuously until smooth.",
+      "Add the turmeric, if using.",
+      "Place the saucepan over medium heat and cook, whisking constantly, until the custard thickens.",
+      "Remove from the heat and serve warm alongside the apple crumble."
+    ],
+    tip: "Use a mix of tart and sweet apples for the best depth of flavor, and let the crumble rest for 10-15 minutes after baking so the filling can set slightly.",
+    extraSections: [
+      {
+        title: "Gluten-free option",
+        items: [
+          "Use certified gluten-free oats and a gluten-free flour blend to make this crumble gluten-free."
+        ]
+      },
+      {
+        title: "Storage",
+        items: [
+          "Store leftover apple crumble in an airtight container in the refrigerator for up to 5 days.",
+          "Store the vanilla custard separately in the refrigerator for up to 3 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze the baked crumble without the custard in an airtight container for up to 3 months.",
+          "Thaw overnight in the refrigerator and reheat in the oven before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Use a mix of tart and sweet apples for the best depth of flavor.",
+          "Do not skip the cardamom. It adds a subtle warmth that pairs beautifully with the cinnamon.",
+          "Let the crumble rest for 10-15 minutes after baking so the filling can set slightly.",
+          "For an extra crunchy topping, sprinkle a handful of chopped pecans or walnuts over the crumble before baking.",
+          "Serve warm with vanilla custard, vegan vanilla ice cream, or whipped cream for the ultimate cozy dessert."
+        ]
+      }
+    ],
+    featured: true,
+    popular: true
+  },
+  {
+    slug: "vegan-carrot-cake-muffins",
+    title: "Carrot Cake Cupcakes",
+    category: "cupcakes",
+    categoryLabel: "Cupcakes",
+    badge: "New recipe",
+    date: "2026-07-03",
+    prepTime: "20 min",
+    bakeTime: "20-25 min",
+    servings: "6 large muffins or 8 medium muffins",
+    excerpt:
+      "Soft, moist, warmly spiced vegan carrot cake muffins topped with light vegan cream cheese frosting and chopped walnuts.",
+    cardText:
+      "I wanted to turn the classic carrot cake into something a little more everyday - a bakery-style muffin that is just as welcome on a slow Sunday morning as it is with an afternoon cup of tea. They are incredibly moist, warmly spiced, and finished with a cloud of fluffy vegan cream cheese frosting and a handful of crunchy walnuts.\n\nWhether you are baking them to share with loved ones or simply treating yourself after a long day, I hope these little cupcakes bring the same comfort, warmth, and joy they bring to my kitchen. Sometimes the sweetest memories are made over a bowl of batter, a dusting of flour, and something delicious fresh from the oven.",
+    featuredText:
+      "Warmly spiced carrot muffins with vegan cream cheese frosting and walnuts.",
+    image: "Carrotcupcake.png",
+    thumbnail: "Carrotcupcake.png",
+    alt: "Vegan carrot cake muffins with cream cheese frosting and walnuts",
+    ingredients: [
+      "Cupcake batter",
+      "182 g all-purpose flour",
+      "120 g brown sugar",
+      "4.4 g baking powder",
+      "5.5 g baking soda",
+      "1.7 g salt",
+      "4.6 g ground cinnamon",
+      "0.3 g ground nutmeg",
+      "0.5 g ground cloves",
+      "2.2 g vanilla extract",
+      "175 g unsweetened soy milk",
+      "103 g finely grated carrots",
+      "38.8 g sunflower oil",
+      "6.5 g apple cider vinegar",
+      "Frosting",
+      "100 g vegan cream cheese, such as Violife, Sheese, or Mommus",
+      "150 g cold vegan whipping cream",
+      "41 g granulated sugar",
+      "5 g vanilla extract",
+      "Decoration",
+      "Chopped walnuts",
+      "Optional: lemon zest, vegan white chocolate shavings, or a sprinkle of cinnamon"
+    ],
+    method: [
+      "Prepare the batter: In a large bowl, whisk together the soy milk, vanilla extract, grated carrot, sunflower oil, and apple cider vinegar. Let the mixture rest for 5 minutes to create a vegan buttermilk.",
+      "In a separate bowl, whisk together the flour, brown sugar, baking powder, baking soda, salt, cinnamon, nutmeg, and cloves until evenly combined.",
+      "Pour the wet ingredients into the dry ingredients and gently fold together until just combined. Be careful not to overmix. A few small lumps are perfectly fine.",
+      "Bake: Preheat your oven to 175C (350F). Line a muffin tin with paper liners.",
+      "Divide the batter evenly, filling each liner about three-quarters full.",
+      "Bake for 20-25 minutes, or until a toothpick inserted into the center comes out with a few moist crumbs attached.",
+      "Let the muffins cool completely in the pan before frosting.",
+      "Make the frosting: In a mixing bowl, beat together the vegan cream cheese, sugar, and vanilla until smooth.",
+      "Add the cold vegan whipping cream and whip until the frosting becomes thick, light, and holds its shape. Refrigerate until ready to use.",
+      "Decorate: Transfer the frosting to a piping bag, or a zip-top bag with one corner snipped off.",
+      "Pipe a generous swirl of frosting onto each cooled muffin and finish with chopped walnuts.",
+      "For an extra special touch, garnish with lemon zest, vegan white chocolate shavings, or a light dusting of cinnamon."
+    ],
+    tip: "Finely grate the carrots for the softest, moistest crumb, and let the muffins cool completely before frosting.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Store the frosted muffins in an airtight container in the refrigerator for up to 5 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Unfrosted muffins can be frozen in an airtight container for up to 3 months.",
+          "Thaw overnight in the refrigerator or at room temperature before frosting and serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Finely grate the carrots for the softest, moistest crumb.",
+          "Do not overmix the batter or the muffins may become dense.",
+          "Make sure the vegan whipping cream is very cold before whipping for the fluffiest frosting.",
+          "Allow the muffins to cool completely before decorating so the frosting does not melt."
+        ]
+      }
+    ],
+    featured: true,
+    popular: true
+  },
+  {
+    slug: "vegan-chocolate-chip-banana-bread",
+    title: "Vegan Chocolate Chip Banana Bread",
+    category: "bread",
+    categoryLabel: "Bread",
+    badge: "Banana bread",
+    date: "2026-07-03",
+    prepTime: "15 min",
+    bakeTime: "60-80 min",
+    servings: "1 loaf, about 10 slices",
+    excerpt:
+      "Soft, incredibly moist vegan banana bread packed with rich dark chocolate and lightly spiced with cinnamon and ginger.",
+    cardText:
+      'Banana bread has a way of making a house feel like home.\n\nIt is the recipe that rescues forgotten bananas from the fruit bowl, filling the kitchen with the comforting aroma of cinnamon, warm vanilla, and melting chocolate. The kind of smell that lingers long after the oven has cooled and quietly invites everyone to gather for "just one slice."\n\nThis version is inspired by those slow afternoons when life seemed a little simpler - a warm loaf on the counter, a cozy blanket, and a cup of tea shared with someone you love. Soft, rich, and dotted with pockets of dark chocolate, it is the kind of bake that feels like a warm hug with every bite.\n\nWhether you are baking it to create new memories or relive old ones, I hope this banana bread brings a little extra comfort to your kitchen. Sometimes the sweetest moments begin with a couple of overripe bananas and the simple joy of baking something from scratch.',
+    featuredText:
+      "Moist banana bread with dark chocolate, cinnamon, and ginger.",
+    image: "Bananabread.png",
+    thumbnail: "Bananabread.png",
+    alt: "Vegan chocolate chip banana bread with pecans",
+    ingredients: [
+      "300 g all-purpose flour",
+      "125 g granulated sugar",
+      "65 g light brown sugar",
+      "4 g baking powder",
+      "2.5 g baking soda",
+      "1.5 g ground cinnamon",
+      "1 g ground ginger",
+      "3 g salt",
+      "240 g ripe bananas, mashed, about 2 medium bananas",
+      "250 g plant-based milk, soy, oat, or almond",
+      "230 g rapeseed oil, or canola oil",
+      "15 g apple cider vinegar",
+      "2.5 g vanilla extract",
+      "150 g dark chocolate chips or chopped dark chocolate"
+    ],
+    method: [
+      "Prepare the batter: Preheat your oven to 175C (350F). Grease and lightly flour a 1.5-litre (9x5-inch) loaf pan.",
+      "In a large mixing bowl, whisk together the flour, granulated sugar, brown sugar, baking powder, baking soda, cinnamon, ginger, and salt until evenly combined.",
+      "In a separate bowl, mash the bananas until mostly smooth. Add the plant milk, rapeseed oil, apple cider vinegar, and vanilla extract, then whisk until well combined.",
+      "Pour the wet ingredients into the dry ingredients and gently whisk until no dry flour remains. Avoid overmixing to keep the loaf soft and tender.",
+      "Fold in the dark chocolate chips.",
+      "Bake: Pour the batter into the prepared loaf pan and smooth the top.",
+      "Bake for 60-80 minutes, or until a skewer inserted into the center comes out clean or with just a few moist crumbs.",
+      "If the top begins to brown too quickly, loosely cover the loaf with aluminum foil during the final 20 minutes of baking.",
+      "Let the banana bread cool in the pan for about 15 minutes, then transfer it to a wire rack to cool completely before slicing."
+    ],
+    tip: "The riper the bananas, the sweeter and more flavorful your banana bread will be.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Store the banana bread in an airtight container at room temperature for 3 days, or in the refrigerator for up to 5 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Wrap individual slices or the whole loaf tightly in plastic wrap and place in a freezer-safe container or bag.",
+          "Freeze for up to 3 months. Thaw at room temperature or gently warm before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "The riper the bananas, the sweeter and more flavorful your banana bread will be.",
+          "Do not overmix the batter. This keeps the loaf light and tender.",
+          "For extra chocolate, sprinkle a handful of chocolate chips over the top before baking.",
+          "Add chopped walnuts or pecans for a delicious crunchy variation.",
+          "This banana bread tastes even better the next day, once the flavors have had time to develop."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
+    slug: "vegan-fudgy-walnut-brownies",
+    title: "Vegan Fudgy Walnut Brownies",
+    category: "cookies",
+    categoryLabel: "Cookies",
+    badge: "Brownies",
+    date: "2026-07-03",
+    prepTime: "20 min",
+    bakeTime: "34-37 min",
+    servings: "16 brownies",
+    excerpt:
+      "Rich, intensely chocolatey vegan brownies with a shiny crackly top, whipped aquafaba, dark chocolate, and crunchy walnuts.",
+    cardText:
+      "There is something wonderfully nostalgic about brownies cooling on the kitchen counter.\n\nMaybe it is the anticipation of waiting for them to set, knowing someone will sneak a corner piece before they have fully cooled. Or the way the rich aroma of chocolate fills every room, making the whole house feel a little warmer and a little cozier.\n\nThese brownies are inspired by those simple moments - the ones where sticky fingers, shared laughs, and a glass of cold milk, or your favorite plant-based alternative, made an ordinary afternoon feel special. With their crackly top, gooey center, pockets of melted chocolate, and crunchy walnuts, they are everything a brownie should be.\n\nWhether you are baking for friends, family, or simply because you are craving chocolate, I hope these brownies become one of those recipes you will come back to again and again - the kind that creates memories as sweet as every bite.",
+    featuredText:
+      "Fudgy vegan brownies with dark chocolate, aquafaba, and walnuts.",
+    image: "Brownie_with_walnuts.png",
+    thumbnail: "Brownie_with_walnuts.png",
+    alt: "Vegan fudgy walnut brownies with cream topping",
+    ingredients: [
+      "180 g aquafaba, liquid from canned chickpeas",
+      "435 g dark brown sugar",
+      "255 g dark chocolate, 65-75%, roughly chopped",
+      "168 g vegan butter or margarine, cubed",
+      "270 g all-purpose flour",
+      "63 g unsweetened cocoa powder",
+      "5 g salt",
+      "22.5 g vanilla extract",
+      "10 g instant espresso powder",
+      "128 g dark chocolate, chopped",
+      "120 g chopped walnuts"
+    ],
+    method: [
+      "Prepare the pan: Preheat your oven to 176C (350F). Line a 25 x 25 cm (10 x 10-inch) square metal baking pan with parchment paper, leaving an overhang on two sides.",
+      "Prepare the dry ingredients: Sift together the flour and cocoa powder into a medium bowl. This helps prevent lumps and creates a smoother batter.",
+      "Whip the aquafaba: In a large mixing bowl, combine the aquafaba and brown sugar.",
+      "Using an electric hand mixer or stand mixer, beat on high speed for 2 1/2-3 minutes, until the mixture becomes thick, glossy, and forms ribbons when lifted.",
+      "Add the vanilla extract, salt, and instant espresso powder. Fold gently with a silicone spatula until fully combined.",
+      "Melt the chocolate: Place the chopped dark chocolate and vegan butter in a microwave-safe bowl.",
+      "Microwave in 30-second intervals, stirring between each interval, until completely melted and smooth.",
+      "Make the batter: Pour the warm chocolate mixture into the whipped aquafaba and gently fold together.",
+      "Add the sifted flour and cocoa mixture, folding just until no dry streaks remain. Avoid overmixing.",
+      "Fold in the chopped dark chocolate and chopped walnuts.",
+      "Transfer the batter to the prepared baking pan and spread it evenly.",
+      "Bake for 34-37 minutes.",
+      "The brownies are ready when a toothpick inserted into the center comes out with a few moist crumbs or a little melted chocolate, but not wet batter.",
+      "If the toothpick comes out with liquid batter, continue baking in 5-minute intervals, checking frequently.",
+      "Cool and slice: Let the brownies cool in the pan for 30 minutes.",
+      "Lift them out using the parchment paper and transfer them to a wire rack.",
+      "Allow them to cool for another 20-30 minutes before slicing. For the cleanest cuts, chill the brownies for an hour before slicing with a warm knife."
+    ],
+    tip: "Whipping the aquafaba well is the secret to achieving that beautiful shiny, crackly brownie top.",
+    extraSections: [
+      {
+        title: "Cooling time",
+        items: ["Cool for about 1 hour before slicing for the neatest pieces."]
+      },
+      {
+        title: "Storage",
+        items: [
+          "Store the brownies in an airtight container at room temperature for 4 days, or refrigerate for up to 1 week."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Wrap individual brownies or the entire slab tightly and freeze in an airtight container for up to 3 months.",
+          "Thaw at room temperature before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Whipping the aquafaba well is the secret to achieving that beautiful shiny, crackly brownie top.",
+          "Use good-quality dark chocolate with 65-75% cocoa for the richest flavor.",
+          "Do not overbake. The brownies will continue to set as they cool.",
+          "For extra fudgy brownies, let them rest overnight before slicing.",
+          "Toast the walnuts for a few minutes before adding them to the batter to deepen their flavor."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
+    slug: "peanut-butter-stuffed-chocolate-cookies",
+    title: "Peanut Butter Stuffed Chocolate Cookies",
+    category: "cookies",
+    categoryLabel: "Cookies",
+    badge: "Cookies",
+    date: "2026-07-03",
+    prepTime: "30 min",
+    bakeTime: "16 min",
+    servings: "9 large bakery-style cookies",
+    excerpt:
+      "Rich, fudgy chocolate cookies with a gooey peanut butter center, finished with melted chocolate and crunchy peanuts.",
+    cardText:
+      "Some of the best treats are the ones with a surprise hidden inside.\n\nThese cookies remind me of those moments as a child when breaking open a dessert felt like uncovering a little secret. The excitement of seeing warm peanut butter slowly melt into rich chocolate was enough to make waiting for them to cool almost impossible.\n\nThey are the kind of cookies that disappear from the cooling rack faster than you expect. One turns into two, two become three, and suddenly everyone is asking if there are any left. With their crisp edges, fudgy centers, and creamy peanut butter filling, they are made for sharing, though you might want to hide a few for yourself.\n\nI hope these cookies bring a little joy, a little nostalgia, and plenty of chocolatey smiles to your kitchen. Sometimes the sweetest memories begin with warm cookies fresh from the oven and sticky fingers that no one minds.",
+    featuredText:
+      "Bakery-style chocolate cookies with a molten peanut butter center.",
+    image: "Pbchocolate_cookie.png",
+    thumbnail: "Pbchocolate_cookie.png",
+    alt: "Peanut butter stuffed chocolate cookies with chocolate drizzle and chopped peanuts",
+    ingredients: [
+      "For the Peanut Butter Filling",
+      "158 g smooth peanut butter",
+      "For the Chocolate Cookie Dough",
+      "230 g vegan margarine, softened",
+      "125 g granulated sugar",
+      "75 g light brown sugar",
+      "177 g all-purpose flour",
+      "80 g unsweetened cocoa powder",
+      "1.5 g salt",
+      "1 g ground cinnamon",
+      "2.5 g baking soda",
+      "10 g vanilla extract",
+      "5 g brewed coffee, or strong espresso",
+      "70 g chopped peanuts",
+      "For Decorating",
+      "50 g dark chocolate, melted",
+      "Chopped peanuts"
+    ],
+    method: [
+      "Freeze the peanut butter filling: Divide the peanut butter into 9 equal portions.",
+      "Place them on a parchment-lined plate or tray and freeze while preparing the cookie dough.",
+      "Make the cookie dough: In a large mixing bowl, beat the softened vegan margarine, granulated sugar, and brown sugar until light, fluffy, and completely smooth.",
+      "Add the flour, cocoa powder, baking soda, salt, cinnamon, vanilla extract, and brewed coffee.",
+      "Mix just until the ingredients come together. Avoid overmixing, as this can make the cookies less tender.",
+      "Fold in the chopped peanuts until evenly distributed.",
+      "Fill the cookies: Divide the dough into 9 equal portions using a large cookie scoop or spoon.",
+      "Flatten each portion slightly to create a well in the center.",
+      "Place one frozen peanut butter portion in the middle.",
+      "Carefully wrap the dough around the filling, sealing all edges completely. Make sure there are no cracks or openings, otherwise the filling may leak during baking.",
+      "If needed, lightly dampen your hands with water and gently roll each cookie into a smooth ball.",
+      "Freeze the dough: Place the filled cookie dough balls onto a parchment-lined baking tray.",
+      "Freeze for at least 1 hour. Do not skip this step. Chilling the dough prevents the cookies from spreading too much and helps create thick, bakery-style cookies.",
+      "Bake: Preheat your oven to 175C (350F).",
+      "Bake the frozen cookies for 15-16 minutes. Every oven is different, so begin checking after 15 minutes.",
+      "The cookies are ready when they have spread slightly and the edges look set while the centers still appear soft.",
+      "Shorter baking time gives extra fudgy cookies. Longer baking time gives firmer cookies.",
+      "Shape: As soon as the cookies come out of the oven, use a round cookie cutter or a heatproof glass slightly larger than the cookies to gently swirl around each one. This creates perfectly round bakery-style cookies.",
+      "Let the cookies cool on the baking tray for about 15 minutes.",
+      "Before lifting them, gently slide each cookie back and forth to make sure it has released from the parchment paper.",
+      "Decorate: Drizzle the melted dark chocolate over each cookie.",
+      "Sprinkle with chopped peanuts while the chocolate is still wet.",
+      "Refrigerate for 10 minutes, or until the chocolate has set.",
+      "Now for the best part: take a bite and enjoy that gooey peanut butter center."
+    ],
+    tip: "Freezing both the filling and the assembled dough is the key to thick, bakery-style cookies with a gooey peanut butter center.",
+    extraSections: [
+      {
+        title: "Freeze time",
+        items: ["Freeze for a total of about 1 hour 30 minutes before baking."]
+      },
+      {
+        title: "Storage",
+        items: [
+          "Store the cookies in an airtight container in the refrigerator for up to 1 week.",
+          "Place a sheet of parchment paper between each cookie to prevent them from sticking together."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze baked cookies in an airtight container or freezer-safe bag for up to 3 months.",
+          "Allow them to thaw at room temperature, or warm them in the microwave for 15-20 seconds for an irresistible molten center."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Freezing the peanut butter filling makes assembling the cookies much easier.",
+          "Do not skip freezing the assembled cookie dough. It is the key to thick, bakery-style cookies.",
+          "Seal the dough completely around the filling to prevent leaks.",
+          "A small amount of coffee enhances the chocolate flavor without making the cookies taste like coffee.",
+          "For an extra gooey center, enjoy the cookies slightly warm."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
+    slug: "vegan-smores-stuffed-cookies",
+    title: "Vegan S'mores Stuffed Cookies",
+    category: "cookies",
+    categoryLabel: "Cookies",
+    badge: "New recipe",
+    date: "2026-08-06",
+    prepTime: "35 min",
+    bakeTime: "18-20 min",
+    servings: "8-10 large bakery-style cookies",
+    excerpt:
+      "Thick vegan s'mores stuffed cookies with gooey chocolate hazelnut spread, melty marshmallows, crunchy Marie biscuits, and vegan chocolate chunks.",
+    cardText:
+      "If you love thick, bakery-style cookies, these Vegan S'mores Stuffed Cookies are a must-try.\n\nThey are packed with gooey chocolate hazelnut spread, melty vegan marshmallows, crunchy biscuits, and chunks of vegan chocolate in every bite. The frozen center bakes into a soft, molten surprise while the cookie edges turn golden and set just enough to hold everything together.\n\nA drizzle of melted vegan milk chocolate and a scatter of marshmallows, chocolate, and crushed Marie biscuits make them feel extra special. Serve them slightly warm for the ultimate gooey center.",
+    featuredText:
+      "Bakery-style s'mores cookies with chocolate hazelnut spread, marshmallows, and biscuits.",
+    image: "Smores_tiktok_photo.png",
+    thumbnail: "Smores_tiktok_photo.png",
+    alt: "Vegan s'mores stuffed cookie pulled apart with gooey chocolate and marshmallow filling",
+    ingredients: [
+      "Chocolate Hazelnut Filling",
+      "100 g vegan chocolate hazelnut spread",
+      "Cookie Dough",
+      "233 g vegan margarine, softened",
+      "122 g granulated sugar",
+      "82 g light brown sugar",
+      "295 g all-purpose flour",
+      "2 g salt",
+      "3 g baking soda",
+      "5 g vanilla sugar",
+      "4.5 g vanilla extract",
+      "30 g vegan Marie biscuits, chopped",
+      "75 g vegan milk chocolate, chopped",
+      "55 g vegan marshmallows, chopped",
+      "Decoration",
+      "Melted vegan milk chocolate",
+      "Extra chopped vegan marshmallows",
+      "Extra chopped vegan chocolate",
+      "Crushed Marie biscuits"
+    ],
+    method: [
+      "Divide the chocolate hazelnut spread into 8-10 small portions and freeze.",
+      "Beat the margarine, granulated sugar, and brown sugar until light and fluffy.",
+      "Add the flour, salt, baking soda, vanilla sugar, and vanilla extract. Mix until just combined.",
+      "Fold in the chopped chocolate, marshmallows, and biscuits.",
+      "Divide about 2/3 of the dough into 8 large balls. Press a well into each one.",
+      "Fill each cookie with one frozen chocolate hazelnut portion, a marshmallow piece, and a biscuit piece.",
+      "Cover with the remaining dough, seal well, and roll into smooth balls.",
+      "Freeze for at least 1 hour.",
+      "Preheat your oven to 175C (350F).",
+      "Bake for 18-20 minutes, until the edges are set and the centers are still soft.",
+      "While still warm, shape the cookies into perfect circles using a large cookie cutter or a glass.",
+      "Drizzle with melted vegan chocolate and decorate with extra marshmallows, chopped chocolate, and crushed biscuits."
+    ],
+    tip: "Freeze the filled cookie dough for at least 1 hour before baking so the cookies stay thick and the chocolate hazelnut center turns perfectly gooey.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Keep in an airtight container in the refrigerator for up to 1 week."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze for up to 3 months.",
+          "Warm for 15-20 seconds before serving for the ultimate gooey center."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Freeze the chocolate hazelnut spread portions before filling so the cookies are easier to shape.",
+          "Seal the dough well around the filling to help prevent leaks.",
+          "Shape the cookies while they are still warm for a polished bakery-style finish.",
+          "Serve slightly warm if you want the chocolate and marshmallow center extra melty."
+        ]
+      }
+    ],
+    featured: true,
+    popular: true
+  },
+  {
+    slug: "vegan-lemon-poppy-seed-bundt-cake",
+    title: "Vegan Lemon Poppy Seed Bundt Cake",
+    category: "cakes",
+    categoryLabel: "Cakes",
+    badge: "Cakes",
+    date: "2026-07-03",
+    prepTime: "15 min",
+    bakeTime: "35-40 min",
+    servings: "10-12 slices",
+    excerpt:
+      "Bright, soft, and wonderfully moist vegan lemon poppy seed Bundt cake with fresh citrus flavor and a sweet lemon glaze.",
+    cardText:
+      'Some cakes taste like sunshine, and this is one of them.\n\nThe bright scent of freshly grated lemons, the tiny poppy seeds scattered through every slice, and the sweet drizzle of lemon glaze bring back memories of slow afternoons, open windows, and warm kitchens filled with laughter. It is the kind of cake that sits proudly in the center of the table, inviting everyone to cut "just one more slice."\n\nSimple, fresh, and wonderfully comforting, this lemon Bundt cake celebrates the little joys of homemade baking. Whether you are sharing it over coffee with friends or enjoying a quiet moment to yourself, I hope it fills your home with the same warmth, happiness, and sunshine that inspired this recipe.',
+    featuredText:
+      "Fresh lemon, delicate poppy seeds, and a sweet citrus glaze.",
+    image: "Lemonbundt.png",
+    thumbnail: "Lemonbundt.png",
+    alt: "Vegan lemon poppy seed Bundt cake with lemon glaze",
+    ingredients: [
+      "For the Cake",
+      "88 g plant-based yogurt",
+      "275 g unsweetened soy milk",
+      "122 g sunflower oil",
+      "50 g freshly squeezed lemon juice",
+      "Zest of 1 large lemon",
+      "385 g all-purpose flour",
+      "5 g baking soda",
+      "3 g baking powder",
+      "220 g granulated sugar",
+      "5 g poppy seeds",
+      "For the Lemon Glaze",
+      "180 g powdered sugar",
+      "45 g freshly squeezed lemon juice"
+    ],
+    method: [
+      "Prepare the batter: Preheat your oven to 180C (355F). Grease and lightly flour a Bundt pan to prevent sticking.",
+      "In a large mixing bowl, whisk together the soy milk, plant-based yogurt, sunflower oil, lemon juice, and lemon zest until smooth.",
+      "In a separate bowl, whisk together the flour, sugar, baking soda, baking powder, and poppy seeds.",
+      "Pour the wet ingredients into the dry ingredients and gently whisk until just combined. Do not overmix. A few small lumps are perfectly fine.",
+      "Bake: Pour the batter into the prepared Bundt pan and smooth the top.",
+      "Bake for 35-40 minutes, or until a skewer inserted into the center comes out clean or with a few moist crumbs.",
+      "Allow the cake to cool in the pan for about 15 minutes before carefully turning it out onto a wire rack.",
+      "Let the cake cool completely before glazing.",
+      "Make the lemon glaze: In a small bowl, whisk together the powdered sugar and fresh lemon juice until smooth.",
+      "If the glaze is too thick, add a teaspoon of lemon juice at a time. If it is too thin, whisk in a little more powdered sugar.",
+      "Slowly drizzle the glaze over the completely cooled Bundt cake, allowing it to run naturally down the sides.",
+      "Let the glaze set for about 15 minutes before serving."
+    ],
+    tip: "Use fresh lemon juice and zest for the brightest, most vibrant flavor, and let the cake cool completely before glazing.",
+    extraSections: [
+      {
+        title: "Storage",
+        items: [
+          "Store the cake in an airtight container at room temperature for 3 days, or refrigerate for up to 5 days."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze the cake without the glaze for up to 3 months.",
+          "Wrap it tightly in plastic wrap and place it in a freezer-safe container.",
+          "Thaw overnight in the refrigerator and glaze before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Use fresh lemon juice and zest for the brightest, most vibrant flavor.",
+          "Rub the lemon zest into the sugar before mixing for an even more aromatic cake.",
+          "Avoid overmixing the batter to keep the crumb light and tender.",
+          "Let the cake cool completely before glazing to prevent the icing from melting.",
+          "For an extra elegant finish, garnish with thin lemon slices, additional lemon zest, or edible flowers."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  },
+  {
+    slug: "homemade-vegan-nutella",
+    title: "Homemade Vegan Nutella",
+    category: "basics",
+    categoryLabel: "Basics",
+    badge: "Basics",
+    date: "2026-07-03",
+    prepTime: "15 min",
+    bakeTime: "10 min chill",
+    servings: "Approximately 350 g",
+    excerpt:
+      "Creamy, rich, and irresistibly chocolatey vegan Nutella made with roasted hazelnuts, cashews, cocoa, and vegan milk chocolate.",
+    cardText:
+      "There was always something magical about opening a fresh jar of chocolate hazelnut spread.\n\nWhether it was spread generously on warm toast before school or secretly enjoyed by the spoonful when no one was looking, it somehow made ordinary moments feel a little more special. That rich chocolate flavor, the roasted hazelnuts, and the excitement of scraping the last bit from the jar are memories many of us share.\n\nThis homemade version brings all of that nostalgia back, but with simple ingredients and plenty of love. Smooth, creamy, and deeply chocolatey, it is the kind of recipe you will find yourself making again and again, not just because it is delicious, but because every spoonful feels like a little taste of childhood.",
+    featuredText:
+      "Smooth chocolate-hazelnut spread for toast, pancakes, oatmeal, and spoonfuls.",
+    image: "Nutella.png",
+    thumbnail: "Nutella.png",
+    alt: "Homemade vegan Nutella chocolate hazelnut spread",
+    ingredients: [
+      "162 g roasted, peeled hazelnuts",
+      "41 g roasted cashews",
+      "18 g unsweetened cocoa powder",
+      "40 g vegan milk chocolate, chopped, such as Vantastic Foods",
+      "26 g melted coconut oil",
+      "58 g powdered sugar",
+      "1 g salt"
+    ],
+    method: [
+      "Blend the nuts: Add the roasted hazelnuts, roasted cashews, and melted coconut oil to a high-powered food processor.",
+      "Blend until the mixture becomes completely smooth and creamy. Depending on your food processor, this may take 5-10 minutes. Stop occasionally to scrape down the sides of the bowl.",
+      "Add the chocolate: Add the cocoa powder, chopped vegan milk chocolate, powdered sugar, and salt.",
+      "Blend again until everything is fully incorporated and silky smooth, scraping down the bowl as needed.",
+      "Chill: Transfer the spread to a clean jar or airtight container.",
+      "Refrigerate for 10 minutes to allow it to thicken slightly.",
+      "Now comes the best part: grab a spoon and enjoy."
+    ],
+    tip: "For an even creamier spread, blend a little longer so the natural oils from the nuts continue to release.",
+    extraSections: [
+      {
+        title: "Serving suggestions",
+        items: [
+          "Toast or fresh bread",
+          "Pancakes and waffles",
+          "Crepes",
+          "Croissants",
+          "Banana slices",
+          "Fresh strawberries",
+          "Oatmeal",
+          "Ice cream",
+          "Brownies and cupcakes",
+          "Straight from the jar"
+        ]
+      },
+      {
+        title: "Storage",
+        items: [
+          "Store in an airtight container in the refrigerator for up to 1 week."
+        ]
+      },
+      {
+        title: "Freezing",
+        items: [
+          "Freeze in a sealed airtight container for up to 3 months.",
+          "Thaw overnight in the refrigerator and stir well before serving."
+        ]
+      },
+      {
+        title: "Baking tips",
+        items: [
+          "Roasting the hazelnuts brings out their rich, nutty flavor and makes the spread extra aromatic.",
+          "If your hazelnuts still have skins, rub them in a clean kitchen towel after roasting to remove most of the skins.",
+          "A high-powered food processor works best for achieving an ultra-smooth texture.",
+          "For an even creamier spread, blend a little longer. The natural oils from the nuts will continue to release.",
+          "Store at room temperature for about 15 minutes before serving if you prefer a softer, more spreadable consistency."
+        ]
+      }
+    ],
+    featured: false,
+    popular: true
+  }
+];

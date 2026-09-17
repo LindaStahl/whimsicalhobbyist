@@ -1,0 +1,307 @@
+const recipePageElement = document.querySelector("#recipe-page");
+const categoryMenuElement = document.querySelector("#category-menu");
+const miniSearch = document.querySelector("#mini-search");
+const searchInput = document.querySelector("#site-search");
+const navDropdown = document.querySelector(".nav-dropdown");
+const navDropdownButton = document.querySelector(".nav-dropdown-button");
+const themeSettings = window.whimsicalTheme || {};
+const menuCategories = [
+  { slug: "cakes", label: "Cakes", href: "cakes.html" },
+  { slug: "cupcakes", label: "Cupcakes", href: "cupcakes.html" },
+  { slug: "cookies", label: "Cookies", href: "cookies.html" },
+  { slug: "bars", label: "Bars", href: "bars.html" },
+  { slug: "creams", label: "Creams", href: "creams.html" },
+  { slug: "no-bake", label: "No Bake", href: "no-bake.html" },
+  { slug: "glutenfree", label: "Gluten-Free", href: "glutenfree.html" }
+];
+
+function getImageUrl(image) {
+  return `${themeSettings.assetsUrl || ""}${image}`;
+}
+
+function getPageUrl(href) {
+  const pageKey = href.replace(".html", "");
+
+  if (pageKey === "index") {
+    return themeSettings.homeUrl || href;
+  }
+
+  return themeSettings.pages?.[pageKey] || href;
+}
+
+function getRecipeUrl(recipe) {
+  return `${themeSettings.pages?.recipe || "recipe.html"}?recipe=${recipe.slug}`;
+}
+
+function formatDate(dateValue) {
+  const date = new Date(`${dateValue}T00:00:00`);
+
+  return date.toLocaleDateString("en", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+}
+
+function getCategories() {
+  return menuCategories;
+}
+
+function renderCategoryMenu() {
+  categoryMenuElement.innerHTML = getCategories()
+    .map(
+      (category) => `
+        <a href="${getPageUrl(category.href)}" data-category-filter="${category.slug}">
+          ${category.label}
+        </a>
+      `
+    )
+    .join("");
+}
+
+function renderRecipeNotFound() {
+  recipePageElement.innerHTML = `
+    <section class="recipe-detail recipe-not-found">
+      <p class="eyebrow">Recipe not found</p>
+      <h1>This bake wandered off</h1>
+      <p>Head back to the recipe box and choose another sweet thing.</p>
+      <a class="read-more" href="${themeSettings.homeUrl || "index.html"}#recipes">Back to recipes</a>
+    </section>
+  `;
+}
+
+function parseIngredientAmount(amount) {
+  if (amount.includes(" ")) {
+    const [whole, fraction] = amount.split(" ");
+    const [numerator, denominator] = fraction.split("/");
+
+    return Number(whole) + Number(numerator) / Number(denominator);
+  }
+
+  if (amount.includes("/")) {
+    const [numerator, denominator] = amount.split("/");
+
+    return Number(numerator) / Number(denominator);
+  }
+
+  return Number(amount);
+}
+
+function formatScaledAmount(amount) {
+  const rounded = Math.round(amount * 100) / 100;
+
+  if (Number.isInteger(rounded)) {
+    return String(rounded);
+  }
+
+  return String(rounded).replace(/\.0+$/, "");
+}
+
+function scaleIngredient(ingredient, scale) {
+  const match = ingredient.match(/^(\d+(?:\.\d+)?(?:\s+\d+\/\d+)?|\d+\/\d+)(.*)$/);
+
+  if (!match) {
+    return ingredient;
+  }
+
+  const amount = parseIngredientAmount(match[1]);
+
+  if (!Number.isFinite(amount)) {
+    return ingredient;
+  }
+
+  return `${formatScaledAmount(amount * scale)}${match[2]}`;
+}
+
+function renderIngredients(recipe, scale = 1) {
+  const ingredientHeadings = [
+    "cupcake batter",
+    "frosting",
+    "decoration",
+    "apple filling",
+    "crumble topping",
+    "homemade vanilla custard",
+    "chocolate hazelnut filling",
+    "cookie dough"
+  ];
+
+  return recipe.ingredients
+    .map((ingredient) => {
+      const normalizedIngredient = ingredient.toLowerCase();
+      const isHeading =
+        normalizedIngredient.startsWith("for ") ||
+        ingredientHeadings.includes(normalizedIngredient);
+      const scaledIngredient = scaleIngredient(ingredient, scale);
+
+      return `<li class="${isHeading ? "ingredient-heading" : ""}">${scaledIngredient}</li>`;
+    })
+    .join("");
+}
+
+function renderMethodStep(step) {
+  const methodHeadings = [
+    "prepare the apple filling",
+    "make the crumble",
+    "assemble",
+    "make the vanilla custard"
+  ];
+  const isHeading = methodHeadings.includes(step.toLowerCase());
+
+  return `<li class="${isHeading ? "method-heading ingredient-heading" : ""}">${step}</li>`;
+}
+
+function renderMethodSteps(method) {
+  let shouldResetCounter = true;
+
+  return method
+    .map((step) => {
+      const renderedStep = renderMethodStep(step);
+      const isHeading = renderedStep.includes("method-heading");
+      const resetAttribute = shouldResetCounter && !isHeading ? ' value="1"' : "";
+
+      shouldResetCounter = isHeading;
+
+      return renderedStep.replace("<li", `<li${resetAttribute}`);
+    })
+    .join("");
+}
+
+function bindIngredientScaler(recipe) {
+  const ingredientsList = document.querySelector("#ingredients-list");
+
+  document.querySelectorAll("[data-recipe-scale]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const scale = Number(button.dataset.recipeScale);
+
+      document.querySelectorAll("[data-recipe-scale]").forEach((scaleButton) => {
+        scaleButton.classList.toggle("active", scaleButton === button);
+      });
+
+      ingredientsList.innerHTML = renderIngredients(recipe, scale);
+    });
+  });
+}
+
+function renderRecipe(recipe) {
+  document.title = `${recipe.title} | The Little Baking Troll`;
+  const extraSections = recipe.extraSections || [];
+
+  recipePageElement.innerHTML = `
+    <article class="recipe-detail">
+      <a class="back-link" href="${themeSettings.homeUrl || "index.html"}#recipes">Back to recipes</a>
+      <div class="recipe-detail-hero">
+        <div class="recipe-detail-copy">
+          <p class="eyebrow">${recipe.categoryLabel}</p>
+          <h1>${recipe.title}</h1>
+          <p>${recipe.excerpt}</p>
+          <div class="recipe-stats" aria-label="Recipe details">
+            <span>Prep: ${recipe.prepTime}</span>
+            <span>Bake: ${recipe.bakeTime}</span>
+            <span>Serves: ${recipe.servings}</span>
+          </div>
+        </div>
+        <img src="${getImageUrl(recipe.image)}" alt="${recipe.alt}" />
+      </div>
+
+      <div class="recipe-detail-body">
+        <section class="recipe-card-panel">
+          <h2>Ingredients</h2>
+          <div class="ingredient-scaler" aria-label="Scale recipe ingredients">
+            <span>Batch size</span>
+            <button type="button" data-recipe-scale="0.5">1/2x</button>
+            <button class="active" type="button" data-recipe-scale="1">1x</button>
+            <button type="button" data-recipe-scale="2">2x</button>
+            <button type="button" data-recipe-scale="3">3x</button>
+          </div>
+          <ul id="ingredients-list">
+            ${renderIngredients(recipe)}
+          </ul>
+        </section>
+
+        <section class="recipe-card-panel">
+          <h2>Method</h2>
+          <ol>
+            ${renderMethodSteps(recipe.method)}
+          </ol>
+        </section>
+      </div>
+
+      <section class="recipe-tip">
+        <p class="eyebrow">Little baking tip</p>
+        <p>${recipe.tip}</p>
+      </section>
+
+      ${
+        extraSections.length
+          ? `
+            <div class="recipe-extra-sections">
+              ${extraSections
+                .map(
+                  (section) => `
+                    <section class="recipe-card-panel">
+                      <h2>${section.title}</h2>
+                      <ul>
+                        ${section.items.map((item) => `<li>${item}</li>`).join("")}
+                      </ul>
+                    </section>
+                  `
+                )
+                .join("")}
+            </div>
+          `
+          : ""
+      }
+
+      <footer class="recipe-post-footer">
+        <span>Posted ${formatDate(recipe.date)}</span>
+        <a class="read-more" href="${themeSettings.homeUrl || "index.html"}#recipes">Browse more recipes</a>
+      </footer>
+    </article>
+  `;
+
+  bindIngredientScaler(recipe);
+}
+
+function getSelectedRecipe() {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get("recipe");
+
+  return recipes.find((recipe) => recipe.slug === slug);
+}
+
+renderCategoryMenu();
+
+navDropdownButton.addEventListener("click", () => {
+  navDropdown.classList.toggle("open");
+});
+
+const selectedRecipe = getSelectedRecipe();
+
+if (selectedRecipe) {
+  renderRecipe(selectedRecipe);
+} else {
+  renderRecipeNotFound();
+}
+
+categoryMenuElement.addEventListener("click", (event) => {
+  const categoryLink = event.target.closest("[data-category-filter]");
+
+  if (!categoryLink) {
+    return;
+  }
+
+  sessionStorage.setItem("littleBakingTrollCategory", categoryLink.dataset.categoryFilter);
+  navDropdown.classList.remove("open");
+});
+
+document.addEventListener("click", (event) => {
+  if (!navDropdown.contains(event.target)) {
+    navDropdown.classList.remove("open");
+  }
+});
+
+miniSearch.addEventListener("submit", (event) => {
+  event.preventDefault();
+  sessionStorage.setItem("littleBakingTrollSearch", searchInput.value.trim());
+  window.location.href = `${themeSettings.homeUrl || "index.html"}#recipes`;
+});

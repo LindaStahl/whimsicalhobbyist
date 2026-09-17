@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#fffaf4"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="#d7f0ff" opacity="0.34"/>
+  <rect x="96" y="92" width="888" height="1166" rx="0" fill="#ffffff" stroke="#ead8dc" stroke-width="3"/>
+  <rect x="152" y="150" width="776" height="410" fill="#fff0ad" opacity="0.78"/>
+  <text x="540" y="246" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="5" fill="#806b70">BAKING TIP</text>
+  <text x="540" y="366" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="76" font-weight="700" fill="#49333a">Freeze The</text>
+  <text x="540" y="450" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="76" font-weight="700" fill="#49333a">Cookie Dough</text>
+  <rect x="212" y="626" width="656" height="362" fill="#fffaf4" stroke="#d7f0ff" stroke-width="4" stroke-dasharray="18 14"/>
+  <text x="540" y="766" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="34" font-weight="700" fill="#806b70">OPTIONAL PHOTO</text>
+  <text x="540" y="820" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="24" fill="#806b70">add a process photo here</text>
+  <text x="540" y="1086" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="34" font-weight="700" fill="#49333a">This keeps the cookies thick,</text>
+  <text x="540" y="1132" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="34" font-weight="700" fill="#49333a">gooey, and bakery-style.</text>
+  <text x="540" y="1210" text-anchor="middle" font-family="Sacramento, cursive" font-size="58" fill="#e96b9a">@whimsicalhobbyist</text>
+</svg>

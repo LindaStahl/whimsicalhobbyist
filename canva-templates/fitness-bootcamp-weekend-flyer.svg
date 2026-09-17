@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#090909"/>
+  <polygon points="0,0 1080,0 1080,376 0,520" fill="#ff5a00"/>
+  <polygon points="0,1032 1080,832 1080,1350 0,1350" fill="#ff5a00"/>
+  <rect x="72" y="70" width="936" height="1210" fill="none" stroke="#ffffff" stroke-width="4"/>
+
+  <text x="96" y="162" font-family="Arial Black, Impact, Arial, sans-serif" font-size="42" font-weight="900" letter-spacing="4" fill="#090909">WEEKEND EVENT</text>
+  <text x="96" y="300" font-family="Arial Black, Impact, Arial, sans-serif" font-size="124" font-weight="900" letter-spacing="0" fill="#ffffff">FITNESS</text>
+  <text x="96" y="418" font-family="Arial Black, Impact, Arial, sans-serif" font-size="118" font-weight="900" letter-spacing="0" fill="#ffffff">BOOTCAMP</text>
+
+  <rect x="96" y="484" width="428" height="74" fill="#ffffff"/>
+  <text x="310" y="534" text-anchor="middle" font-family="Arial Black, Impact, Arial, sans-serif" font-size="31" font-weight="900" letter-spacing="2" fill="#090909">SAT + SUN</text>
+
+  <text x="96" y="642" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="2" fill="#ffffff">HIGH-INTENSITY TRAINING</text>
+  <text x="96" y="694" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#d9d9d9">Strength • Cardio • Core • Mobility</text>
+
+  <rect x="96" y="770" width="888" height="328" fill="#ffffff"/>
+  <rect x="96" y="770" width="888" height="82" fill="#ff5a00"/>
+  <text x="540" y="824" text-anchor="middle" font-family="Arial Black, Impact, Arial, sans-serif" font-size="34" font-weight="900" letter-spacing="3" fill="#090909">SCHEDULE</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" fill="#090909">
+    <text x="142" y="912" font-size="32" font-weight="900">SATURDAY</text>
+    <text x="406" y="912" font-size="32" font-weight="800">09:00</text>
+    <text x="560" y="912" font-size="32" font-weight="700">Full Body Burn</text>
+
+    <line x1="142" y1="954" x2="938" y2="954" stroke="#dedede" stroke-width="3"/>
+
+    <text x="142" y="1014" font-size="32" font-weight="900">SUNDAY</text>
+    <text x="406" y="1014" font-size="32" font-weight="800">10:00</text>
+    <text x="560" y="1014" font-size="32" font-weight="700">Core + Conditioning</text>
+  </g>
+
+  <text x="96" y="1172" font-family="Arial Black, Impact, Arial, sans-serif" font-size="52" font-weight="900" fill="#090909">JOIN THE CHALLENGE</text>
+  <text x="96" y="1230" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="800" letter-spacing="2" fill="#090909">LOCATION • WEBSITE • @HANDLE</text>
+</svg>

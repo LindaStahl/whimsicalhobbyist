@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#fffaf4"/>
+  <rect x="0" y="0" width="1080" height="238" fill="#ffd6e7"/>
+  <text x="84" y="118" font-family="Sacramento, cursive" font-size="86" fill="#e96b9a">Whimsical</text>
+  <text x="84" y="184" font-family="Sacramento, cursive" font-size="86" fill="#8aa8b7">Hobbyist</text>
+  <rect x="728" y="68" width="270" height="128" rx="0" fill="#ffffff" stroke="#ead8dc" stroke-width="3"/>
+  <text x="863" y="118" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="3" fill="#49333a">INGREDIENTS</text>
+  <text x="863" y="160" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="20" font-weight="700" fill="#806b70">for today's bake</text>
+  <text x="84" y="330" font-family="Playfair Display, Georgia, serif" font-size="72" font-weight="700" fill="#49333a">What You Need</text>
+  <text x="84" y="386" font-family="Quicksand, Arial, sans-serif" font-size="29" font-weight="600" fill="#806b70">Swap this list for your recipe ingredients.</text>
+  <rect x="84" y="452" width="912" height="650" fill="#ffffff" stroke="#ead8dc" stroke-width="3"/>
+  <g font-family="Quicksand, Arial, sans-serif" font-size="34" font-weight="700" fill="#49333a">
+    <circle cx="140" cy="536" r="13" fill="#e96b9a"/><text x="176" y="548">233 g vegan margarine</text>
+    <circle cx="140" cy="626" r="13" fill="#d7f0ff"/><text x="176" y="638">122 g granulated sugar</text>
+    <circle cx="140" cy="716" r="13" fill="#fff0ad"/><text x="176" y="728">295 g all-purpose flour</text>
+    <circle cx="140" cy="806" r="13" fill="#e96b9a"/><text x="176" y="818">75 g vegan chocolate</text>
+    <circle cx="140" cy="896" r="13" fill="#d7f0ff"/><text x="176" y="908">55 g vegan marshmallows</text>
+    <circle cx="140" cy="986" r="13" fill="#fff0ad"/><text x="176" y="998">crushed biscuits</text>
+  </g>
+  <rect x="84" y="1148" width="912" height="112" fill="#d7f0ff"/>
+  <text x="540" y="1194" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="3" fill="#49333a">TIP</text>
+  <text x="540" y="1234" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="28" font-weight="700" fill="#49333a">Screenshot this before grocery shopping.</text>
+</svg>

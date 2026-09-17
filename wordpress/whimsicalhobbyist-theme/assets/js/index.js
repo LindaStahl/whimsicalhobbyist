@@ -1,0 +1,252 @@
+const categoryMenuElement = document.querySelector("#category-menu");
+const recipeCarouselElement = document.querySelector("#recipe-carousel");
+const carouselPrevButton = document.querySelector("#carousel-prev");
+const carouselNextButton = document.querySelector("#carousel-next");
+const recipeListElement = document.querySelector("#recipe-list");
+const popularPostsElement = document.querySelector("#popular-posts");
+const newsletterForm = document.querySelector("#newsletter-form");
+const formMessage = document.querySelector("#form-message");
+const miniSearch = document.querySelector("#mini-search");
+const searchInput = document.querySelector("#site-search");
+const navDropdown = document.querySelector(".nav-dropdown");
+const navDropdownButton = document.querySelector(".nav-dropdown-button");
+const themeSettings = window.whimsicalTheme || {};
+
+let activeFilter = "all";
+const menuCategories = [
+  { slug: "cakes", label: "Cakes", href: "cakes.html", categories: ["cakes"] },
+  { slug: "cupcakes", label: "Cupcakes", href: "cupcakes.html", categories: ["cupcakes"] },
+  { slug: "cookies", label: "Cookies", href: "cookies.html", categories: ["cookies"] },
+  { slug: "bars", label: "Bars", href: "bars.html", categories: ["bars"] },
+  { slug: "creams", label: "Creams", href: "creams.html", categories: ["basics", "creams"] },
+  { slug: "no-bake", label: "No Bake", href: "no-bake.html", categories: ["no-bake"] },
+  { slug: "glutenfree", label: "Gluten-Free", href: "glutenfree.html", categories: ["glutenfree"] }
+];
+
+function getImageUrl(image) {
+  return `${themeSettings.assetsUrl || ""}${image}`;
+}
+
+function getPageUrl(href) {
+  const pageKey = href.replace(".html", "");
+
+  if (pageKey === "index") {
+    return themeSettings.homeUrl || href;
+  }
+
+  return themeSettings.pages?.[pageKey] || href;
+}
+
+function getRecipeUrl(recipe) {
+  return `${themeSettings.pages?.recipe || "recipe.html"}?recipe=${recipe.slug}`;
+}
+
+function getRecipeCategories(recipe) {
+  return recipe.categories || [recipe.category];
+}
+
+function formatDate(dateValue) {
+  const date = new Date(`${dateValue}T00:00:00`);
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = date.toLocaleString("en", { month: "short" });
+  const year = date.getFullYear();
+
+  return { day, label: `${month} ${year}` };
+}
+
+function sortRecipesByNewest(recipeSet) {
+  return [...recipeSet].sort(
+    (firstRecipe, secondRecipe) =>
+      new Date(`${secondRecipe.date}T00:00:00`) -
+      new Date(`${firstRecipe.date}T00:00:00`)
+  );
+}
+
+function getCategories() {
+  return menuCategories;
+}
+
+function renderCategories() {
+  categoryMenuElement.innerHTML = getCategories()
+    .map(
+      (category) => `
+        <a href="${getPageUrl(category.href)}" data-category-filter="${category.slug}">
+          ${category.label}
+        </a>
+      `
+    )
+    .join("");
+}
+
+function renderRecipeCarousel() {
+  recipeCarouselElement.innerHTML = recipes
+    .slice(0, 6)
+    .map(
+      (recipe) => `
+        <a class="carousel-card" href="${getRecipeUrl(recipe)}">
+          <img src="${getImageUrl(recipe.image)}" alt="${recipe.alt}" />
+          <span>
+            <small>${recipe.categoryLabel}</small>
+            ${recipe.title}
+          </span>
+        </a>
+      `
+    )
+    .join("");
+}
+
+function renderRecipePosts() {
+  recipeListElement.innerHTML = sortRecipesByNewest(recipes)
+    .map((recipe) => {
+      const date = formatDate(recipe.date);
+      const cardText = recipe.cardText || recipe.excerpt;
+
+      return `
+        <article class="blog-post" data-category="${recipe.category}" data-categories="${getRecipeCategories(recipe).join(" ")}">
+          <a href="${getRecipeUrl(recipe)}" class="post-image">
+            <img src="${getImageUrl(recipe.image)}" alt="${recipe.alt}" />
+          </a>
+          <div class="post-content">
+            <time datetime="${recipe.date}">
+              <span>${date.day}</span>
+              ${date.label}
+            </time>
+            <p class="eyebrow">${recipe.categoryLabel}</p>
+            <h2>${recipe.title}</h2>
+            <div class="post-excerpt">
+              ${cardText
+                .split("\n\n")
+                .map((paragraph) => `<p>${paragraph}</p>`)
+                .join("")}
+            </div>
+            <a class="read-more" href="${getRecipeUrl(recipe)}">View post</a>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderPopularPosts() {
+  popularPostsElement.innerHTML = recipes
+    .filter((recipe) => recipe.popular)
+    .slice(0, 3)
+    .map(
+      (recipe) => `
+        <a class="mini-post" href="${getRecipeUrl(recipe)}">
+          <img src="${getImageUrl(recipe.thumbnail)}" alt="${recipe.alt}" />
+          <span>
+            <small>${recipe.categoryLabel}</small>
+            ${recipe.title}
+          </span>
+        </a>
+      `
+    )
+    .join("");
+}
+
+function bindRecipeCarousel() {
+  const scrollCarousel = (direction) => {
+    const card = recipeCarouselElement.querySelector(".carousel-card");
+    const cardWidth = card ? card.offsetWidth : 280;
+
+    recipeCarouselElement.scrollBy({
+      left: direction * (cardWidth + 18),
+      behavior: "smooth"
+    });
+  };
+
+  carouselPrevButton.addEventListener("click", () => scrollCarousel(-1));
+  carouselNextButton.addEventListener("click", () => scrollCarousel(1));
+}
+
+function syncFilterControls() {
+  document.querySelectorAll("[data-category-filter]").forEach((button) => {
+    button.classList.toggle(
+      "active",
+      button.dataset.categoryFilter === activeFilter
+    );
+  });
+}
+
+function updateVisiblePosts() {
+  const searchTerm = searchInput.value.trim().toLowerCase();
+  const activeCategory = getCategories().find(
+    (category) => category.slug === activeFilter
+  );
+
+  document.querySelectorAll(".blog-post").forEach((post) => {
+    const matchesFilter =
+      activeFilter === "all" ||
+      activeCategory?.categories.some((category) =>
+        post.dataset.categories.split(" ").includes(category)
+      );
+    const matchesSearch = post.textContent.toLowerCase().includes(searchTerm);
+
+    post.classList.toggle("hidden", !matchesFilter || !matchesSearch);
+  });
+}
+
+function setActiveFilter(filter) {
+  activeFilter = filter;
+  syncFilterControls();
+  updateVisiblePosts();
+}
+
+function applyStoredRecipeFilters() {
+  const storedCategory = sessionStorage.getItem("littleBakingTrollCategory");
+  const storedSearch = sessionStorage.getItem("littleBakingTrollSearch");
+
+  if (storedSearch) {
+    searchInput.value = storedSearch;
+    sessionStorage.removeItem("littleBakingTrollSearch");
+  }
+
+  if (storedCategory) {
+    activeFilter = storedCategory;
+    sessionStorage.removeItem("littleBakingTrollCategory");
+  }
+}
+
+function bindCategoryFilters() {
+  navDropdownButton.addEventListener("click", () => {
+    navDropdown.classList.toggle("open");
+  });
+
+  document.querySelectorAll("[data-category-filter]").forEach((link) => {
+    link.addEventListener("click", () => {
+      navDropdown.classList.remove("open");
+    });
+  });
+}
+
+document.addEventListener("click", (event) => {
+  if (!navDropdown.contains(event.target)) {
+    navDropdown.classList.remove("open");
+  }
+});
+
+renderCategories();
+renderRecipeCarousel();
+renderRecipePosts();
+renderPopularPosts();
+bindCategoryFilters();
+bindRecipeCarousel();
+applyStoredRecipeFilters();
+setActiveFilter(activeFilter);
+
+miniSearch.addEventListener("submit", (event) => {
+  event.preventDefault();
+  updateVisiblePosts();
+  document.querySelector("#recipes").scrollIntoView({ behavior: "smooth" });
+});
+
+searchInput.addEventListener("input", updateVisiblePosts);
+
+newsletterForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const emailInput = document.querySelector("#email");
+
+  formMessage.textContent = "Sweet! Little Baking Troll recipes are on the way.";
+  emailInput.value = "";
+});

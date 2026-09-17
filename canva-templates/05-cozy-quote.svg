@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#fffaf4"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="#fff0ad" opacity="0.38"/>
+  <circle cx="184" cy="178" r="118" fill="#ffd6e7"/>
+  <circle cx="900" cy="1120" r="156" fill="#d7f0ff"/>
+  <rect x="120" y="150" width="840" height="1050" fill="#ffffff" stroke="#ead8dc" stroke-width="3"/>
+  <text x="540" y="284" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="5" fill="#806b70">COZY KITCHEN NOTE</text>
+  <text x="540" y="452" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="76" font-weight="700" fill="#49333a">The sweetest</text>
+  <text x="540" y="542" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="76" font-weight="700" fill="#49333a">memories begin</text>
+  <text x="540" y="632" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="76" font-weight="700" fill="#49333a">with something</text>
+  <text x="540" y="722" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="76" font-weight="700" fill="#49333a">fresh from</text>
+  <text x="540" y="812" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="76" font-weight="700" fill="#49333a">the oven.</text>
+  <rect x="360" y="902" width="360" height="4" fill="#e96b9a"/>
+  <text x="540" y="1008" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="32" font-weight="700" fill="#806b70">save this for your next baking day</text>
+  <text x="540" y="1122" text-anchor="middle" font-family="Sacramento, cursive" font-size="72" fill="#e96b9a">@whimsicalhobbyist</text>
+</svg>

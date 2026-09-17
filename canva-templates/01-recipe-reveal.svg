@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#fffaf4"/>
+  <rect x="0" y="0" width="1080" height="1350" fill="#ffd6e7" opacity="0.32"/>
+  <circle cx="930" cy="154" r="190" fill="#d7f0ff" opacity="0.9"/>
+  <circle cx="124" cy="1212" r="180" fill="#fff0ad" opacity="0.88"/>
+  <rect x="74" y="70" width="932" height="1210" rx="0" fill="#ffffff" stroke="#ead8dc" stroke-width="3"/>
+  <text x="540" y="154" text-anchor="middle" font-family="Sacramento, cursive" font-size="88" fill="#e96b9a">Whimsical</text>
+  <text x="540" y="220" text-anchor="middle" font-family="Sacramento, cursive" font-size="88" fill="#8aa8b7">Hobbyist</text>
+  <text x="540" y="276" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="6" fill="#806b70">BAKE | READ | CREATE</text>
+  <rect x="148" y="332" width="784" height="560" fill="#f7eef0" stroke="#ead8dc" stroke-width="3"/>
+  <rect x="184" y="368" width="712" height="488" fill="#fffaf4" stroke="#d7f0ff" stroke-width="4" stroke-dasharray="18 14"/>
+  <text x="540" y="590" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="34" font-weight="700" fill="#806b70">DROP YOUR PHOTO HERE</text>
+  <text x="540" y="646" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="23" fill="#806b70">best for close-up cookie or cake shots</text>
+  <rect x="148" y="930" width="784" height="72" fill="#d7f0ff"/>
+  <text x="540" y="977" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="3" fill="#49333a">NEW VEGAN RECIPE</text>
+  <text x="540" y="1084" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="70" font-weight="700" fill="#49333a">Recipe Name</text>
+  <text x="540" y="1140" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="30" font-weight="600" fill="#806b70">gooey, cozy, bakery-style sweetness</text>
+  <rect x="358" y="1192" width="364" height="66" rx="33" fill="#e96b9a"/>
+  <text x="540" y="1235" text-anchor="middle" font-family="Quicksand, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="2" fill="#ffffff">SAVE THIS RECIPE</text>
+</svg>
